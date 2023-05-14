@@ -1,0 +1,84 @@
+
+/* Class = "UIButton"; normalTitle = " الشروط والأحكام"; ObjectID = "1bD-hy-vqG"; */
+"1bD-hy-vqG.normalTitle" = " الشروط والأحكام";
+
+/* Class = "UILabel"; text = "فرد"; ObjectID = "22p-14-JfG"; */
+"22p-14-JfG.text" = "فرد";
+
+/* Class = "UILabel"; text = "دخول الآن"; ObjectID = "3sc-vQ-yPm"; */
+"3sc-vQ-yPm.text" = "دخول الآن";
+
+/* Class = "UITextField"; placeholder = "ـ"; ObjectID = "4K6-02-F5U"; */
+"4K6-02-F5U.placeholder" = "ـ";
+
+/* Class = "UIButton"; normalTitle = "إعادة إرسال الرمز"; ObjectID = "5yI-Ed-RsR"; */
+"5yI-Ed-RsR.normalTitle" = "إعادة إرسال الرمز";
+
+/* Class = "UITextField"; placeholder = "رقم الجوال"; ObjectID = "B8W-wk-4bS"; */
+"B8W-wk-4bS.placeholder" = "رقم الجوال";
+
+/* Class = "UILabel"; text = "+966"; ObjectID = "BHb-du-25z"; */
+"BHb-du-25z.text" = "+966";
+
+/* Class = "UITextField"; placeholder = "الإسم"; ObjectID = "CKo-CJ-ruJ"; */
+"CKo-CJ-ruJ.placeholder" = "الإسم";
+
+/* Class = "UILabel"; text = "جار التحميل"; ObjectID = "DZh-KE-tuy"; */
+"DZh-KE-tuy.text" = "جار التحميل";
+
+/* Class = "UILabel"; text = "+966"; ObjectID = "EAG-nl-9TI"; */
+"EAG-nl-9TI.text" = "+966";
+
+/* Class = "UILabel"; text = "شركة"; ObjectID = "MBl-u9-Uq1"; */
+"MBl-u9-Uq1.text" = "شركة";
+
+/* Class = "UILabel"; text = "الموافقة على"; ObjectID = "Qdv-qE-sl3"; */
+"Qdv-qE-sl3.text" = "الموافقة على";
+
+/* Class = "UILabel"; text = "100"; ObjectID = "XKx-AK-vLH"; */
+"XKx-AK-vLH.text" = "100";
+
+/* Class = "UITextField"; placeholder = "ـ"; ObjectID = "a62-rM-XcQ"; */
+"a62-rM-XcQ.placeholder" = "ـ";
+
+/* Class = "UILabel"; text = "التحقق من رقم الجوال"; ObjectID = "aVh-dQ-rg0"; */
+"aVh-dQ-rg0.text" = "التحقق من رقم الجوال";
+
+/* Class = "UIButton"; normalTitle = "تأكيد"; ObjectID = "d0e-Wb-OLz"; */
+"d0e-Wb-OLz.normalTitle" = "تأكيد";
+
+/* Class = "UILabel"; text = "966"; ObjectID = "fq5-41-zhr"; */
+"fq5-41-zhr.text" = "966";
+
+/* Class = "UIBarButtonItem"; title = "  "; ObjectID = "hag-pq-Tdz"; */
+"hag-pq-Tdz.title" = "  ";
+
+/* Class = "UIButton"; normalTitle = "دخول الآن"; ObjectID = "l76-gL-SZX"; */
+"l76-gL-SZX.normalTitle" = "دخول الآن";
+
+/* Class = "UIButton"; normalTitle = "إنشاء حساب"; ObjectID = "n01-M1-qUy"; */
+"n01-M1-qUy.normalTitle" = "إنشاء حساب";
+
+/* Class = "UITextField"; placeholder = "ـ"; ObjectID = "nlC-ce-NxS"; */
+"nlC-ce-NxS.placeholder" = "ـ";
+
+/* Class = "UITextField"; placeholder = "رقم الجوال"; ObjectID = "oLK-XI-X9S"; */
+"oLK-XI-X9S.placeholder" = "رقم الجوال";
+
+/* Class = "UILabel"; text = "مؤسسة"; ObjectID = "pUZ-M4-EUh"; */
+"pUZ-M4-EUh.text" = "مؤسسة";
+
+/* Class = "UILabel"; text = "إنشاء حساب مزود خدمة"; ObjectID = "pi7-ne-Mhv"; */
+"pi7-ne-Mhv.text" = "إنشاء حساب مزود خدمة";
+
+/* Class = "UITextField"; placeholder = "ـ"; ObjectID = "qB3-eT-66N"; */
+"qB3-eT-66N.placeholder" = "ـ";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "utD-p5-fmn"; */
+"utD-p5-fmn.title" = " ";
+
+/* Class = "UILabel"; text = "ادخل رمز الذي أرسلناه إلى رقم الهاتف"; ObjectID = "wOp-dr-Vfb"; */
+"wOp-dr-Vfb.text" = "ادخل رمز الذي أرسلناه إلى رقم الهاتف";
+
+/* Class = "UIButton"; normalTitle = "تحقق"; ObjectID = "xLq-Ue-kga"; */
+"xLq-Ue-kga.normalTitle" = "تحقق";

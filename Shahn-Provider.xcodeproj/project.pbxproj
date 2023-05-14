@@ -14,6 +14,27 @@
 		CEAB76C12A076BF000E963BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76BF2A076BF000E963BC /* Main.storyboard */; };
 		CEAB76C32A076BF100E963BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76C22A076BF100E963BC /* Assets.xcassets */; };
 		CEAB76C62A076BF100E963BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76C42A076BF100E963BC /* LaunchScreen.storyboard */; };
+		CEAB76CE2A0E67D500E963BC /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76CD2A0E67D500E963BC /* Tabbar.storyboard */; };
+		CEAB76DC2A0E688800E963BC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76D92A0E688700E963BC /* RegistrationViewController.swift */; };
+		CEAB76DD2A0E688800E963BC /* ValidationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76DA2A0E688800E963BC /* ValidationCodeViewController.swift */; };
+		CEAB76DE2A0E688800E963BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76DB2A0E688800E963BC /* LoginViewController.swift */; };
+		CEAB76E92A0E68F200E963BC /* AttachmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E22A0E68F200E963BC /* AttachmentHandler.swift */; };
+		CEAB76EA2A0E68F200E963BC /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E32A0E68F200E963BC /* StretchyHeaderLayout.swift */; };
+		CEAB76EB2A0E68F200E963BC /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E82A0E68F200E963BC /* AlertHelper.swift */; };
+		CEAB76EC2A0E68F200E963BC /* Extestension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E02A0E68F100E963BC /* Extestension.swift */; };
+		CEAB76ED2A0E68F200E963BC /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E12A0E68F100E963BC /* Extensions+UIView.swift */; };
+		CEAB76EE2A0E68F200E963BC /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E42A0E68F200E963BC /* CommonFunctions.swift */; };
+		CEAB76EF2A0E68F200E963BC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E72A0E68F200E963BC /* Utilities.swift */; };
+		CEAB76F02A0E68F200E963BC /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E62A0E68F200E963BC /* HeaderView.swift */; };
+		CEAB76F12A0E68F200E963BC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E52A0E68F200E963BC /* API.swift */; };
+		CEAB76FA2A0E691300E963BC /* CustomMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76F42A0E691200E963BC /* CustomMarker.swift */; };
+		CEAB76FB2A0E691300E963BC /* noUserDataNotLoadedNip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76F92A0E691300E963BC /* noUserDataNotLoadedNip.swift */; };
+		CEAB76FC2A0E691300E963BC /* noDataFoundNip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76F52A0E691200E963BC /* noDataFoundNip.swift */; };
+		CEAB77032A0E694A00E963BC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77022A0E694A00E963BC /* UserModel.swift */; };
+		CEAB77042A0E694A00E963BC /* AboutModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77002A0E694A00E963BC /* AboutModels.swift */; };
+		CEAB77052A0E694A00E963BC /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77012A0E694A00E963BC /* ErrorModel.swift */; };
+		CEAB77082A0E697400E963BC /* Bahij Janna-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77072A0E697300E963BC /* Bahij Janna-Bold.ttf */; };
+		CEAB77092A0E697900E963BC /* Bahij Janna-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76FE2A0E692800E963BC /* Bahij Janna-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +48,33 @@
 		CEAB76C22A076BF100E963BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAB76C52A076BF100E963BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEAB76C72A076BF100E963BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEAB76CD2A0E67D500E963BC /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		CEAB76D92A0E688700E963BC /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		CEAB76DA2A0E688800E963BC /* ValidationCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationCodeViewController.swift; sourceTree = "<group>"; };
+		CEAB76DB2A0E688800E963BC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CEAB76E02A0E68F100E963BC /* Extestension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extestension.swift; sourceTree = "<group>"; };
+		CEAB76E12A0E68F100E963BC /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
+		CEAB76E22A0E68F200E963BC /* AttachmentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentHandler.swift; sourceTree = "<group>"; };
+		CEAB76E32A0E68F200E963BC /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
+		CEAB76E42A0E68F200E963BC /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		CEAB76E52A0E68F200E963BC /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		CEAB76E62A0E68F200E963BC /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		CEAB76E72A0E68F200E963BC /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		CEAB76E82A0E68F200E963BC /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		CEAB76F32A0E691200E963BC /* noDataFoundNip.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = noDataFoundNip.xib; sourceTree = "<group>"; };
+		CEAB76F42A0E691200E963BC /* CustomMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarker.swift; sourceTree = "<group>"; };
+		CEAB76F52A0E691200E963BC /* noDataFoundNip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noDataFoundNip.swift; sourceTree = "<group>"; };
+		CEAB76F62A0E691200E963BC /* customViewsMedia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = customViewsMedia.xcassets; sourceTree = "<group>"; };
+		CEAB76F72A0E691200E963BC /* noUserDataNotLoadedNip.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = noUserDataNotLoadedNip.xib; sourceTree = "<group>"; };
+		CEAB76F82A0E691300E963BC /* CustomMarker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMarker.xib; sourceTree = "<group>"; };
+		CEAB76F92A0E691300E963BC /* noUserDataNotLoadedNip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noUserDataNotLoadedNip.swift; sourceTree = "<group>"; };
+		CEAB76FE2A0E692800E963BC /* Bahij Janna-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij Janna-Regular.ttf"; sourceTree = "<group>"; };
+		CEAB77002A0E694A00E963BC /* AboutModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModels.swift; sourceTree = "<group>"; };
+		CEAB77012A0E694A00E963BC /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		CEAB77022A0E694A00E963BC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		CEAB77072A0E697300E963BC /* Bahij Janna-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij Janna-Bold.ttf"; sourceTree = "<group>"; };
+		CEAB770A2A10D17F00E963BC /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		CEAB770B2A10D18000E963BC /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		D9779CA92DC9F519B4B84B3C /* Pods-Shahn-Provider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahn-Provider.release.xcconfig"; path = "Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +96,6 @@
 				13B8D006B784584C9ADC0730 /* Pods-Shahn-Provider.debug.xcconfig */,
 				D9779CA92DC9F519B4B84B3C /* Pods-Shahn-Provider.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,12 +131,93 @@
 				CEAB76B92A076BF000E963BC /* AppDelegate.swift */,
 				CEAB76BB2A076BF000E963BC /* SceneDelegate.swift */,
 				CEAB76BD2A076BF000E963BC /* ViewController.swift */,
+				CEAB76CF2A0E67EF00E963BC /* Helpers */,
+				CEAB76D82A0E686B00E963BC /* Sceces */,
 				CEAB76BF2A076BF000E963BC /* Main.storyboard */,
 				CEAB76C22A076BF100E963BC /* Assets.xcassets */,
+				CEAB76CD2A0E67D500E963BC /* Tabbar.storyboard */,
 				CEAB76C42A076BF100E963BC /* LaunchScreen.storyboard */,
 				CEAB76C72A076BF100E963BC /* Info.plist */,
 			);
 			path = "Shahn-Provider";
+			sourceTree = "<group>";
+		};
+		CEAB76CF2A0E67EF00E963BC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB77062A0E695700E963BC /* Models */,
+				CEAB76FF2A0E694200E963BC /* Fonts */,
+				CEAB76FD2A0E691C00E963BC /* CustomViews */,
+				CEAB76F22A0E690100E963BC /* Utilities */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CEAB76D82A0E686B00E963BC /* Sceces */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB76DF2A0E689000E963BC /* Auth */,
+			);
+			path = Sceces;
+			sourceTree = "<group>";
+		};
+		CEAB76DF2A0E689000E963BC /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB76DB2A0E688800E963BC /* LoginViewController.swift */,
+				CEAB76D92A0E688700E963BC /* RegistrationViewController.swift */,
+				CEAB76DA2A0E688800E963BC /* ValidationCodeViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		CEAB76F22A0E690100E963BC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB76E82A0E68F200E963BC /* AlertHelper.swift */,
+				CEAB76E52A0E68F200E963BC /* API.swift */,
+				CEAB76E22A0E68F200E963BC /* AttachmentHandler.swift */,
+				CEAB76E42A0E68F200E963BC /* CommonFunctions.swift */,
+				CEAB76E12A0E68F100E963BC /* Extensions+UIView.swift */,
+				CEAB76E02A0E68F100E963BC /* Extestension.swift */,
+				CEAB76E62A0E68F200E963BC /* HeaderView.swift */,
+				CEAB76E32A0E68F200E963BC /* StretchyHeaderLayout.swift */,
+				CEAB76E72A0E68F200E963BC /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CEAB76FD2A0E691C00E963BC /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB76F42A0E691200E963BC /* CustomMarker.swift */,
+				CEAB76F82A0E691300E963BC /* CustomMarker.xib */,
+				CEAB76F62A0E691200E963BC /* customViewsMedia.xcassets */,
+				CEAB76F52A0E691200E963BC /* noDataFoundNip.swift */,
+				CEAB76F32A0E691200E963BC /* noDataFoundNip.xib */,
+				CEAB76F92A0E691300E963BC /* noUserDataNotLoadedNip.swift */,
+				CEAB76F72A0E691200E963BC /* noUserDataNotLoadedNip.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		CEAB76FF2A0E694200E963BC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB77072A0E697300E963BC /* Bahij Janna-Bold.ttf */,
+				CEAB76FE2A0E692800E963BC /* Bahij Janna-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CEAB77062A0E695700E963BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB77002A0E694A00E963BC /* AboutModels.swift */,
+				CEAB77012A0E694A00E963BC /* ErrorModel.swift */,
+				CEAB77022A0E694A00E963BC /* UserModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +265,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = CEAB76AD2A076BF000E963BC;
 			productRefGroup = CEAB76B72A076BF000E963BC /* Products */;
@@ -153,8 +282,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAB77082A0E697400E963BC /* Bahij Janna-Bold.ttf in Resources */,
+				CEAB76CE2A0E67D500E963BC /* Tabbar.storyboard in Resources */,
 				CEAB76C62A076BF100E963BC /* LaunchScreen.storyboard in Resources */,
 				CEAB76C32A076BF100E963BC /* Assets.xcassets in Resources */,
+				CEAB77092A0E697900E963BC /* Bahij Janna-Regular.ttf in Resources */,
 				CEAB76C12A076BF000E963BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,9 +357,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAB77052A0E694A00E963BC /* ErrorModel.swift in Sources */,
+				CEAB76ED2A0E68F200E963BC /* Extensions+UIView.swift in Sources */,
+				CEAB76DE2A0E688800E963BC /* LoginViewController.swift in Sources */,
 				CEAB76BE2A076BF000E963BC /* ViewController.swift in Sources */,
+				CEAB76EC2A0E68F200E963BC /* Extestension.swift in Sources */,
+				CEAB76F12A0E68F200E963BC /* API.swift in Sources */,
+				CEAB76EF2A0E68F200E963BC /* Utilities.swift in Sources */,
+				CEAB76EA2A0E68F200E963BC /* StretchyHeaderLayout.swift in Sources */,
 				CEAB76BA2A076BF000E963BC /* AppDelegate.swift in Sources */,
+				CEAB76EE2A0E68F200E963BC /* CommonFunctions.swift in Sources */,
+				CEAB76DC2A0E688800E963BC /* RegistrationViewController.swift in Sources */,
+				CEAB76FA2A0E691300E963BC /* CustomMarker.swift in Sources */,
 				CEAB76BC2A076BF000E963BC /* SceneDelegate.swift in Sources */,
+				CEAB76EB2A0E68F200E963BC /* AlertHelper.swift in Sources */,
+				CEAB76FB2A0E691300E963BC /* noUserDataNotLoadedNip.swift in Sources */,
+				CEAB76E92A0E68F200E963BC /* AttachmentHandler.swift in Sources */,
+				CEAB77042A0E694A00E963BC /* AboutModels.swift in Sources */,
+				CEAB77032A0E694A00E963BC /* UserModel.swift in Sources */,
+				CEAB76FC2A0E691300E963BC /* noDataFoundNip.swift in Sources */,
+				CEAB76DD2A0E688800E963BC /* ValidationCodeViewController.swift in Sources */,
+				CEAB76F02A0E68F200E963BC /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +388,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEAB76C02A076BF000E963BC /* Base */,
+				CEAB770A2A10D17F00E963BC /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -246,6 +397,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEAB76C52A076BF100E963BC /* Base */,
+				CEAB770B2A10D18000E963BC /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -257,6 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -317,6 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
