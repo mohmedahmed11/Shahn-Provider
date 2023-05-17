@@ -1172,30 +1172,96 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JgP-IR-FOx">
                                 <rect key="frame" x="8" y="111" width="377" height="699"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الرقم المتسلسل" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cec-0w-zOw">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yvC-Jk-ibO">
                                         <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ez8-Dp-40v">
+                                                <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ei-e6-HJN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="4" height="50"/>
+                                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="4" id="OSS-VM-w4X"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الرقم المتسلسل" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wgk-Ed-f4g">
+                                                        <rect key="frame" x="14" y="0.0" width="363" height="50"/>
+                                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="BGColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="J52-Aa-dXD"/>
+                                            <constraint firstItem="Ez8-Dp-40v" firstAttribute="top" secondItem="yvC-Jk-ibO" secondAttribute="top" id="0na-1D-uvx"/>
+                                            <constraint firstAttribute="height" constant="50" id="O1X-QW-qBi"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ez8-Dp-40v" secondAttribute="bottom" id="TI3-Vg-6ul"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ez8-Dp-40v" secondAttribute="trailing" id="iyg-aa-3aQ"/>
+                                            <constraint firstItem="Ez8-Dp-40v" firstAttribute="leading" secondItem="yvC-Jk-ibO" secondAttribute="leading" id="w9w-MY-IQ6"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="وزن الشحن" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c1J-VO-oaC">
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2T-zF-xDn">
                                         <rect key="frame" x="0.0" y="60" width="377" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Zr-FV-BX6">
+                                                <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hID-GQ-hsH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="4" height="50"/>
+                                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="4" id="3wA-JG-Ph3"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="وزن الشحن" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Yl-4y-n18">
+                                                        <rect key="frame" x="14" y="0.0" width="363" height="50"/>
+                                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="BGColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="jDb-mg-29E"/>
+                                            <constraint firstAttribute="trailing" secondItem="4Zr-FV-BX6" secondAttribute="trailing" id="7cs-ln-JMS"/>
+                                            <constraint firstItem="4Zr-FV-BX6" firstAttribute="leading" secondItem="R2T-zF-xDn" secondAttribute="leading" id="MYm-yv-J4W"/>
+                                            <constraint firstAttribute="bottom" secondItem="4Zr-FV-BX6" secondAttribute="bottom" id="c4u-T6-ra7"/>
+                                            <constraint firstAttribute="height" constant="50" id="caG-Q9-ouY"/>
+                                            <constraint firstItem="4Zr-FV-BX6" firstAttribute="top" secondItem="R2T-zF-xDn" secondAttribute="top" id="uK7-z7-JZd"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="مزود الخدمة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4gj-sb-jiW">
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DjD-0h-8wK">
                                         <rect key="frame" x="0.0" y="120" width="377" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yGB-Ea-ncc">
+                                                <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mxg-9a-DzU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="4" height="50"/>
+                                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="4" id="gn2-mm-oOB"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="مزود الخدمة" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KwI-JS-jeG">
+                                                        <rect key="frame" x="14" y="0.0" width="363" height="50"/>
+                                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="BGColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="1h1-nn-wow"/>
+                                            <constraint firstItem="yGB-Ea-ncc" firstAttribute="top" secondItem="DjD-0h-8wK" secondAttribute="top" id="Oxa-gs-wQ3"/>
+                                            <constraint firstAttribute="height" constant="50" id="Sgy-jW-FoK"/>
+                                            <constraint firstItem="yGB-Ea-ncc" firstAttribute="leading" secondItem="DjD-0h-8wK" secondAttribute="leading" id="VpN-oe-XtB"/>
+                                            <constraint firstAttribute="bottom" secondItem="yGB-Ea-ncc" secondAttribute="bottom" id="Xen-Lx-sCB"/>
+                                            <constraint firstAttribute="trailing" secondItem="yGB-Ea-ncc" secondAttribute="trailing" id="reG-dj-dQh"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
-                                    </textField>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGH-WE-THd">
                                         <rect key="frame" x="0.0" y="180" width="377" height="459"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1244,9 +1310,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="إضافة شحنة" id="26f-31-fBl"/>
                     <connections>
-                        <outlet property="provider" destination="4gj-sb-jiW" id="ndd-Nu-Cw3"/>
-                        <outlet property="serialNumber" destination="Cec-0w-zOw" id="mqf-ex-a1n"/>
-                        <outlet property="weight" destination="4gj-sb-jiW" id="SOI-d9-WXX"/>
+                        <outlet property="provider" destination="KwI-JS-jeG" id="1SZ-dU-2Yk"/>
+                        <outlet property="serialNumber" destination="Wgk-Ed-f4g" id="YTv-Dd-lDj"/>
+                        <outlet property="weight" destination="8Yl-4y-n18" id="w3K-BA-hR0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yjc-Qr-AH0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
