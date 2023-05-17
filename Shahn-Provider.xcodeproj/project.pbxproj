@@ -35,6 +35,22 @@
 		CEAB77052A0E694A00E963BC /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77012A0E694A00E963BC /* ErrorModel.swift */; };
 		CEAB77082A0E697400E963BC /* Bahij Janna-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77072A0E697300E963BC /* Bahij Janna-Bold.ttf */; };
 		CEAB77092A0E697900E963BC /* Bahij Janna-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76FE2A0E692800E963BC /* Bahij Janna-Regular.ttf */; };
+		CEAB770D2A10E19E00E963BC /* ProviderInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB770C2A10E19E00E963BC /* ProviderInfoViewController.swift */; };
+		CEAB77102A1116F900E963BC /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB770F2A1116F900E963BC /* ImageCollectionViewCell.swift */; };
+		CEAB77122A134C8700E963BC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77112A134C8700E963BC /* Home.storyboard */; };
+		CEAB77142A134CA200E963BC /* SubProviders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77132A134CA200E963BC /* SubProviders.storyboard */; };
+		CEAB77172A134CEE00E963BC /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77152A134CEE00E963BC /* Setting.storyboard */; };
+		CEAB77182A134CEE00E963BC /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77162A134CEE00E963BC /* Account.storyboard */; };
+		CEAB771A2A134D1900E963BC /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77192A134D1900E963BC /* UserAccountViewController.swift */; };
+		CEAB771E2A134D4000E963BC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB771C2A134D4000E963BC /* AboutViewController.swift */; };
+		CEAB771F2A134D4000E963BC /* AddCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB771D2A134D4000E963BC /* AddCommentViewController.swift */; };
+		CEAB77232A1350D400E963BC /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77212A1350D400E963BC /* OrderDetailsViewController.swift */; };
+		CEAB77242A1350D400E963BC /* OrderLoadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77222A1350D400E963BC /* OrderLoadsViewController.swift */; };
+		CEAB77272A13513B00E963BC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77262A13513B00E963BC /* HomeViewController.swift */; };
+		CEAB77292A1351A100E963BC /* ChargesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77282A1351A100E963BC /* ChargesTableViewCell.swift */; };
+		CEAB772E2A13521D00E963BC /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB772D2A13521D00E963BC /* OrderTableViewCell.swift */; };
+		CEAB77302A135A5600E963BC /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB772F2A135A5600E963BC /* TabbarController.swift */; };
+		CEAB77352A14FC4600E963BC /* AddLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77342A14FC4600E963BC /* AddLoadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +91,22 @@
 		CEAB77072A0E697300E963BC /* Bahij Janna-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij Janna-Bold.ttf"; sourceTree = "<group>"; };
 		CEAB770A2A10D17F00E963BC /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		CEAB770B2A10D18000E963BC /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CEAB770C2A10E19E00E963BC /* ProviderInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoViewController.swift; sourceTree = "<group>"; };
+		CEAB770F2A1116F900E963BC /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEAB77112A134C8700E963BC /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		CEAB77132A134CA200E963BC /* SubProviders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SubProviders.storyboard; sourceTree = "<group>"; };
+		CEAB77152A134CEE00E963BC /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		CEAB77162A134CEE00E963BC /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		CEAB77192A134D1900E963BC /* UserAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewController.swift; sourceTree = "<group>"; };
+		CEAB771C2A134D4000E963BC /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		CEAB771D2A134D4000E963BC /* AddCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCommentViewController.swift; sourceTree = "<group>"; };
+		CEAB77212A1350D400E963BC /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
+		CEAB77222A1350D400E963BC /* OrderLoadsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderLoadsViewController.swift; sourceTree = "<group>"; };
+		CEAB77262A13513B00E963BC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CEAB77282A1351A100E963BC /* ChargesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargesTableViewCell.swift; sourceTree = "<group>"; };
+		CEAB772D2A13521D00E963BC /* OrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		CEAB772F2A135A5600E963BC /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		CEAB77342A14FC4600E963BC /* AddLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoadViewController.swift; sourceTree = "<group>"; };
 		D9779CA92DC9F519B4B84B3C /* Pods-Shahn-Provider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahn-Provider.release.xcconfig"; path = "Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +168,10 @@
 				CEAB76BF2A076BF000E963BC /* Main.storyboard */,
 				CEAB76C22A076BF100E963BC /* Assets.xcassets */,
 				CEAB76CD2A0E67D500E963BC /* Tabbar.storyboard */,
+				CEAB77112A134C8700E963BC /* Home.storyboard */,
+				CEAB77132A134CA200E963BC /* SubProviders.storyboard */,
+				CEAB77162A134CEE00E963BC /* Account.storyboard */,
+				CEAB77152A134CEE00E963BC /* Setting.storyboard */,
 				CEAB76C42A076BF100E963BC /* LaunchScreen.storyboard */,
 				CEAB76C72A076BF100E963BC /* Info.plist */,
 			);
@@ -156,7 +192,12 @@
 		CEAB76D82A0E686B00E963BC /* Sceces */ = {
 			isa = PBXGroup;
 			children = (
+				CEAB770E2A1116DD00E963BC /* Cells */,
+				CEAB77312A135A5900E963BC /* Tabbar */,
 				CEAB76DF2A0E689000E963BC /* Auth */,
+				CEAB77252A1350DA00E963BC /* Home */,
+				CEAB771B2A134D1E00E963BC /* Account */,
+				CEAB77202A134D4700E963BC /* Setting */,
 			);
 			path = Sceces;
 			sourceTree = "<group>";
@@ -166,6 +207,7 @@
 			children = (
 				CEAB76DB2A0E688800E963BC /* LoginViewController.swift */,
 				CEAB76D92A0E688700E963BC /* RegistrationViewController.swift */,
+				CEAB770C2A10E19E00E963BC /* ProviderInfoViewController.swift */,
 				CEAB76DA2A0E688800E963BC /* ValidationCodeViewController.swift */,
 			);
 			path = Auth;
@@ -218,6 +260,61 @@
 				CEAB77022A0E694A00E963BC /* UserModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CEAB770E2A1116DD00E963BC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB770F2A1116F900E963BC /* ImageCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CEAB771B2A134D1E00E963BC /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB77192A134D1900E963BC /* UserAccountViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		CEAB77202A134D4700E963BC /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB771C2A134D4000E963BC /* AboutViewController.swift */,
+				CEAB771D2A134D4000E963BC /* AddCommentViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		CEAB77252A1350DA00E963BC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB772A2A1351A400E963BC /* Cells */,
+				CEAB77262A13513B00E963BC /* HomeViewController.swift */,
+				CEAB77212A1350D400E963BC /* OrderDetailsViewController.swift */,
+				CEAB77342A14FC4600E963BC /* AddLoadViewController.swift */,
+				CEAB77222A1350D400E963BC /* OrderLoadsViewController.swift */,
+			);
+			name = Home;
+			path = "آHome";
+			sourceTree = "<group>";
+		};
+		CEAB772A2A1351A400E963BC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB772D2A13521D00E963BC /* OrderTableViewCell.swift */,
+				CEAB77282A1351A100E963BC /* ChargesTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CEAB77312A135A5900E963BC /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB772F2A135A5600E963BC /* TabbarController.swift */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,11 +379,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAB77122A134C8700E963BC /* Home.storyboard in Resources */,
 				CEAB77082A0E697400E963BC /* Bahij Janna-Bold.ttf in Resources */,
+				CEAB77182A134CEE00E963BC /* Account.storyboard in Resources */,
 				CEAB76CE2A0E67D500E963BC /* Tabbar.storyboard in Resources */,
 				CEAB76C62A076BF100E963BC /* LaunchScreen.storyboard in Resources */,
 				CEAB76C32A076BF100E963BC /* Assets.xcassets in Resources */,
+				CEAB77172A134CEE00E963BC /* Setting.storyboard in Resources */,
 				CEAB77092A0E697900E963BC /* Bahij Janna-Regular.ttf in Resources */,
+				CEAB77142A134CA200E963BC /* SubProviders.storyboard in Resources */,
 				CEAB76C12A076BF000E963BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,23 +459,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEAB77052A0E694A00E963BC /* ErrorModel.swift in Sources */,
+				CEAB77302A135A5600E963BC /* TabbarController.swift in Sources */,
 				CEAB76ED2A0E68F200E963BC /* Extensions+UIView.swift in Sources */,
 				CEAB76DE2A0E688800E963BC /* LoginViewController.swift in Sources */,
+				CEAB77352A14FC4600E963BC /* AddLoadViewController.swift in Sources */,
 				CEAB76BE2A076BF000E963BC /* ViewController.swift in Sources */,
 				CEAB76EC2A0E68F200E963BC /* Extestension.swift in Sources */,
+				CEAB771A2A134D1900E963BC /* UserAccountViewController.swift in Sources */,
 				CEAB76F12A0E68F200E963BC /* API.swift in Sources */,
 				CEAB76EF2A0E68F200E963BC /* Utilities.swift in Sources */,
 				CEAB76EA2A0E68F200E963BC /* StretchyHeaderLayout.swift in Sources */,
 				CEAB76BA2A076BF000E963BC /* AppDelegate.swift in Sources */,
 				CEAB76EE2A0E68F200E963BC /* CommonFunctions.swift in Sources */,
+				CEAB77232A1350D400E963BC /* OrderDetailsViewController.swift in Sources */,
 				CEAB76DC2A0E688800E963BC /* RegistrationViewController.swift in Sources */,
 				CEAB76FA2A0E691300E963BC /* CustomMarker.swift in Sources */,
 				CEAB76BC2A076BF000E963BC /* SceneDelegate.swift in Sources */,
 				CEAB76EB2A0E68F200E963BC /* AlertHelper.swift in Sources */,
 				CEAB76FB2A0E691300E963BC /* noUserDataNotLoadedNip.swift in Sources */,
 				CEAB76E92A0E68F200E963BC /* AttachmentHandler.swift in Sources */,
+				CEAB772E2A13521D00E963BC /* OrderTableViewCell.swift in Sources */,
+				CEAB77102A1116F900E963BC /* ImageCollectionViewCell.swift in Sources */,
+				CEAB77272A13513B00E963BC /* HomeViewController.swift in Sources */,
+				CEAB77242A1350D400E963BC /* OrderLoadsViewController.swift in Sources */,
+				CEAB771E2A134D4000E963BC /* AboutViewController.swift in Sources */,
+				CEAB770D2A10E19E00E963BC /* ProviderInfoViewController.swift in Sources */,
 				CEAB77042A0E694A00E963BC /* AboutModels.swift in Sources */,
 				CEAB77032A0E694A00E963BC /* UserModel.swift in Sources */,
+				CEAB77292A1351A100E963BC /* ChargesTableViewCell.swift in Sources */,
+				CEAB771F2A134D4000E963BC /* AddCommentViewController.swift in Sources */,
 				CEAB76FC2A0E691300E963BC /* noDataFoundNip.swift in Sources */,
 				CEAB76DD2A0E688800E963BC /* ValidationCodeViewController.swift in Sources */,
 				CEAB76F02A0E68F200E963BC /* HeaderView.swift in Sources */,
@@ -456,7 +569,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -511,7 +624,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -532,6 +645,7 @@
 				DEVELOPMENT_TEAM = PP486X33A2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Shahn-Provider/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "شاحن-مزود خدمة";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -565,6 +679,7 @@
 				DEVELOPMENT_TEAM = PP486X33A2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Shahn-Provider/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "شاحن-مزود خدمة";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

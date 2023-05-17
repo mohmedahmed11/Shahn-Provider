@@ -25,7 +25,8 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        setTimer()
+        self.performSegue(withIdentifier: "toHome", sender: nil)
+//        setTimer()
     }
     
     
