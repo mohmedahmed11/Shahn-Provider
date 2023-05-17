@@ -51,6 +51,9 @@
 		CEAB772E2A13521D00E963BC /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB772D2A13521D00E963BC /* OrderTableViewCell.swift */; };
 		CEAB77302A135A5600E963BC /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB772F2A135A5600E963BC /* TabbarController.swift */; };
 		CEAB77352A14FC4600E963BC /* AddLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77342A14FC4600E963BC /* AddLoadViewController.swift */; };
+		CEAB773A2A14FDCE00E963BC /* SubProvidersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77392A14FDCE00E963BC /* SubProvidersViewController.swift */; };
+		CEAB773C2A14FE4900E963BC /* ProviderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB773B2A14FE4900E963BC /* ProviderTableViewCell.swift */; };
+		CEAB773E2A15075600E963BC /* AddSubProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB773D2A15075600E963BC /* AddSubProviderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +110,9 @@
 		CEAB772D2A13521D00E963BC /* OrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 		CEAB772F2A135A5600E963BC /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
 		CEAB77342A14FC4600E963BC /* AddLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoadViewController.swift; sourceTree = "<group>"; };
+		CEAB77392A14FDCE00E963BC /* SubProvidersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubProvidersViewController.swift; sourceTree = "<group>"; };
+		CEAB773B2A14FE4900E963BC /* ProviderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderTableViewCell.swift; sourceTree = "<group>"; };
+		CEAB773D2A15075600E963BC /* AddSubProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubProviderViewController.swift; sourceTree = "<group>"; };
 		D9779CA92DC9F519B4B84B3C /* Pods-Shahn-Provider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahn-Provider.release.xcconfig"; path = "Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +202,7 @@
 				CEAB77312A135A5900E963BC /* Tabbar */,
 				CEAB76DF2A0E689000E963BC /* Auth */,
 				CEAB77252A1350DA00E963BC /* Home */,
+				CEAB77362A14FD9800E963BC /* SubProvider */,
 				CEAB771B2A134D1E00E963BC /* Account */,
 				CEAB77202A134D4700E963BC /* Setting */,
 			);
@@ -315,6 +322,24 @@
 				CEAB772F2A135A5600E963BC /* TabbarController.swift */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		CEAB77362A14FD9800E963BC /* SubProvider */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB77372A14FDB300E963BC /* Cell */,
+				CEAB77392A14FDCE00E963BC /* SubProvidersViewController.swift */,
+				CEAB773D2A15075600E963BC /* AddSubProviderViewController.swift */,
+			);
+			path = SubProvider;
+			sourceTree = "<group>";
+		};
+		CEAB77372A14FDB300E963BC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB773B2A14FE4900E963BC /* ProviderTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,6 +493,7 @@
 				CEAB771A2A134D1900E963BC /* UserAccountViewController.swift in Sources */,
 				CEAB76F12A0E68F200E963BC /* API.swift in Sources */,
 				CEAB76EF2A0E68F200E963BC /* Utilities.swift in Sources */,
+				CEAB773A2A14FDCE00E963BC /* SubProvidersViewController.swift in Sources */,
 				CEAB76EA2A0E68F200E963BC /* StretchyHeaderLayout.swift in Sources */,
 				CEAB76BA2A076BF000E963BC /* AppDelegate.swift in Sources */,
 				CEAB76EE2A0E68F200E963BC /* CommonFunctions.swift in Sources */,
@@ -479,9 +505,11 @@
 				CEAB76FB2A0E691300E963BC /* noUserDataNotLoadedNip.swift in Sources */,
 				CEAB76E92A0E68F200E963BC /* AttachmentHandler.swift in Sources */,
 				CEAB772E2A13521D00E963BC /* OrderTableViewCell.swift in Sources */,
+				CEAB773E2A15075600E963BC /* AddSubProviderViewController.swift in Sources */,
 				CEAB77102A1116F900E963BC /* ImageCollectionViewCell.swift in Sources */,
 				CEAB77272A13513B00E963BC /* HomeViewController.swift in Sources */,
 				CEAB77242A1350D400E963BC /* OrderLoadsViewController.swift in Sources */,
+				CEAB773C2A14FE4900E963BC /* ProviderTableViewCell.swift in Sources */,
 				CEAB771E2A134D4000E963BC /* AboutViewController.swift in Sources */,
 				CEAB770D2A10E19E00E963BC /* ProviderInfoViewController.swift in Sources */,
 				CEAB77042A0E694A00E963BC /* AboutModels.swift in Sources */,
