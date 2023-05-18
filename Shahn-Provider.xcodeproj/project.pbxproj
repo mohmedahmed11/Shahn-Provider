@@ -54,6 +54,11 @@
 		CEAB773A2A14FDCE00E963BC /* SubProvidersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77392A14FDCE00E963BC /* SubProvidersViewController.swift */; };
 		CEAB773C2A14FE4900E963BC /* ProviderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB773B2A14FE4900E963BC /* ProviderTableViewCell.swift */; };
 		CEAB773E2A15075600E963BC /* AddSubProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB773D2A15075600E963BC /* AddSubProviderViewController.swift */; };
+		CEAB77402A16891300E963BC /* OrdersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB773F2A16891300E963BC /* OrdersPresenter.swift */; };
+		CEAB77412A168DC300E963BC /* customViewsMedia.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76F62A0E691200E963BC /* customViewsMedia.xcassets */; };
+		CEAB77422A168DC300E963BC /* noDataFoundNip.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76F32A0E691200E963BC /* noDataFoundNip.xib */; };
+		CEAB77432A168DC300E963BC /* CustomMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76F82A0E691300E963BC /* CustomMarker.xib */; };
+		CEAB77442A168DC300E963BC /* noUserDataNotLoadedNip.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76F72A0E691200E963BC /* noUserDataNotLoadedNip.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +118,7 @@
 		CEAB77392A14FDCE00E963BC /* SubProvidersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubProvidersViewController.swift; sourceTree = "<group>"; };
 		CEAB773B2A14FE4900E963BC /* ProviderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderTableViewCell.swift; sourceTree = "<group>"; };
 		CEAB773D2A15075600E963BC /* AddSubProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubProviderViewController.swift; sourceTree = "<group>"; };
+		CEAB773F2A16891300E963BC /* OrdersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersPresenter.swift; sourceTree = "<group>"; };
 		D9779CA92DC9F519B4B84B3C /* Pods-Shahn-Provider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahn-Provider.release.xcconfig"; path = "Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -299,6 +305,7 @@
 			children = (
 				CEAB772A2A1351A400E963BC /* Cells */,
 				CEAB77262A13513B00E963BC /* HomeViewController.swift */,
+				CEAB773F2A16891300E963BC /* OrdersPresenter.swift */,
 				CEAB77212A1350D400E963BC /* OrderDetailsViewController.swift */,
 				CEAB77342A14FC4600E963BC /* AddLoadViewController.swift */,
 				CEAB77222A1350D400E963BC /* OrderLoadsViewController.swift */,
@@ -404,14 +411,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAB77412A168DC300E963BC /* customViewsMedia.xcassets in Resources */,
 				CEAB77122A134C8700E963BC /* Home.storyboard in Resources */,
+				CEAB77442A168DC300E963BC /* noUserDataNotLoadedNip.xib in Resources */,
 				CEAB77082A0E697400E963BC /* Bahij Janna-Bold.ttf in Resources */,
 				CEAB77182A134CEE00E963BC /* Account.storyboard in Resources */,
 				CEAB76CE2A0E67D500E963BC /* Tabbar.storyboard in Resources */,
+				CEAB77432A168DC300E963BC /* CustomMarker.xib in Resources */,
 				CEAB76C62A076BF100E963BC /* LaunchScreen.storyboard in Resources */,
 				CEAB76C32A076BF100E963BC /* Assets.xcassets in Resources */,
 				CEAB77172A134CEE00E963BC /* Setting.storyboard in Resources */,
 				CEAB77092A0E697900E963BC /* Bahij Janna-Regular.ttf in Resources */,
+				CEAB77422A168DC300E963BC /* noDataFoundNip.xib in Resources */,
 				CEAB77142A134CA200E963BC /* SubProviders.storyboard in Resources */,
 				CEAB76C12A076BF000E963BC /* Main.storyboard in Resources */,
 			);
@@ -485,6 +496,7 @@
 			files = (
 				CEAB77052A0E694A00E963BC /* ErrorModel.swift in Sources */,
 				CEAB77302A135A5600E963BC /* TabbarController.swift in Sources */,
+				CEAB77402A16891300E963BC /* OrdersPresenter.swift in Sources */,
 				CEAB76ED2A0E68F200E963BC /* Extensions+UIView.swift in Sources */,
 				CEAB76DE2A0E688800E963BC /* LoginViewController.swift in Sources */,
 				CEAB77352A14FC4600E963BC /* AddLoadViewController.swift in Sources */,

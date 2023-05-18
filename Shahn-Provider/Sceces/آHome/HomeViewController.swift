@@ -6,17 +6,31 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var optionsSegment: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    
+    var orders = [JSON]()
+    var filtredOrders = [JSON]()
+    var presenter: OrdersPresenter?
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        presenter = OrdersPresenter(self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.customNavJannaFont()
         setupSegments()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.presenter?.getOrders()
     }
     
     func setupSegments() {
@@ -27,6 +41,15 @@ class HomeViewController: UIViewController {
         optionsSegment.setTitleTextAttributes(fontAttributes, for: .normal)
     }
     
+    @IBAction func optionChange(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            self.filtredOrders = orders
+        }else {
+            self.filtredOrders = orders.filter({ $0["status"].intValue == sender.selectedSegmentIndex - 1 })
+        }
+        
+        tableView.reloadData()
+    }
 
     /*
     // MARK: - Navigation
@@ -40,13 +63,54 @@ class HomeViewController: UIViewController {
 
 }
 
+extension HomeViewController: OrdersListDelegate {
+    func didReciveOrders(with result: Result<JSON, Error>) {
+        switch result {
+        case .success(let data):
+            if data["operation"].boolValue == true {
+                self.orders = data["data"].arrayValue
+                if !self.orders.isEmpty {
+                    self.filtredOrders = orders
+                    self.tableView.backgroundView = nil
+                }else {
+                    self.addNoData()
+                }
+            }else {
+                self.addNoData()
+            }
+            self.tableView.reloadData()
+        case .failure(let error):
+            self.faildLoading(icon: UIImage(named: "reload"), content: "حدث خطأ اعد المحاولة")
+            print(error)
+        }
+    }
+    
+    func addNoData() {
+        let error = noDataFoundNip()
+        error.frame.size.height = 200
+        error.content.text = "لايوجد طلب حتى الآن"
+        self.tableView.backgroundView = error
+    }
+    
+    func faildLoading(icon: UIImage?, content: String) {
+        let error = noUserDataNotLoadedNip(nil, content)
+        error.frame = self.tabBarController?.tabBar.frame ?? .zero
+        error.reloadData = {
+            self.presenter?.getOrders()
+            error.removeFromSuperview()
+        }
+        self.tabBarController?.view.addSubview(error)
+    }
+}
+
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return filtredOrders.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! OrderTableViewCell
+        cell.setUI(with: filtredOrders[indexPath.row])
         return cell
     }
 }

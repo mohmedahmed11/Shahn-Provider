@@ -59,6 +59,9 @@
                                     <segment title="تم التنفيذ"/>
                                     <segment title="ملغي"/>
                                 </segments>
+                                <connections>
+                                    <action selector="optionChange:" destination="Brb-5h-IFH" eventType="valueChanged" id="Xa6-hf-H3x"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Rq3-es-QeM">
                                 <rect key="frame" x="8" y="153" width="377" height="657"/>
@@ -157,9 +160,11 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="date" destination="gAU-Xh-5xw" id="14Y-nH-MZg"/>
-                                            <outlet property="orderId" destination="Aqd-KR-cON" id="bUF-PP-0SB"/>
-                                            <outlet property="status" destination="5CS-by-cc6" id="p9Z-Xm-fci"/>
+                                            <outlet property="orderId" destination="ORq-zc-JsY" id="ypi-bK-LF8"/>
+                                            <outlet property="status" destination="Aqd-KR-cON" id="8Mu-aU-93y"/>
                                             <outlet property="type" destination="HYD-yL-dZT" id="4GF-KA-gP2"/>
+                                            <outlet property="wight" destination="5CS-by-cc6" id="0Ms-lq-G4v"/>
+                                            <outlet property="wightLbl" destination="YP0-Rp-jMp" id="IHN-Z7-33h"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

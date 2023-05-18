@@ -677,7 +677,6 @@ enum Glubal {
     case categories
     case sms
     case providers
-    case createOrder
     case getOrders(userId: Int)
     case offersStatus
     case inquiries
@@ -725,8 +724,6 @@ extension Glubal: Endpoint {
             return "sms_api.php"
         case .providers:
             return "provider/show/sub_providers.php"
-        case .createOrder:
-            return "provider/write/orders.php"
         case .getOrders(let userID):
             return "provider/show/orders.php?user_id=\(userID)&action=all"
         case .offersStatus:
