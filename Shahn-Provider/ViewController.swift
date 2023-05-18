@@ -20,13 +20,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.customNavJannaFont()
         self.reloadBtn.isHidden = true
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.performSegue(withIdentifier: "toHome", sender: nil)
-//        setTimer()
+        setTimer()
     }
     
     

@@ -714,9 +714,9 @@ extension Glubal: Endpoint {
         case .about:
             return "show/about.php"
         case .users:
-            return "write/users.php"
+            return "provider/write/users.php"
         case .getUser:
-            return "show/user.php"
+            return "provider/show/user.php"
         case .cities:
             return "show/cities.php"
         case .categories:
@@ -724,13 +724,13 @@ extension Glubal: Endpoint {
         case .sms:
             return "sms_api.php"
         case .providers:
-            return "show/providers.php"
+            return "provider/show/sub_providers.php"
         case .createOrder:
-            return "write/orders.php"
+            return "provider/write/orders.php"
         case .getOrders(let userID):
-            return "show/orders.php?user_id=\(userID)&action=all"
+            return "provider/show/orders.php?user_id=\(userID)&action=all"
         case .offersStatus:
-            return "write/offers_status.php"
+            return "provider/write/offers_status.php"
         case .inquiries:
             return "show/inquiries.php"
         case .createInquiry:
@@ -758,7 +758,8 @@ extension Glubal: Endpoint {
 
 struct AppManager {
     static var shared = AppManager()
-    var authUser: User?
+    var authUser: User!
+    var userJSON: JSON!
     var about: About?
     var wallet: JSON?
     var sms: SMS?

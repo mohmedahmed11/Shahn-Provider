@@ -29,7 +29,7 @@ class ValidationCodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
-        self.phone.text = AppManager.shared.authUser!.phone
+        self.phone.text = "+966\(AppManager.shared.authUser.phone!)"
        
         // Do any additional setup after loading the view.
     }

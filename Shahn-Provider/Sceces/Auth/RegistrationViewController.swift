@@ -112,14 +112,37 @@ class RegistrationViewController: UIViewController {
             return
         }
         
-        sendData()
+        sendCheckPhone()
     }
     
-
-    func sendData() {
+    func sendCheckPhone() {
         
-        AppManager.shared.authUser = User(id: "0", name: name.text!, phone: self.userPhone, type: self.type, action: "register")
-        AppManager.shared.authUser?.userCode = Int.random(in: 1111 ... 9999)
+        ProgressHUD.animationType = .circleStrokeSpin
+        ProgressHUD.show()
+        NetworkManager.instance.request(with: "\(Glubal.baseurl.path)\(Glubal.users.path)", method: .post, parameters: ["phone": "\(self.userPhone)", "action": "check_phone"],  decodingType: JSON.self, errorModel: ErrorModel.self) { result in
+            ProgressHUD.dismiss()
+            switch result {
+            case .success(let data):
+                if data["operation"].boolValue == true {
+                    self.sendSMS()
+                }else {
+                    AlertHelper.showAlert(message: "عفواً رقم الهاتف مسجل مسبقاً")
+                }
+            case .failure(let error):
+                AlertHelper.showAlert(message: "عفواً فشل التسجيل حاول مرة أخرى")
+                print(error.localizedDescription)
+            }
+        }
+        
+        
+            
+    }
+
+    func sendSMS() {
+        
+        AppManager.shared.userJSON = JSON(["name": self.name.text!, "phone": "\(self.userPhone)", "type": self.type, "action": "action"])
+        AppManager.shared.authUser = User(id: "0", name: name.text!, phone: "\(self.userPhone)", type: self.type, action: "register")
+        AppManager.shared.authUser.userCode = Int.random(in: 1111 ... 9999)
         
         guard let user = AppManager.shared.authUser else {
             return

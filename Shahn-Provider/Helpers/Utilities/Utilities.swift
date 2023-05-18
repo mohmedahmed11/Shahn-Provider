@@ -7,5 +7,5 @@
 
 import Foundation
 
-let APP_NAME = "شحن - مقدم خدمة"
+let APP_NAME = "شاحن - مقدم خدمة"
 var accessToken = ""
