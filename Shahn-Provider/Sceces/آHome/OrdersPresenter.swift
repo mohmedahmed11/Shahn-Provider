@@ -17,9 +17,20 @@ protocol PricingOffersStatusDelegate {
     func didStatusChanged(with result: Result<JSON, Error>)
 }
 
+protocol LoadsDelegate {
+    func didReciveLoads(with result: Result<JSON, Error>)
+}
+
+protocol AddLoadDelegate {
+    func didAddLoad(with result: Result<JSON, Error>)
+    func didReciveDrivers(with result: Result<JSON, Error>)
+}
+
 class OrdersPresenter {
     var ordersViewController: OrdersListDelegate?
     var pricingViewController: PricingOffersStatusDelegate?
+    var addLoadViewController: AddLoadDelegate?
+    var LoadsViewController: LoadsDelegate?
     
     convenience init(_ viewController: OrdersListDelegate) {
         self.init()
@@ -30,6 +41,16 @@ class OrdersPresenter {
     convenience init(_ viewController: PricingOffersStatusDelegate) {
         self.init()
         self.pricingViewController = viewController
+    }
+    
+    convenience init(_ viewController: AddLoadDelegate) {
+        self.init()
+        self.addLoadViewController = viewController
+    }
+    
+    convenience init(_ viewController: LoadsDelegate) {
+        self.init()
+        self.LoadsViewController = viewController
     }
     
     func getOrders() {
@@ -72,6 +93,50 @@ class OrdersPresenter {
                 self.pricingViewController?.didStatusChanged(with: .success(data))
             case .failure(let error):
                 self.pricingViewController?.didStatusChanged(with: .failure(error))
+            }
+        }
+    }
+    
+    func getLoads(id: Int) {
+        guard let request = Glubal.getOrderLoads(offerId: id).getRequest() else {return}
+        startProgress()
+        NetworkManager.instance.request(with: request, decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
+            guard let self = self else { return }
+            self.stopProgress()
+            switch result {
+            case .success(let data):
+                self.LoadsViewController?.didReciveLoads(with: .success(data))
+            case .failure(let error):
+                self.LoadsViewController?.didReciveLoads(with: .failure(error))
+            }
+        }
+    }
+    
+    func addLoad(with parameters: [String: String]) {
+        startProgress()
+        NetworkManager.instance.request(with: "\(Glubal.baseurl.path)\(Glubal.addLoad.path)", method: .post, parameters: parameters,  decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
+            guard let self = self else { return }
+            self.stopProgress()
+            switch result {
+            case .success(let data):
+                self.addLoadViewController?.didAddLoad(with: .success(data))
+            case .failure(let error):
+                self.addLoadViewController?.didAddLoad(with: .failure(error))
+            }
+        }
+    }
+    
+    func getSubProviders() {
+        guard let request = Glubal.getSubProviders(userId: UserDefaults.standard.integer(forKey: "userIsIn")).getRequest() else {return}
+        startProgress()
+        NetworkManager.instance.request(with: request, decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
+            guard let self = self else { return }
+            self.stopProgress()
+            switch result {
+            case .success(let data):
+                self.addLoadViewController?.didReciveDrivers(with: .success(data))
+            case .failure(let error):
+                self.addLoadViewController?.didReciveDrivers(with: .failure(error))
             }
         }
     }

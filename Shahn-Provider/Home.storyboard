@@ -142,7 +142,6 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <connections>
                                                     <action selector="submit" destination="brL-X2-rSL" eventType="touchUpInside" id="YhE-kZ-iEP"/>
-                                                    <action selector="submitAction" destination="pOM-De-IBB" eventType="touchUpInside" id="G1e-Fz-qjj"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1240,15 +1239,18 @@
                                 <rect key="frame" x="277" y="0.0" width="100" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إضافة شحنة" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjp-1P-8kr">
-                                        <rect key="frame" x="4" y="0.0" width="77.333333333333329" height="44"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إضافة +" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjp-1P-8kr">
+                                        <rect key="frame" x="4" y="0.0" width="92" height="44"/>
                                         <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1x-RW-o08">
-                                        <rect key="frame" x="0.0" y="0.0" width="85.333333333333329" height="44"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="addLoad" destination="iuc-1A-aUs" eventType="touchUpInside" id="tQO-t8-sB7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="PrimaryColor"/>
@@ -1273,7 +1275,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wB-vx-dJb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3569" y="-28"/>
+            <point key="canvasLocation" x="3568.7022900763359" y="-28.169014084507044"/>
         </scene>
         <!--إضافة شحنة-->
         <scene sceneID="ff6-hw-vZi">
@@ -1303,6 +1305,9 @@
                                                         <rect key="frame" x="14" y="0.0" width="363" height="50"/>
                                                         <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                        <connections>
+                                                            <action selector="valueChanged:" destination="pOM-De-IBB" eventType="editingChanged" id="3lq-3N-ft9"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -1333,6 +1338,9 @@
                                                         <rect key="frame" x="14" y="0.0" width="363" height="50"/>
                                                         <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                        <connections>
+                                                            <action selector="valueChanged:" destination="pOM-De-IBB" eventType="editingChanged" id="l80-hf-vbz"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -1363,6 +1371,9 @@
                                                         <rect key="frame" x="14" y="0.0" width="363" height="50"/>
                                                         <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="pOM-De-IBB" id="Ci3-DO-uvp"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>

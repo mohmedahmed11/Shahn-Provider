@@ -144,7 +144,7 @@ class OrderDetailsViewController: UIViewController {
             vc.delegate = self
         }else if segue.identifier == "charges" {
             let vc = segue.destination as! OrderLoadsViewController
-            vc.charges = order["charges"].arrayValue
+            vc.order = order
         }
         // Pass the selected object to the new view controller.
     }

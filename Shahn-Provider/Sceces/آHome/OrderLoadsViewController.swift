@@ -14,6 +14,14 @@ class OrderLoadsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var charges: [JSON] = []
+    var order: JSON!
+    
+    var presenter: OrdersPresenter?
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        presenter = OrdersPresenter(self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +29,67 @@ class OrderLoadsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        presenter?.getLoads(id: order["offer_id"].intValue)
+    }
+    
+    @IBAction func addLoad() {
+        self.performSegue(withIdentifier: "addLoad", sender: nil)
+    }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
+        if segue.identifier == "addLoad" {
+            let vc = segue.destination as! AddLoadViewController
+            vc.order = order
+        }
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
+}
+
+extension OrderLoadsViewController: LoadsDelegate {
+    func didReciveLoads(with result: Result<JSON, Error>) {
+        switch result {
+        case .success(let data):
+            if data["operation"].boolValue == true {
+                if !data["data"].arrayValue.isEmpty {
+                    self.charges = data["data"].arrayValue
+                    self.tableView.tableFooterView = nil
+                } else {
+                    self.addNoData()
+                }
+            }else {
+                self.addNoData()
+            }
+            self.tableView.reloadData()
+        case .failure(let error):
+            self.faildLoading(icon: UIImage(named: "reload"), content: "حدث خطأ اعد المحاولة")
+            print(error)
+        }
+    }
+    
+    func addNoData() {
+        let error = noDataFoundNip()
+        error.frame.size.height = 200
+        error.content.text = "لاتوجد شحنات"
+        self.tableView.backgroundView = error
+    }
+    
+    func faildLoading(icon: UIImage?, content: String) {
+        let error = noUserDataNotLoadedNip(nil, content)
+        error.frame = self.tabBarController?.tabBar.frame ?? .zero
+        error.reloadData = {
+            self.presenter?.getOrders()
+            error.removeFromSuperview()
+        }
+        self.tabBarController?.view.addSubview(error)
+    }
 }
 
 extension OrderLoadsViewController: UITableViewDelegate, UITableViewDataSource {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class AddLoadViewController: UIViewController {
 
@@ -13,9 +14,23 @@ class AddLoadViewController: UIViewController {
     @IBOutlet weak var weight: UITextField!
     @IBOutlet weak var provider: UITextField!
     
+    var presenter: OrdersPresenter?
+    
+    var drivers = [JSON]()
+    var order: JSON!
+    var selectedDriverId: Int = 0
+    var pickerView = UIPickerView()
+    var currentTextField = UITextField()
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        presenter = OrdersPresenter(self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        hideKeyboardWhenTappedAround()
+        presenter?.getSubProviders()
         // Do any additional setup after loading the view.
     }
     
@@ -36,7 +51,7 @@ class AddLoadViewController: UIViewController {
     }
 
     func sendData() {
-        
+        presenter?.addLoad(with: ["order_id": order["id"].stringValue, "offer_id": order["offer_id"].stringValue,"driver_id": "\(selectedDriverId)","wight": weight.text!,"number": serialNumber.text!, "action": "create"])
     }
     
     /*
@@ -49,4 +64,86 @@ class AddLoadViewController: UIViewController {
     }
     */
 
+}
+
+extension AddLoadViewController: AddLoadDelegate {
+    func didAddLoad(with result: Result<SwiftyJSON.JSON, Error>) {
+        switch result {
+        case .success(let data):
+            if data["operation"].boolValue == true {
+                self.navigationController?.popViewController(animated: true)
+            }else {
+                AlertHelper.showAlert(message: "عفوا حاول مرة أخري")
+            }
+        case .failure(let u):
+            AlertHelper.showAlert(message: "عفوا حاول مرة أخري")
+            print(u.localizedDescription)
+        }
+    }
+    
+    func didReciveDrivers(with result: Result<SwiftyJSON.JSON, Error>) {
+        switch result {
+        case .success(let data):
+            if data["operation"].boolValue == true {
+                self.drivers = data["data"].arrayValue
+            }
+        case .failure(let u):
+            print(u.localizedDescription)
+        }
+    }
+    
+    
+}
+
+extension AddLoadViewController:  UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    @IBAction func valueChanged(_ textField: UITextField) {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.locale = Locale(identifier: "EN")
+        if let finalText = numberFormatter.number(from: "\(textField.text!)")
+        {
+            textField.text = finalText.stringValue
+        }
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        currentTextField = textField
+        if currentTextField == provider {
+            if drivers.isEmpty {
+                return
+            }else {
+                provider.inputView = pickerView
+            }
+        }
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if currentTextField == provider {
+            return self.drivers.count
+        }
+        return 0
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if currentTextField == provider {
+            return self.drivers[row]["name"].string
+        }
+        
+        return ""
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if currentTextField == provider {
+            self.selectedDriverId = self.drivers[row]["id"].intValue
+            self.provider.text = self.drivers[row]["name"].string
+        }
+        self.view.endEditing(true)
+    }
 }
