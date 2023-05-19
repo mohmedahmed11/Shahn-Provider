@@ -31,19 +31,25 @@ class OrderTableViewCell: UITableViewCell {
         date.text = order["created_at"].string
         if order["offer_status"].intValue == 0 || order["offer_status"].intValue == 1 {
             status.text = "جديد"
+            status.textColor = .systemBlue
         }else  if order["offer_status"].intValue == 2 {
             status.text = "معتمد"
+            status.textColor = .systemOrange
         }else if order["offer_status"].intValue == 3 {
             status.text = "تم النفيذ"
+            status.textColor = .systemGreen
         }else if order["offer_status"].intValue == 5 {
             status.text = "ملغي"
+            status.textColor = .systemRed
         }
         
         if order["offer_status"].intValue == 1 {
             self.offerLbl.text = "تم إسال العرض"
+            self.offerLbl.textColor = .systemOrange
             self.offerLbl.isHidden = false
         }else if order["offer_status"].intValue == 5 {
             self.offerLbl.text = "العرض ملغي"
+            self.offerLbl.textColor = .systemRed
             self.offerLbl.isHidden = false
         }else {
             self.offerLbl.isHidden = true

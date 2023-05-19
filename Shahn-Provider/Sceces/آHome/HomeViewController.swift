@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        self.optionsSegment.selectedSegmentIndex = 0
         self.presenter?.getOrders()
     }
     
@@ -45,7 +46,14 @@ class HomeViewController: UIViewController {
         if sender.selectedSegmentIndex == 0 {
             self.filtredOrders = orders
         }else {
-            self.filtredOrders = orders.filter({ $0["status"].intValue == sender.selectedSegmentIndex - 1 })
+            if sender.selectedSegmentIndex == 4 {
+                self.filtredOrders = orders.filter({ $0["offer_status"].intValue == 5})
+            }else if sender.selectedSegmentIndex == 1 {
+                self.filtredOrders = orders.filter({ $0["offer_status"].intValue == 0 || $0["offer_status"].intValue == 1})
+            }else {
+                self.filtredOrders = orders.filter({ $0["offer_status"].intValue == sender.selectedSegmentIndex})
+            }
+            
         }
         
         tableView.reloadData()

@@ -88,6 +88,50 @@ class OrderDetailsViewController: UIViewController {
             self.presenter?.changeOfferStatus(orderId: self.order["id"].intValue, providerId: UserDefaults.standard.integer(forKey: "userIsIn"), status: 5)
         }
     }
+    
+    @IBAction func openPicInMap() {
+        self.openGoogleMap(latDouble: order["pickup_lat"].floatValue, longDouble: order["pickup_lon"].floatValue)
+    }
+    
+    @IBAction func openDropInMap() {
+        self.openGoogleMap(latDouble: order["dropoff_lat"].floatValue, longDouble: order["dropoff_lon"].floatValue)
+    }
+    
+    func openGoogleMap(latDouble: Float, longDouble: Float) {
+     if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {  //if phone has an app
+
+          if let url = URL(string: "comgooglemaps-x-callback://?saddr=&daddr=\(latDouble),\(longDouble)&directionsmode=driving") {
+                    UIApplication.shared.open(url, options: [:])
+           }}
+      else {
+             //Open in browser
+            if let urlDestination = URL.init(string: "https://www.google.co.in/maps/dir/?saddr=&daddr=\(latDouble),\(longDouble)&directionsmode=driving") {
+                           UIApplication.shared.open(urlDestination)
+                       }
+            }
+
+    }
+    
+    @IBAction func makeCall() {
+        let appURL = NSURL(string: "tel://0\(order["receiver_phone"].stringValue)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+        let webURL = NSURL(string: "tel://0\(order["receiver_phone"].stringValue)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+
+
+        if UIApplication.shared.canOpenURL(appURL as URL) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(appURL as URL, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(appURL as URL)
+            }
+        } else {
+            //redirect to safari because the user doesn't have Instagram
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(webURL as URL, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(webURL as URL)
+            }
+        }
+    }
 
     // MARK: - Navigation
 
