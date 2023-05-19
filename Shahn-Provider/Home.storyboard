@@ -38,6 +38,148 @@
             </objects>
             <point key="canvasLocation" x="32.824427480916029" y="-28.169014084507044"/>
         </scene>
+        <!--Order Pricing View Controller-->
+        <scene sceneID="lWW-yj-ICv">
+            <objects>
+                <viewController id="brL-X2-rSL" customClass="OrderPricingViewController" customModule="Shahn_Provider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pa1-iJ-Faa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9lI-yg-smg">
+                                <rect key="frame" x="8" y="67" width="377" height="708"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التسعيرة" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vj-bB-Eju">
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="9KU-Vp-Trk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BahijJanna-Bold" family="Bahij Janna" pointSize="18"/>
+                                        <color key="textColor" name="PrimaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efG-PI-P1B">
+                                        <rect key="frame" x="0.0" y="44" width="377" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nr8-ng-cut">
+                                                <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MeN-lA-Sc0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="4" height="50"/>
+                                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="4" id="AFd-M0-fWg"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="السعر" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B1u-av-2Zm">
+                                                        <rect key="frame" x="14" y="0.0" width="363" height="50"/>
+                                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                        <connections>
+                                                            <action selector="valueChanged:" destination="brL-X2-rSL" eventType="editingChanged" id="A6Z-jO-gPP"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="BGColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="nr8-ng-cut" secondAttribute="trailing" id="AEb-Tf-In2"/>
+                                            <constraint firstAttribute="height" constant="50" id="KDD-Nz-6VL"/>
+                                            <constraint firstItem="nr8-ng-cut" firstAttribute="leading" secondItem="efG-PI-P1B" secondAttribute="leading" id="Vvh-0P-FQB"/>
+                                            <constraint firstItem="nr8-ng-cut" firstAttribute="top" secondItem="efG-PI-P1B" secondAttribute="top" id="YM1-Bn-snk"/>
+                                            <constraint firstAttribute="bottom" secondItem="nr8-ng-cut" secondAttribute="bottom" id="cXs-jD-Mex"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFI-PC-fIM">
+                                        <rect key="frame" x="0.0" y="104" width="377" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bWR-Pm-rve">
+                                                <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="16w-9q-EVH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="4" height="50"/>
+                                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="4" id="9gN-kf-aaC"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="أيام التنفيذ" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5s-sy-3TT">
+                                                        <rect key="frame" x="14" y="0.0" width="363" height="50"/>
+                                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                        <connections>
+                                                            <action selector="valueChanged:" destination="brL-X2-rSL" eventType="editingChanged" id="w0X-uo-WAI"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="BGColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="bWR-Pm-rve" secondAttribute="trailing" id="BOq-DB-NEI"/>
+                                            <constraint firstItem="bWR-Pm-rve" firstAttribute="leading" secondItem="pFI-PC-fIM" secondAttribute="leading" id="Byz-h2-T6M"/>
+                                            <constraint firstAttribute="bottom" secondItem="bWR-Pm-rve" secondAttribute="bottom" id="GYB-AV-w3G"/>
+                                            <constraint firstItem="bWR-Pm-rve" firstAttribute="top" secondItem="pFI-PC-fIM" secondAttribute="top" id="bp4-Bm-M74"/>
+                                            <constraint firstAttribute="height" constant="50" id="cJk-Iv-yLn"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qck-Cu-W35">
+                                        <rect key="frame" x="0.0" y="164" width="377" height="484"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLO-xK-WbP">
+                                        <rect key="frame" x="0.0" y="658" width="377" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="إرسال العرض" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9V-b5-gUX">
+                                                <rect key="frame" x="8" y="8" width="361" height="34"/>
+                                                <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGp-MO-YeE">
+                                                <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="submit" destination="brL-X2-rSL" eventType="touchUpInside" id="YhE-kZ-iEP"/>
+                                                    <action selector="submitAction" destination="pOM-De-IBB" eventType="touchUpInside" id="G1e-Fz-qjj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="G9V-b5-gUX" secondAttribute="trailing" constant="8" id="Bom-ej-lwg"/>
+                                            <constraint firstAttribute="trailing" secondItem="fGp-MO-YeE" secondAttribute="trailing" id="TT0-kV-TbQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="G9V-b5-gUX" secondAttribute="bottom" constant="8" id="WzC-bK-bPF"/>
+                                            <constraint firstItem="G9V-b5-gUX" firstAttribute="top" secondItem="rLO-xK-WbP" secondAttribute="top" constant="8" id="iYm-Nh-f1A"/>
+                                            <constraint firstAttribute="height" constant="50" id="nLM-i7-bNw"/>
+                                            <constraint firstItem="G9V-b5-gUX" firstAttribute="leading" secondItem="rLO-xK-WbP" secondAttribute="leading" constant="8" id="pEW-uO-VFQ"/>
+                                            <constraint firstItem="fGp-MO-YeE" firstAttribute="top" secondItem="rLO-xK-WbP" secondAttribute="top" id="qSK-Vw-UVl"/>
+                                            <constraint firstAttribute="bottom" secondItem="fGp-MO-YeE" secondAttribute="bottom" id="tKu-Mt-fN8"/>
+                                            <constraint firstItem="fGp-MO-YeE" firstAttribute="leading" secondItem="rLO-xK-WbP" secondAttribute="leading" id="uVz-sk-4Yz"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vJO-nH-wdx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9lI-yg-smg" firstAttribute="top" secondItem="vJO-nH-wdx" secondAttribute="top" constant="8" id="WJB-uW-cY3"/>
+                            <constraint firstItem="vJO-nH-wdx" firstAttribute="bottom" secondItem="9lI-yg-smg" secondAttribute="bottom" constant="8" id="aSe-G1-uLZ"/>
+                            <constraint firstItem="9lI-yg-smg" firstAttribute="leading" secondItem="vJO-nH-wdx" secondAttribute="leading" constant="8" id="ea1-ho-lru"/>
+                            <constraint firstItem="vJO-nH-wdx" firstAttribute="trailing" secondItem="9lI-yg-smg" secondAttribute="trailing" constant="8" id="hzJ-ij-P6X"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="daies" destination="y5s-sy-3TT" id="B8h-EO-vZX"/>
+                        <outlet property="price" destination="B1u-av-2Zm" id="hPR-Ml-AUU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6BR-Ta-NC6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2439" y="761"/>
+        </scene>
         <!--العروض-->
         <scene sceneID="Lti-7z-VCw">
             <objects>
@@ -78,13 +220,13 @@
                                                     <rect key="frame" x="8" y="8" width="361" height="128"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="D4X-2k-WTd">
-                                                            <rect key="frame" x="0.0" y="0.0" width="361" height="37.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="361" height="26"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q78-t9-E92">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="106.33333333333333" height="37.333333333333336"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="106.33333333333333" height="26"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الطلب" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rwb-Ls-sLn">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="37.333333333333336"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="63.666666666666664" height="26"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="24" id="1nf-Fc-u2n"/>
                                                                             </constraints>
@@ -93,7 +235,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#102" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORq-zc-JsY">
-                                                                            <rect key="frame" x="71.666666666666671" y="0.0" width="34.666666666666671" height="37.333333333333336"/>
+                                                                            <rect key="frame" x="71.666666666666671" y="0.0" width="34.666666666666671" height="26"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="24" id="60W-ou-THM"/>
                                                                             </constraints>
@@ -104,7 +246,7 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#102" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqd-KR-cON">
-                                                                    <rect key="frame" x="326.33333333333331" y="0.0" width="34.666666666666686" height="37.333333333333336"/>
+                                                                    <rect key="frame" x="326.33333333333331" y="0.0" width="34.666666666666686" height="26"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="24" id="yUu-Aj-pwF"/>
                                                                     </constraints>
@@ -115,31 +257,31 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="منتجات غزائية لمحل تجاري" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYD-yL-dZT">
-                                                            <rect key="frame" x="0.0" y="45.333333333333329" width="361" height="37.333333333333329"/>
+                                                            <rect key="frame" x="0.0" y="34" width="361" height="26"/>
                                                             <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Y8Q-4i-uTS">
-                                                            <rect key="frame" x="0.0" y="90.666666666666671" width="361" height="37.333333333333329"/>
+                                                            <rect key="frame" x="0.0" y="68" width="361" height="26"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023/04/9 11:32 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAU-Xh-5xw">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="37.333333333333336"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="26"/>
                                                                     <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wSf-Ns-MnJ">
-                                                                    <rect key="frame" x="289.33333333333331" y="0.0" width="71.666666666666686" height="37.333333333333336"/>
+                                                                    <rect key="frame" x="289.33333333333331" y="0.0" width="71.666666666666686" height="26"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الوزن :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YP0-Rp-jMp">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="36" height="37.333333333333336"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="36" height="26"/>
                                                                             <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="جديد" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CS-by-cc6">
-                                                                            <rect key="frame" x="44" y="0.0" width="27.666666666666671" height="37.333333333333336"/>
+                                                                            <rect key="frame" x="44" y="0.0" width="27.666666666666671" height="26"/>
                                                                             <fontDescription key="fontDescription" name="BahijJanna-Bold" family="Bahij Janna" pointSize="16"/>
                                                                             <color key="textColor" name="PrimaryColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -148,6 +290,13 @@
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تم إرسال العرض" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfD-fE-bF2">
+                                                            <rect key="frame" x="0.0" y="102" width="361" height="26"/>
+                                                            <color key="backgroundColor" name="BGColor"/>
+                                                            <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
+                                                            <color key="textColor" name="PrimaryColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
@@ -160,6 +309,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="date" destination="gAU-Xh-5xw" id="14Y-nH-MZg"/>
+                                            <outlet property="offerLbl" destination="JfD-fE-bF2" id="Lbf-Yz-pir"/>
                                             <outlet property="orderId" destination="ORq-zc-JsY" id="ypi-bK-LF8"/>
                                             <outlet property="status" destination="Aqd-KR-cON" id="8Mu-aU-93y"/>
                                             <outlet property="type" destination="HYD-yL-dZT" id="4GF-KA-gP2"/>
@@ -211,7 +361,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dtw-ww-8kz">
-                                        <rect key="frame" x="8" y="8" width="377" height="1410"/>
+                                        <rect key="frame" x="8" y="8" width="377" height="1216"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="معلومات الشحنة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExF-rW-C55">
                                                 <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
@@ -557,20 +707,20 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="معلومات المرسل إليه" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3x-Cv-fWl">
-                                                <rect key="frame" x="0.0" y="808" width="377" height="34"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="34" id="Qhm-Dk-VBd"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="BahijJanna-Bold" family="Bahij Janna" pointSize="18"/>
-                                                <color key="textColor" name="PrimaryColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AEI-Sc-9uN">
-                                                <rect key="frame" x="0.0" y="862" width="377" height="110"/>
+                                                <rect key="frame" x="0.0" y="808" width="377" height="154"/>
                                                 <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="معلومات المرسل إليه" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3x-Cv-fWl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="Qhm-Dk-VBd"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="BahijJanna-Bold" family="Bahij Janna" pointSize="18"/>
+                                                        <color key="textColor" name="PrimaryColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XI2-9t-EdL">
-                                                        <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
+                                                        <rect key="frame" x="0.0" y="44" width="377" height="50"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f60-OV-VgW">
                                                                 <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
@@ -601,7 +751,7 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUE-8p-8OB">
-                                                        <rect key="frame" x="0.0" y="60" width="377" height="50"/>
+                                                        <rect key="frame" x="0.0" y="104" width="377" height="50"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jt2-r6-cx2">
                                                                 <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
@@ -634,91 +784,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="stQ-lR-5EQ">
-                                                <rect key="frame" x="0.0" y="992" width="377" height="348"/>
+                                                <rect key="frame" x="0.0" y="982" width="377" height="164"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="n5x-Le-j7j">
-                                                        <rect key="frame" x="0.0" y="0.0" width="377" height="164"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="معلومات الشاحن" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0O-Vs-2hh">
-                                                                <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="34" id="oV4-OM-paN"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="BahijJanna-Bold" family="Bahij Janna" pointSize="18"/>
-                                                                <color key="textColor" name="PrimaryColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AW5-N6-dmo">
-                                                                <rect key="frame" x="0.0" y="54" width="377" height="110"/>
-                                                                <subviews>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R0O-cq-s2p">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
-                                                                        <subviews>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SSs-ZG-8kj">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
-                                                                                <subviews>
-                                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMa-Zw-Jrz">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="3" height="50"/>
-                                                                                        <color key="backgroundColor" name="PrimaryColor"/>
-                                                                                        <constraints>
-                                                                                            <constraint firstAttribute="width" constant="3" id="cQs-wq-m08"/>
-                                                                                        </constraints>
-                                                                                    </view>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="اسم مقدم الخدمة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jja-YY-sUf">
-                                                                                        <rect key="frame" x="11" y="0.0" width="366" height="50"/>
-                                                                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
-                                                                                        <nil key="textColor"/>
-                                                                                        <nil key="highlightedColor"/>
-                                                                                    </label>
-                                                                                </subviews>
-                                                                            </stackView>
-                                                                        </subviews>
-                                                                        <color key="backgroundColor" name="BGColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="bottom" secondItem="SSs-ZG-8kj" secondAttribute="bottom" id="6UZ-OZ-Cjd"/>
-                                                                            <constraint firstItem="SSs-ZG-8kj" firstAttribute="top" secondItem="R0O-cq-s2p" secondAttribute="top" id="L2Y-la-h7G"/>
-                                                                            <constraint firstItem="SSs-ZG-8kj" firstAttribute="leading" secondItem="R0O-cq-s2p" secondAttribute="leading" id="QlO-GB-FId"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="SSs-ZG-8kj" secondAttribute="trailing" id="dfJ-Xs-7Vc"/>
-                                                                            <constraint firstAttribute="height" constant="50" id="fzu-j4-t5O"/>
-                                                                        </constraints>
-                                                                    </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3b-Wb-PWi">
-                                                                        <rect key="frame" x="0.0" y="60" width="377" height="50"/>
-                                                                        <subviews>
-                                                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="L40-hW-4uG">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
-                                                                                <subviews>
-                                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzA-no-PQT">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="3" height="50"/>
-                                                                                        <color key="backgroundColor" name="PrimaryColor"/>
-                                                                                        <constraints>
-                                                                                            <constraint firstAttribute="width" constant="3" id="J6d-kr-3KZ"/>
-                                                                                        </constraints>
-                                                                                    </view>
-                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الجوال" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvi-r5-ufK">
-                                                                                        <rect key="frame" x="11" y="0.0" width="366" height="50"/>
-                                                                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
-                                                                                        <nil key="textColor"/>
-                                                                                        <nil key="highlightedColor"/>
-                                                                                    </label>
-                                                                                </subviews>
-                                                                            </stackView>
-                                                                        </subviews>
-                                                                        <color key="backgroundColor" name="BGColor"/>
-                                                                        <constraints>
-                                                                            <constraint firstItem="L40-hW-4uG" firstAttribute="leading" secondItem="Y3b-Wb-PWi" secondAttribute="leading" id="QzS-Hh-W4G"/>
-                                                                            <constraint firstItem="L40-hW-4uG" firstAttribute="top" secondItem="Y3b-Wb-PWi" secondAttribute="top" id="Y9a-Kj-3nZ"/>
-                                                                            <constraint firstAttribute="height" constant="50" id="l8l-oj-9w2"/>
-                                                                            <constraint firstAttribute="trailing" secondItem="L40-hW-4uG" secondAttribute="trailing" id="tcB-wh-2Wr"/>
-                                                                            <constraint firstAttribute="bottom" secondItem="L40-hW-4uG" secondAttribute="bottom" id="whN-YX-Xj6"/>
-                                                                        </constraints>
-                                                                    </view>
-                                                                </subviews>
-                                                            </stackView>
-                                                        </subviews>
-                                                    </stackView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عرض السعر (الإجمالي)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nj-6g-tCz">
-                                                        <rect key="frame" x="0.0" y="184" width="377" height="34"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="qLR-qw-rfg"/>
                                                         </constraints>
@@ -727,7 +796,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sfz-5e-Gsp">
-                                                        <rect key="frame" x="0.0" y="238" width="377" height="110"/>
+                                                        <rect key="frame" x="0.0" y="54" width="377" height="110"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mP-lM-8z1">
                                                                 <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
@@ -818,7 +887,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dYb-2Z-Eyp">
-                                                <rect key="frame" x="0.0" y="1360" width="377" height="50"/>
+                                                <rect key="frame" x="0.0" y="1166" width="377" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6k-7L-igf">
                                                         <rect key="frame" x="0.0" y="0.0" width="178.66666666666666" height="50"/>
@@ -832,6 +901,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2j-ll-9Ts">
                                                                 <rect key="frame" x="0.0" y="0.0" width="178.66666666666666" height="50"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <connections>
+                                                                    <action selector="acceptOrder" destination="sRB-Ua-goL" eventType="touchUpInside" id="qjr-TH-r9B"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" name="PrimaryColor"/>
@@ -859,6 +931,9 @@
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8p-Nt-JhF">
                                                                 <rect key="frame" x="0.0" y="0.0" width="178.33333333333334" height="50"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <connections>
+                                                                    <action selector="rejectOrder" destination="sRB-Ua-goL" eventType="touchUpInside" id="xNC-K1-DlB"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemGray4Color"/>
@@ -939,16 +1014,17 @@
                         <outlet property="details" destination="q7A-Eg-mhr" id="Ngd-bS-EDC"/>
                         <outlet property="dropLocation" destination="pqv-mv-e5h" id="prF-lh-kSX"/>
                         <outlet property="imagesCollectionView" destination="hFG-V0-FF4" id="VoA-0B-4lr"/>
+                        <outlet property="optionsBtsStack" destination="dYb-2Z-Eyp" id="g93-zd-4Qe"/>
                         <outlet property="picLocation" destination="PAI-dQ-1o7" id="6GP-tf-NYu"/>
-                        <outlet property="providerName" destination="jja-YY-sUf" id="jQJ-UW-6jl"/>
+                        <outlet property="pricingStack" destination="stQ-lR-5EQ" id="UaW-g0-fQd"/>
                         <outlet property="providerOfferDaies" destination="NOZ-0n-oXS" id="che-uH-B5N"/>
                         <outlet property="providerOfferPrice" destination="vwP-cI-pz2" id="16d-Ha-vhd"/>
-                        <outlet property="providerPhone" destination="pvi-r5-ufK" id="eS8-Yq-CmN"/>
-                        <outlet property="providerStack" destination="stQ-lR-5EQ" id="0c1-Ns-oFW"/>
                         <outlet property="reciverName" destination="ue4-lT-ce1" id="YqU-zE-s5Y"/>
                         <outlet property="reciverPhone" destination="8pw-JY-6SU" id="Usp-yS-16X"/>
+                        <outlet property="reciverStack" destination="AEI-Sc-9uN" id="hor-Do-SyI"/>
                         <outlet property="type" destination="LsN-bE-YAv" id="ZX2-md-P3t"/>
                         <outlet property="wight" destination="VHC-vK-Vks" id="Cme-fW-t1y"/>
+                        <segue destination="brL-X2-rSL" kind="presentation" identifier="pricing" modalPresentationStyle="pageSheet" id="agC-n9-g51"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ac-Sq-NNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

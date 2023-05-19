@@ -7,6 +7,8 @@
 
 import UIKit
 import SwiftyJSON
+import ImageSlideshow
+import Kingfisher
 
 class OrderDetailsViewController: UIViewController {
     
@@ -22,16 +24,23 @@ class OrderDetailsViewController: UIViewController {
     @IBOutlet weak var chargeDate: UILabel!
     @IBOutlet weak var reciverName: UILabel!
     @IBOutlet weak var reciverPhone: UILabel!
-    @IBOutlet weak var providerStack: UIStackView!
-    @IBOutlet weak var providerName: UILabel!
-    @IBOutlet weak var providerPhone: UILabel!
     @IBOutlet weak var providerOfferPrice: UILabel!
     @IBOutlet weak var providerOfferDaies: UILabel!
     @IBOutlet weak var chargesBtn: UIView!
+    @IBOutlet weak var pricingStack: UIStackView!
+    @IBOutlet weak var reciverStack: UIStackView!
+    @IBOutlet weak var optionsBtsStack: UIStackView!
+    
+    var presenter: OrdersPresenter?
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        presenter = OrdersPresenter(self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setData()
+        setData()
         // Do any additional setup after loading the view.
     }
     
@@ -46,16 +55,37 @@ class OrderDetailsViewController: UIViewController {
         reciverPhone.text = order["receiver_phone"].string
         images = order["images"].arrayValue
         imagesCollectionView.reloadData()
-        if order["status"].intValue != 0 && order["status"].intValue != 3 {
-            if let provider = order["providers"].arrayValue.first(where: { $0["status"].intValue == 2 }) {
-                providerName.text = provider["name"].string
-                providerPhone.text = provider["contact"].string
-                providerOfferPrice.text = "\(provider["price"].stringValue) ريال"
-                providerOfferDaies.text = "\(provider["duration"].stringValue) يوم"
+        
+        if order["offer_status"].intValue > 0 && order["offer_status"].intValue < 5 {
+            self.pricingStack.isHidden = false
+            self.optionsBtsStack.isHidden = true
+            if order["offer_status"].intValue > 1 {
+                self.reciverStack.isHidden = false
+                self.chargesBtn.isHidden = false
+            }else {
+                self.reciverStack.isHidden = true
+                self.chargesBtn.isHidden = true
             }
-        }else {
-            self.providerStack.isHidden = true
+        }else if order["offer_status"].intValue == 0 {
+            self.pricingStack.isHidden = true
+            self.optionsBtsStack.isHidden = false
+            self.reciverStack.isHidden = true
             self.chargesBtn.isHidden = true
+        }else {
+            self.pricingStack.isHidden = true
+            self.optionsBtsStack.isHidden = true
+            self.reciverStack.isHidden = true
+            self.chargesBtn.isHidden = true
+        }
+    }
+    
+    @IBAction func acceptOrder() {
+        self.performSegue(withIdentifier: "pricing", sender: nil)
+    }
+    
+    @IBAction func rejectOrder() {
+        AlertHelper.showOkCancel(message: "هل ترفغ في رفض الطلب") {
+            self.presenter?.changeOfferStatus(orderId: self.order["id"].intValue, providerId: UserDefaults.standard.integer(forKey: "userIsIn"), status: 5)
         }
     }
 
@@ -65,8 +95,9 @@ class OrderDetailsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         if segue.identifier == "pricing" {
-//            let vc = segue.destination as! OrderPricingViewController
-//            vc.providers = order["providers"].arrayValue
+            let vc = segue.destination as! OrderPricingViewController
+            vc.order = order
+            vc.delegate = self
         }else if segue.identifier == "charges" {
             let vc = segue.destination as! OrderLoadsViewController
             vc.charges = order["charges"].arrayValue
@@ -74,6 +105,16 @@ class OrderDetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
 
+}
+
+extension OrderDetailsViewController: PricingOffersStatusDelegate, PricingDelegate {
+    func didStatusChanged(with result: Result<JSON, Error>) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func didPriceOffer() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }
 
 extension OrderDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -84,7 +125,7 @@ extension OrderDetailsViewController: UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageCollectionViewCell
         if let url = URL(string: Glubal.imageBaseurl.path+images[indexPath.row]["image"].stringValue) {
-//            cell.imageView.kf.setImage(with: url, placeholder: UIImage(named: "logo"))
+            cell.imageView.kf.setImage(with: url, placeholder: UIImage(named: "logo"))
         }
         return cell
     }

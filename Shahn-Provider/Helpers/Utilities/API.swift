@@ -615,6 +615,7 @@ extension Endpoint {
         } catch {
            return nil
         }
+        print(String(data: request.httpBody!, encoding: .utf8))
         normalHeaders.forEach { request.addValue("\($0.value)", forHTTPHeaderField: $0.name) }
         return request
     }

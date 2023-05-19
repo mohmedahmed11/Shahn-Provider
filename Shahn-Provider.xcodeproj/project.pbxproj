@@ -59,6 +59,7 @@
 		CEAB77422A168DC300E963BC /* noDataFoundNip.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76F32A0E691200E963BC /* noDataFoundNip.xib */; };
 		CEAB77432A168DC300E963BC /* CustomMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76F82A0E691300E963BC /* CustomMarker.xib */; };
 		CEAB77442A168DC300E963BC /* noUserDataNotLoadedNip.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76F72A0E691200E963BC /* noUserDataNotLoadedNip.xib */; };
+		CEAB77462A16965300E963BC /* OrderPricingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77452A16965300E963BC /* OrderPricingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +120,7 @@
 		CEAB773B2A14FE4900E963BC /* ProviderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderTableViewCell.swift; sourceTree = "<group>"; };
 		CEAB773D2A15075600E963BC /* AddSubProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubProviderViewController.swift; sourceTree = "<group>"; };
 		CEAB773F2A16891300E963BC /* OrdersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersPresenter.swift; sourceTree = "<group>"; };
+		CEAB77452A16965300E963BC /* OrderPricingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPricingViewController.swift; sourceTree = "<group>"; };
 		D9779CA92DC9F519B4B84B3C /* Pods-Shahn-Provider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahn-Provider.release.xcconfig"; path = "Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -307,6 +309,7 @@
 				CEAB77262A13513B00E963BC /* HomeViewController.swift */,
 				CEAB773F2A16891300E963BC /* OrdersPresenter.swift */,
 				CEAB77212A1350D400E963BC /* OrderDetailsViewController.swift */,
+				CEAB77452A16965300E963BC /* OrderPricingViewController.swift */,
 				CEAB77342A14FC4600E963BC /* AddLoadViewController.swift */,
 				CEAB77222A1350D400E963BC /* OrderLoadsViewController.swift */,
 			);
@@ -510,6 +513,7 @@
 				CEAB76BA2A076BF000E963BC /* AppDelegate.swift in Sources */,
 				CEAB76EE2A0E68F200E963BC /* CommonFunctions.swift in Sources */,
 				CEAB77232A1350D400E963BC /* OrderDetailsViewController.swift in Sources */,
+				CEAB77462A16965300E963BC /* OrderPricingViewController.swift in Sources */,
 				CEAB76DC2A0E688800E963BC /* RegistrationViewController.swift in Sources */,
 				CEAB76FA2A0E691300E963BC /* CustomMarker.swift in Sources */,
 				CEAB76BC2A076BF000E963BC /* SceneDelegate.swift in Sources */,
