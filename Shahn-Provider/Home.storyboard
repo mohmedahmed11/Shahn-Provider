@@ -360,7 +360,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dtw-ww-8kz">
-                                        <rect key="frame" x="8" y="8" width="377" height="1216"/>
+                                        <rect key="frame" x="8" y="8" width="377" height="1276"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="معلومات الشحنة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExF-rW-C55">
                                                 <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
@@ -816,7 +816,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="stQ-lR-5EQ">
-                                                <rect key="frame" x="0.0" y="982" width="377" height="164"/>
+                                                <rect key="frame" x="0.0" y="982" width="377" height="224"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عرض السعر (الإجمالي)" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nj-6g-tCz">
                                                         <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
@@ -828,7 +828,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sfz-5e-Gsp">
-                                                        <rect key="frame" x="0.0" y="54" width="377" height="110"/>
+                                                        <rect key="frame" x="0.0" y="54" width="377" height="170"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0mP-lM-8z1">
                                                                 <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
@@ -914,12 +914,54 @@
                                                                     <constraint firstAttribute="bottom" secondItem="AYR-Kr-WcI" secondAttribute="bottom" id="mnM-sa-I0B"/>
                                                                 </constraints>
                                                             </view>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcE-gE-XgZ">
+                                                                <rect key="frame" x="0.0" y="120" width="377" height="50"/>
+                                                                <subviews>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H8i-Ro-twM">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
+                                                                        <subviews>
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQc-Ya-77g">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="3" height="50"/>
+                                                                                <color key="backgroundColor" name="PrimaryColor"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="3" id="hx4-X7-Nsj"/>
+                                                                                </constraints>
+                                                                            </view>
+                                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EUn-IZ-AK8">
+                                                                                <rect key="frame" x="11" y="0.0" width="366" height="50"/>
+                                                                                <subviews>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عدد الشحنات" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jj-yh-sYr">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="50"/>
+                                                                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
+                                                                                        <nil key="textColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Be-rJ-57T">
+                                                                                        <rect key="frame" x="356" y="0.0" width="10" height="50"/>
+                                                                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
+                                                                                        <color key="textColor" name="PrimaryColor"/>
+                                                                                        <nil key="highlightedColor"/>
+                                                                                    </label>
+                                                                                </subviews>
+                                                                            </stackView>
+                                                                        </subviews>
+                                                                    </stackView>
+                                                                </subviews>
+                                                                <color key="backgroundColor" name="BGColor"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="trailing" secondItem="H8i-Ro-twM" secondAttribute="trailing" id="LC3-a9-WiD"/>
+                                                                    <constraint firstItem="H8i-Ro-twM" firstAttribute="leading" secondItem="bcE-gE-XgZ" secondAttribute="leading" id="Sao-Ds-0YY"/>
+                                                                    <constraint firstItem="H8i-Ro-twM" firstAttribute="top" secondItem="bcE-gE-XgZ" secondAttribute="top" id="inh-xW-cP6"/>
+                                                                    <constraint firstAttribute="height" constant="50" id="l7J-4s-AEC"/>
+                                                                    <constraint firstAttribute="bottom" secondItem="H8i-Ro-twM" secondAttribute="bottom" id="yYy-3X-Xgq"/>
+                                                                </constraints>
+                                                            </view>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dYb-2Z-Eyp">
-                                                <rect key="frame" x="0.0" y="1166" width="377" height="50"/>
+                                                <rect key="frame" x="0.0" y="1226" width="377" height="50"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6k-7L-igf">
                                                         <rect key="frame" x="0.0" y="0.0" width="178.66666666666666" height="50"/>
@@ -1021,7 +1063,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="44"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <connections>
-                                            <segue destination="iuc-1A-aUs" kind="show" identifier="charges" id="C8x-MF-9IR"/>
+                                            <action selector="showLoads" destination="sRB-Ua-goL" eventType="touchUpInside" id="obc-ID-Mxr"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1046,6 +1088,7 @@
                         <outlet property="details" destination="q7A-Eg-mhr" id="Ngd-bS-EDC"/>
                         <outlet property="dropLocation" destination="pqv-mv-e5h" id="prF-lh-kSX"/>
                         <outlet property="imagesCollectionView" destination="hFG-V0-FF4" id="VoA-0B-4lr"/>
+                        <outlet property="loadsCount" destination="0Be-rJ-57T" id="15s-dN-zje"/>
                         <outlet property="optionsBtsStack" destination="dYb-2Z-Eyp" id="g93-zd-4Qe"/>
                         <outlet property="picLocation" destination="PAI-dQ-1o7" id="6GP-tf-NYu"/>
                         <outlet property="pricingStack" destination="stQ-lR-5EQ" id="UaW-g0-fQd"/>
@@ -1057,6 +1100,7 @@
                         <outlet property="type" destination="LsN-bE-YAv" id="ZX2-md-P3t"/>
                         <outlet property="wight" destination="VHC-vK-Vks" id="Cme-fW-t1y"/>
                         <segue destination="brL-X2-rSL" kind="presentation" identifier="pricing" modalPresentationStyle="pageSheet" id="agC-n9-g51"/>
+                        <segue destination="iuc-1A-aUs" kind="show" identifier="charges" id="IH9-F5-k3M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ac-Sq-NNT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -34,7 +34,11 @@ class OrderLoadsViewController: UIViewController {
     }
     
     @IBAction func addLoad() {
-        self.performSegue(withIdentifier: "addLoad", sender: nil)
+        if order["total_delivery"].intValue > charges.count {
+            self.performSegue(withIdentifier: "addLoad", sender: nil)
+        }else {
+            AlertHelper.showAlert(message: "عفواً عدد الشحنات مكتمل")
+        }
     }
 
     

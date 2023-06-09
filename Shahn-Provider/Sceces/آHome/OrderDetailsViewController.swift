@@ -26,6 +26,7 @@ class OrderDetailsViewController: UIViewController {
     @IBOutlet weak var reciverPhone: UILabel!
     @IBOutlet weak var providerOfferPrice: UILabel!
     @IBOutlet weak var providerOfferDaies: UILabel!
+    @IBOutlet weak var loadsCount: UILabel!
     @IBOutlet weak var chargesBtn: UIView!
     @IBOutlet weak var pricingStack: UIStackView!
     @IBOutlet weak var reciverStack: UIStackView!
@@ -55,6 +56,10 @@ class OrderDetailsViewController: UIViewController {
         reciverPhone.text = order["receiver_phone"].string
         images = order["images"].arrayValue
         imagesCollectionView.reloadData()
+        
+        if order["total_delivery"].intValue > 0 {
+            loadsCount.text = "\(order["total_delivery"].intValue) شحنة"
+        }
         
         if order["offer_status"].intValue > 0 && order["offer_status"].intValue < 5 {
             self.pricingStack.isHidden = false
@@ -133,6 +138,17 @@ class OrderDetailsViewController: UIViewController {
         }
     }
 
+    @IBAction func showLoads() {
+        if order["total_delivery"].intValue > 0 {
+            self.performSegue(withIdentifier: "charges", sender: nil)
+        }else {
+            AlertHelper.showAlertTextEntry(message: "عدد الشحنات للطلب", placeholderText: "عدد الشحنات", keyboardType: .numberPad) { buttonIndex, textField in
+                self.presenter?.orderLoadsCount(offerId: self.order["offer_id"].intValue, count: Int(textField.text!)!)
+                return
+            }
+        }
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -151,13 +167,27 @@ class OrderDetailsViewController: UIViewController {
 
 }
 
-extension OrderDetailsViewController: PricingOffersStatusDelegate, PricingDelegate {
+extension OrderDetailsViewController: PricingDelegate, DetailsDelegate {
     func didStatusChanged(with result: Result<JSON, Error>) {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
     func didPriceOffer() {
         self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func didAddLoadsCount(with result: Result<JSON, Error>) {
+        switch result {
+        case .success(let data):
+            print(data)
+            if data["operation"].boolValue == true {
+                self.performSegue(withIdentifier: "charges", sender: nil)
+            }else {
+                AlertHelper.showAlert(message: "عفوا أعد المحاولة")
+            }
+        case .failure:
+            AlertHelper.showAlert(message: "عفوا أعد المحاولة")
+        }
     }
 }
 
