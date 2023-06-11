@@ -77,6 +77,7 @@
                         <outlet property="reloadBtn" destination="apd-mr-vX3" id="Fh9-JS-r5Y"/>
                         <segue destination="lyi-Bz-2du" kind="show" identifier="doSign" id="snH-ox-C5V"/>
                         <segue destination="ygg-1z-ntf" kind="show" identifier="toHome" id="JEP-wl-BSK"/>
+                        <segue destination="C4z-mV-ZPm" kind="show" identifier="toDriverHome" id="5eq-6E-1ED"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GHg-eY-cI0" sceneMemberID="firstResponder"/>
@@ -92,6 +93,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oor-o7-4ZP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2200" y="-2"/>
+        </scene>
+        <!--DriverTabbar-->
+        <scene sceneID="sNP-zF-1Gf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DriverTabbar" id="C4z-mV-ZPm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nOG-3i-Ekn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8u-D5-fP3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2228" y="93"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Eto-mL-w1c">
@@ -194,10 +205,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nd0-Ba-qTd">
-                                        <rect key="frame" x="0.0" y="154" width="353" height="233"/>
+                                        <rect key="frame" x="0.0" y="154" width="353" height="143"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l76-gL-SZX">
-                                        <rect key="frame" x="0.0" y="427" width="353" height="50"/>
+                                        <rect key="frame" x="0.0" y="337" width="353" height="50"/>
                                         <color key="backgroundColor" name="PrimaryColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="dbA-8Q-Rn9"/>
@@ -208,7 +219,22 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="submitAction" destination="lyi-Bz-2du" eventType="touchUpInside" id="qaX-n9-VKX"/>
+                                            <action selector="submitAction:" destination="lyi-Bz-2du" eventType="touchUpInside" id="aTx-Fx-cwg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEc-CO-SW5">
+                                        <rect key="frame" x="0.0" y="427" width="353" height="50"/>
+                                        <color key="backgroundColor" name="PrimaryColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="TUG-dT-Z4Q"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="تسجيل دخول للسائقين ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="submitAction:" destination="lyi-Bz-2du" eventType="touchUpInside" id="owN-Ox-2fP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n01-M1-qUy">
@@ -1679,7 +1705,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="qMQ-Uk-p09"/>
+        <segue reference="d9j-Q8-Oec"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="logo" width="567" height="423"/>

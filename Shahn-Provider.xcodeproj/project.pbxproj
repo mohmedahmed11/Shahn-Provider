@@ -63,6 +63,7 @@
 		CEAB77482A362E8F00E963BC /* SubProvidersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77472A362E8F00E963BC /* SubProvidersPresenter.swift */; };
 		CEAB774A2A36371E00E963BC /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77492A36371E00E963BC /* Location.storyboard */; };
 		CEAB774C2A3637B500E963BC /* PicAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB774B2A3637B500E963BC /* PicAddressViewController.swift */; };
+		CEAB774E2A36746700E963BC /* DriverTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB774D2A36746700E963BC /* DriverTabbar.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +128,7 @@
 		CEAB77472A362E8F00E963BC /* SubProvidersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubProvidersPresenter.swift; sourceTree = "<group>"; };
 		CEAB77492A36371E00E963BC /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
 		CEAB774B2A3637B500E963BC /* PicAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicAddressViewController.swift; sourceTree = "<group>"; };
+		CEAB774D2A36746700E963BC /* DriverTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DriverTabbar.storyboard; sourceTree = "<group>"; };
 		D9779CA92DC9F519B4B84B3C /* Pods-Shahn-Provider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahn-Provider.release.xcconfig"; path = "Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,6 +191,7 @@
 				CEAB76BF2A076BF000E963BC /* Main.storyboard */,
 				CEAB76C22A076BF100E963BC /* Assets.xcassets */,
 				CEAB76CD2A0E67D500E963BC /* Tabbar.storyboard */,
+				CEAB774D2A36746700E963BC /* DriverTabbar.storyboard */,
 				CEAB77112A134C8700E963BC /* Home.storyboard */,
 				CEAB77132A134CA200E963BC /* SubProviders.storyboard */,
 				CEAB77492A36371E00E963BC /* Location.storyboard */,
@@ -429,6 +432,7 @@
 				CEAB77442A168DC300E963BC /* noUserDataNotLoadedNip.xib in Resources */,
 				CEAB77082A0E697400E963BC /* Bahij Janna-Bold.ttf in Resources */,
 				CEAB77182A134CEE00E963BC /* Account.storyboard in Resources */,
+				CEAB774E2A36746700E963BC /* DriverTabbar.storyboard in Resources */,
 				CEAB76CE2A0E67D500E963BC /* Tabbar.storyboard in Resources */,
 				CEAB77432A168DC300E963BC /* CustomMarker.xib in Resources */,
 				CEAB76C62A076BF100E963BC /* LaunchScreen.storyboard in Resources */,

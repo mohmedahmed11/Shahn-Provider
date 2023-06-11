@@ -71,8 +71,11 @@ class ViewController: UIViewController {
     
     func segue() {
         if UserDefaults.standard.value(forKey: "userIsIn") != nil {
-//            self.updateToken()
-            self.performSegue(withIdentifier: "toHome", sender: nil)
+            if UserDefaults.standard.string(forKey: "userType") == "driver" {
+                self.performSegue(withIdentifier: "toDriverHome", sender: nil)
+            }else {
+                self.performSegue(withIdentifier: "toHome", sender: nil)
+            }
         }else {
             self.performSegue(withIdentifier: "doSign", sender: nil)
         }

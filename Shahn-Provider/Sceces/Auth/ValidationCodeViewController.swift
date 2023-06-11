@@ -86,6 +86,7 @@ class ValidationCodeViewController: UIViewController {
     func saveUser() {
         UserDefaults.standard.set(AppManager.shared.authUser!.id, forKey: "userIsIn")
         UserDefaults.standard.set(AppManager.shared.authUser!.phone, forKey: "user_phone")
+        UserDefaults.standard.set(AppManager.shared.authUser!.type!, forKey: "userType")
         self.navigationController?.popToRootViewController(animated: true)
     }
     

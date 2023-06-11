@@ -24,7 +24,7 @@ class LoginViewController: UIViewController {
     
 
     
-    @IBAction func submitAction() {
+    @IBAction func submitAction(_ sender: UIButton) {
         
         if phone.text == "" || phone.text == " " {
             let errMessage = "عفوا الرجاء إدخال رقم الهاتف"
@@ -50,7 +50,11 @@ class LoginViewController: UIViewController {
         }
      
         
-        sendData()
+        if sender.tag == 1 {
+            driverLogin()
+        }else {
+            sendData()
+        }
     }
     
     func sendData() {
@@ -62,7 +66,7 @@ class LoginViewController: UIViewController {
             switch result {
             case .success(let data):
                 if data["operation"].boolValue == true {
-                    AppManager.shared.authUser = User(id: data["user"]["id"].stringValue, name: data["user"]["name"].stringValue, phone: data["user"]["phone"].stringValue, contact: data["user"]["contact"].stringValue, image: data["user"]["image"].stringValue)
+                    AppManager.shared.authUser = User(id: data["user"]["id"].stringValue, name: data["user"]["name"].stringValue, phone: data["user"]["phone"].stringValue, contact: data["user"]["contact"].stringValue, type: "provider", image: data["user"]["image"].stringValue)
                     AppManager.shared.authUser?.action = "login"
                     self.sendSmsData()
                 }else {
@@ -75,6 +79,28 @@ class LoginViewController: UIViewController {
             }
         }
        
+    }
+    
+    func driverLogin() {
+        ProgressHUD.animationType = .circleStrokeSpin
+        ProgressHUD.show()
+        NetworkManager.instance.request(with: "\(Glubal.baseurl.path)\(Glubal.createProvider.path)", method: .post, parameters: [ "phone": self.userPhone, "action": "login"],  decodingType: JSON.self, errorModel: ErrorModel.self) { result in
+            ProgressHUD.dismiss()
+            switch result {
+            case .success(let data):
+                if data["operation"].boolValue == true {
+                    AppManager.shared.authUser = User(id: data["user"]["id"].stringValue, name: data["user"]["name"].stringValue, phone: data["user"]["phone"].stringValue, contact: data["user"]["contact"].stringValue, type: "driver", image: data["user"]["image"].stringValue)
+                    AppManager.shared.authUser?.action = "login"
+                    self.sendSmsData()
+                }else {
+                    AlertHelper.showAlert(message:  "عفواً رقم الهاتف غير موجود")
+                }
+                
+            case .failure(let error):
+                AlertHelper.showAlert(message: "عفواً فشل الدخول حاول مرة أخرى")
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func sendSmsData() {
