@@ -46,6 +46,10 @@ class SubProvidersViewController: UIViewController {
             let vc = segue.destination as! PicAddressViewController
             vc.locationJSON = sender as? JSON
             vc.IsForPicing = false
+        }else if segue.identifier == "editProvider" {
+            let vc = segue.destination as! AddSubProviderViewController
+            vc.isForUpdate = true
+            vc.provider = sender as? JSON
         }
         // Pass the selected object to the new view controller.
     }

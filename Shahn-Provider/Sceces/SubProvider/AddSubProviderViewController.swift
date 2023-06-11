@@ -33,6 +33,7 @@ class AddSubProviderViewController: UIViewController {
     
     var presenter: SubProvidersPresenter?
     var isForUpdate: Bool = false
+    var provider: JSON?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -42,8 +43,27 @@ class AddSubProviderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hideKeyboardWhenTappedAround()
+        if isForUpdate && provider != nil {
+            setProviderData()
+        }
         loadCities()
         // Do any additional setup after loading the view.
+    }
+    
+    func setProviderData() {
+        if let provider = provider {
+            self.name.text = provider["name"].string
+            self.phone.text = provider["phone"].string
+            self.city.text = provider["city_name"].string
+            self.area.text = provider["area"].string
+            self.locationLbl.text = provider["lat"].stringValue+" - "+provider["lon"].stringValue
+            self.idNumber.text = provider["identity"].string
+            self.carType.text = provider["car_type"].string
+            self.selectedCityId = provider["city_id"].intValue
+            //        self.selectedCategory = provider["service_type"].intValue
+            self.location = CLLocationCoordinate2D(latitude: CLLocationDegrees(provider["lat"].floatValue), longitude: CLLocationDegrees(provider["lon"].floatValue))
+            self.categorySelection(categories.first(where: {$0.tag == provider["service_type"].intValue})!)
+        }
     }
     
     func loadCities() {
@@ -136,10 +156,12 @@ class AddSubProviderViewController: UIViewController {
                                             "city_id": "\(selectedCityId)",
                                             "area": area.text!,
                                             "lat": "\(location.latitude)",
-                                            "lon": "\(location.latitude)",
+                                            "lon": "\(location.longitude)",
                                             "identity": idNumber.text!,
                                             "service_type": "\(selectedCategory)",
-                                            "car_type": carType.text!])
+                                            "car_type": carType.text!,
+                                            "status": "0",
+                                            "driver_id": provider?["id"].stringValue ?? ""])
     }
     
     func startProgress() {

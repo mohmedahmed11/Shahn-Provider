@@ -239,6 +239,7 @@
                         <outlet property="tableView" destination="IaO-LL-993" id="P8X-zy-cev"/>
                         <segue destination="ica-ZC-4gQ" kind="show" identifier="addProvider" id="ava-Fi-8dm"/>
                         <segue destination="jZH-Kt-eaB" kind="show" identifier="openLocation" id="mOs-cy-gNl"/>
+                        <segue destination="ica-ZC-4gQ" kind="show" identifier="editProvider" id="jaD-bV-faV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -832,6 +833,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
+        <segue reference="jaD-bV-faV"/>
         <segue reference="mOs-cy-gNl"/>
     </inferredMetricsTieBreakers>
     <resources>
