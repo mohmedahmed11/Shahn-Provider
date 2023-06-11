@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1hv-2a-wNz">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bahij Janna-Regular.ttf">
+            <string>BahijJanna</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--العنوان-->
+        <scene sceneID="2pW-eT-5fo">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="1hv-2a-wNz" customClass="PicAddressViewController" customModule="Shahn_Provider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7eY-aa-DbT">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tsX-xl-Gnx">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wF9-CD-zta">
+                                <rect key="frame" x="96.666666666666686" y="734" width="200" height="44"/>
+                                <color key="backgroundColor" name="PrimaryColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="sCe-tO-mW7"/>
+                                    <constraint firstAttribute="width" constant="200" id="xBt-YR-thu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
+                                <state key="normal" title="اختيار العنوان">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Piclocation:" destination="1hv-2a-wNz" eventType="touchUpInside" id="h1L-0E-QEj"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="custom-pin-red" translatesAutoresizingMaskIntoConstraints="NO" id="MH0-aD-nw3">
+                                <rect key="frame" x="171.66666666666666" y="380" width="50" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="0Vc-L2-1dK"/>
+                                    <constraint firstAttribute="width" constant="50" id="X45-FL-Kkn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6dd-4g-aDA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wF9-CD-zta" firstAttribute="centerX" secondItem="7eY-aa-DbT" secondAttribute="centerX" id="6d7-0y-ssC"/>
+                            <constraint firstItem="MH0-aD-nw3" firstAttribute="centerY" secondItem="tsX-xl-Gnx" secondAttribute="centerY" constant="-38" id="8La-sc-A8M"/>
+                            <constraint firstItem="tsX-xl-Gnx" firstAttribute="top" secondItem="6dd-4g-aDA" secondAttribute="top" id="JVv-vG-rMx"/>
+                            <constraint firstAttribute="bottom" secondItem="tsX-xl-Gnx" secondAttribute="bottom" id="Mvz-Q5-qP1"/>
+                            <constraint firstItem="6dd-4g-aDA" firstAttribute="trailing" secondItem="tsX-xl-Gnx" secondAttribute="trailing" id="Olh-1U-dJy"/>
+                            <constraint firstItem="MH0-aD-nw3" firstAttribute="centerX" secondItem="7eY-aa-DbT" secondAttribute="centerX" id="Qkz-2B-kzX"/>
+                            <constraint firstItem="6dd-4g-aDA" firstAttribute="bottom" secondItem="wF9-CD-zta" secondAttribute="bottom" constant="40" id="gho-bI-h4n"/>
+                            <constraint firstItem="tsX-xl-Gnx" firstAttribute="leading" secondItem="7eY-aa-DbT" secondAttribute="leading" id="yLF-ag-Wxg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="العنوان" id="Mah-aK-T6A"/>
+                    <connections>
+                        <outlet property="mapPlaceView" destination="tsX-xl-Gnx" id="mLD-tg-Ruu"/>
+                        <outlet property="picBtn" destination="wF9-CD-zta" id="cte-go-tMn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DAz-9h-5yc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="custom-pin-red" width="40" height="40"/>
+        <namedColor name="PrimaryColor">
+            <color red="0.86699998378753662" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -60,6 +60,9 @@
 		CEAB77432A168DC300E963BC /* CustomMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76F82A0E691300E963BC /* CustomMarker.xib */; };
 		CEAB77442A168DC300E963BC /* noUserDataNotLoadedNip.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76F72A0E691200E963BC /* noUserDataNotLoadedNip.xib */; };
 		CEAB77462A16965300E963BC /* OrderPricingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77452A16965300E963BC /* OrderPricingViewController.swift */; };
+		CEAB77482A362E8F00E963BC /* SubProvidersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77472A362E8F00E963BC /* SubProvidersPresenter.swift */; };
+		CEAB774A2A36371E00E963BC /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77492A36371E00E963BC /* Location.storyboard */; };
+		CEAB774C2A3637B500E963BC /* PicAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB774B2A3637B500E963BC /* PicAddressViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +124,9 @@
 		CEAB773D2A15075600E963BC /* AddSubProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubProviderViewController.swift; sourceTree = "<group>"; };
 		CEAB773F2A16891300E963BC /* OrdersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersPresenter.swift; sourceTree = "<group>"; };
 		CEAB77452A16965300E963BC /* OrderPricingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPricingViewController.swift; sourceTree = "<group>"; };
+		CEAB77472A362E8F00E963BC /* SubProvidersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubProvidersPresenter.swift; sourceTree = "<group>"; };
+		CEAB77492A36371E00E963BC /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
+		CEAB774B2A3637B500E963BC /* PicAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicAddressViewController.swift; sourceTree = "<group>"; };
 		D9779CA92DC9F519B4B84B3C /* Pods-Shahn-Provider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahn-Provider.release.xcconfig"; path = "Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				CEAB76B92A076BF000E963BC /* AppDelegate.swift */,
+				CEAB774B2A3637B500E963BC /* PicAddressViewController.swift */,
 				CEAB76BB2A076BF000E963BC /* SceneDelegate.swift */,
 				CEAB76BD2A076BF000E963BC /* ViewController.swift */,
 				CEAB76CF2A0E67EF00E963BC /* Helpers */,
@@ -184,6 +191,7 @@
 				CEAB76CD2A0E67D500E963BC /* Tabbar.storyboard */,
 				CEAB77112A134C8700E963BC /* Home.storyboard */,
 				CEAB77132A134CA200E963BC /* SubProviders.storyboard */,
+				CEAB77492A36371E00E963BC /* Location.storyboard */,
 				CEAB77162A134CEE00E963BC /* Account.storyboard */,
 				CEAB77152A134CEE00E963BC /* Setting.storyboard */,
 				CEAB76C42A076BF100E963BC /* LaunchScreen.storyboard */,
@@ -339,6 +347,7 @@
 			children = (
 				CEAB77372A14FDB300E963BC /* Cell */,
 				CEAB77392A14FDCE00E963BC /* SubProvidersViewController.swift */,
+				CEAB77472A362E8F00E963BC /* SubProvidersPresenter.swift */,
 				CEAB773D2A15075600E963BC /* AddSubProviderViewController.swift */,
 			);
 			path = SubProvider;
@@ -414,6 +423,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAB774A2A36371E00E963BC /* Location.storyboard in Resources */,
 				CEAB77412A168DC300E963BC /* customViewsMedia.xcassets in Resources */,
 				CEAB77122A134C8700E963BC /* Home.storyboard in Resources */,
 				CEAB77442A168DC300E963BC /* noUserDataNotLoadedNip.xib in Resources */,
@@ -505,7 +515,9 @@
 				CEAB77352A14FC4600E963BC /* AddLoadViewController.swift in Sources */,
 				CEAB76BE2A076BF000E963BC /* ViewController.swift in Sources */,
 				CEAB76EC2A0E68F200E963BC /* Extestension.swift in Sources */,
+				CEAB77482A362E8F00E963BC /* SubProvidersPresenter.swift in Sources */,
 				CEAB771A2A134D1900E963BC /* UserAccountViewController.swift in Sources */,
+				CEAB774C2A3637B500E963BC /* PicAddressViewController.swift in Sources */,
 				CEAB76F12A0E68F200E963BC /* API.swift in Sources */,
 				CEAB76EF2A0E68F200E963BC /* Utilities.swift in Sources */,
 				CEAB773A2A14FDCE00E963BC /* SubProvidersViewController.swift in Sources */,

@@ -138,7 +138,7 @@ class OrdersPresenter {
     }
     
     func getSubProviders() {
-        guard let request = Glubal.getSubProviders(userId: UserDefaults.standard.integer(forKey: "userIsIn")).getRequest() else {return}
+        guard let request = Glubal.getSubProviders(userId: UserDefaults.standard.integer(forKey: "userIsIn"), action: "drivers").getRequest() else {return}
         startProgress()
         NetworkManager.instance.request(with: request, decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
             guard let self = self else { return }
