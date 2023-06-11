@@ -32,8 +32,8 @@ class SubProvidersPresenter {
         self.addProviderViewController = viewController
     }
     
-    func loadSubProviders() {
-        guard let request = Glubal.getSubProviders(userId: UserDefaults.standard.integer(forKey: "userIsIn"), action: "support_services").getRequest() else {return}
+    func loadSubProviders(action: String = "all_drivers") {
+        guard let request = Glubal.getSubProviders(userId: UserDefaults.standard.integer(forKey: "userIsIn"), action: action).getRequest() else {return}
         startProgress()
         NetworkManager.instance.request(with: request, decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
             guard let self = self else { return }
