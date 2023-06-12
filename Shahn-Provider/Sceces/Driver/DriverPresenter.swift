@@ -43,18 +43,11 @@ class DriverPresenter {
         self.detailsViewController = viewController
     }
     
-    func getOrders() {
-        guard let request = Glubal.getOrders(userId: UserDefaults.standard.integer(forKey: "userIsIn")).getRequest() else {return}
+    func updateLocation(lat: Double, lon: Double) {
         startProgress()
-        NetworkManager.instance.request(with: request, decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
+        NetworkManager.instance.request(with: "\(Glubal.baseurl.path)\(Glubal.drivers.path)", method: .post, parameters: ["lat": "\(lat)", "lon": "\(lon)", "driver_id": UserDefaults.standard.string(forKey: "userIsIn")!, "action": "update_location"],  decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
             guard let self = self else { return }
             self.stopProgress()
-            switch result {
-            case .success(let data):
-                self.ordersViewController?.didReciveOrders(with: .success(data))
-            case .failure(let error):
-                self.ordersViewController?.didReciveOrders(with: .failure(error))
-            }
         }
     }
     
@@ -69,20 +62,6 @@ class DriverPresenter {
                 self.detailsViewController?.didStatusChanged(with: .success(data))
             case .failure(let error):
                 self.detailsViewController?.didStatusChanged(with: .failure(error))
-            }
-        }
-    }
-    
-    func pricingOffer(with parameters: [String: String]) {
-        startProgress()
-        NetworkManager.instance.request(with: "\(Glubal.baseurl.path)\(Glubal.offersStatus.path)", method: .post, parameters: parameters,  decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
-            guard let self = self else { return }
-            self.stopProgress()
-            switch result {
-            case .success(let data):
-                self.pricingViewController?.didStatusChanged(with: .success(data))
-            case .failure(let error):
-                self.pricingViewController?.didStatusChanged(with: .failure(error))
             }
         }
     }
@@ -102,19 +81,6 @@ class DriverPresenter {
         }
     }
     
-    func addLoad(with parameters: [String: String]) {
-        startProgress()
-        NetworkManager.instance.request(with: "\(Glubal.baseurl.path)\(Glubal.addLoad.path)", method: .post, parameters: parameters,  decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
-            guard let self = self else { return }
-            self.stopProgress()
-            switch result {
-            case .success(let data):
-                self.addLoadViewController?.didAddLoad(with: .success(data))
-            case .failure(let error):
-                self.addLoadViewController?.didAddLoad(with: .failure(error))
-            }
-        }
-    }
     
     func getSubProviders() {
         guard let request = Glubal.getSubProviders(userId: UserDefaults.standard.integer(forKey: "userIsIn"), action: "drivers").getRequest() else {return}
@@ -127,20 +93,6 @@ class DriverPresenter {
                 self.addLoadViewController?.didReciveDrivers(with: .success(data))
             case .failure(let error):
                 self.addLoadViewController?.didReciveDrivers(with: .failure(error))
-            }
-        }
-    }
-    
-    func orderLoadsCount(offerId: Int, count: Int) {
-        startProgress()
-        NetworkManager.instance.request(with: "\(Glubal.baseurl.path)\(Glubal.offersStatus.path)", method: .post, parameters: ["offer_id": offerId, "total_delivery": "\(count)", "action": "total_delivery"],  decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
-            guard let self = self else { return }
-            self.stopProgress()
-            switch result {
-            case .success(let data):
-                self.detailsViewController?.didAddLoadsCount(with: .success(data))
-            case .failure(let error):
-                self.detailsViewController?.didAddLoadsCount(with: .failure(error))
             }
         }
     }

@@ -686,7 +686,7 @@ enum Glubal {
     case getSubProviders(userId: Int, action: String)
     case getOrderLoads(offerId: Int)
     case deleteSubProvider(providerId: Int, action: String)
-    case createProvider
+    case drivers
     case getDriverLoads(driverId: Int)
 }
 
@@ -747,7 +747,7 @@ extension Glubal: Endpoint {
             return "provider/show/loads.php?offer_id=\(offerId)"
         case .deleteSubProvider(let providerId, let action):
             return "provider/write/drivers.php?driver_id=\(providerId)&action=\(action)"
-        case .createProvider:
+        case .drivers:
             return "provider/write/drivers.php"
         case .getDriverLoads(let driverId):
             return "provider/show/driver_delivery.php?driver_id=\(driverId)"

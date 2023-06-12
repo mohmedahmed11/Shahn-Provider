@@ -8,6 +8,7 @@
 import UIKit
 import SwiftyJSON
 import SafariServices
+import CoreLocation
 
 class DriverLoadsViewController: UIViewController {
 
@@ -16,6 +17,8 @@ class DriverLoadsViewController: UIViewController {
     
     var charges: [JSON] = []
     var filtredCharges: [JSON] = []
+    
+    let locationManager = CLLocationManager()
     
     var presenter: DriverPresenter?
     
@@ -27,13 +30,23 @@ class DriverLoadsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.customNavJannaFont()
+        setupLocationManager()
         setupSegments()
+        if let location = locationManager.location {
+            presenter?.updateLocation(lat: location.coordinate.latitude, lon: location.coordinate.longitude)
+        }
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.optionsSegment.selectedSegmentIndex = 0
         presenter?.getLoads(driverId: UserDefaults.standard.integer(forKey: "userIsIn"))
+    }
+    
+    func setupLocationManager() {
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.stopUpdatingLocation()
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
     }
     
     func setupSegments() {
@@ -100,7 +113,7 @@ extension DriverLoadsViewController: LoadsDelegate {
         let error = noUserDataNotLoadedNip(nil, content)
         error.frame = self.tabBarController?.tabBar.frame ?? .zero
         error.reloadData = {
-            self.presenter?.getOrders()
+            self.presenter?.getLoads(driverId: UserDefaults.standard.integer(forKey: "userIsIn"))
             error.removeFromSuperview()
         }
         self.tabBarController?.view.addSubview(error)

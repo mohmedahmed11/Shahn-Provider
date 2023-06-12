@@ -84,7 +84,7 @@ class LoginViewController: UIViewController {
     func driverLogin() {
         ProgressHUD.animationType = .circleStrokeSpin
         ProgressHUD.show()
-        NetworkManager.instance.request(with: "\(Glubal.baseurl.path)\(Glubal.createProvider.path)", method: .post, parameters: [ "phone": self.userPhone, "action": "login"],  decodingType: JSON.self, errorModel: ErrorModel.self) { result in
+        NetworkManager.instance.request(with: "\(Glubal.baseurl.path)\(Glubal.drivers.path)", method: .post, parameters: [ "phone": self.userPhone, "action": "login"],  decodingType: JSON.self, errorModel: ErrorModel.self) { result in
             ProgressHUD.dismiss()
             switch result {
             case .success(let data):
