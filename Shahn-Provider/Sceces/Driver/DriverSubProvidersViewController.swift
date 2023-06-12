@@ -49,7 +49,7 @@ class DriverSubProvidersViewController: UIViewController {
             self.filtredProviders = providers
         }else {
             
-            self.filtredProviders = providers.filter({ $0["service_type"].intValue == sender.selectedSegmentIndex - 1})
+            self.filtredProviders = providers.filter({ $0["service_type"].intValue == sender.selectedSegmentIndex + 1})
         }
         
         tableView.reloadData()
@@ -82,6 +82,7 @@ extension DriverSubProvidersViewController: SubProvidersViewDelegate {
         case .success(let data):
             if data["operation"].boolValue == true {
                 self.providers = data["data"].arrayValue
+                self.filtredProviders = self.providers
                 if !self.providers.isEmpty {
                     self.tableView.backgroundView = nil
                 }else {
@@ -126,10 +127,10 @@ extension DriverSubProvidersViewController: UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DSubProviderTableViewCell
         cell.setUI(with: filtredProviders[indexPath.row])
         cell.call = {
-            
+            self.makeCall(phoneNumber: self.filtredProviders[indexPath.row]["contact"].stringValue)
         }
         cell.whatsapp = {
-            
+            self.openWhatsapp(phoneNumber: self.filtredProviders[indexPath.row]["contact"].stringValue)
         }
         
         return cell
@@ -138,4 +139,48 @@ extension DriverSubProvidersViewController: UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         return
     }
+    
+    func makeCall(phoneNumber: String) {
+     
+        let appURL = NSURL(string: "tel://+966\(phoneNumber)")!
+        let webURL = NSURL(string: "tel://+966\(phoneNumber)")!
+
+
+        if UIApplication.shared.canOpenURL(appURL as URL) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(appURL as URL, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(appURL as URL)
+            }
+        } else {
+            //redirect to safari because the user doesn't have Instagram
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(webURL as URL, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(webURL as URL)
+            }
+        }
+    }
+    
+    func openWhatsapp(phoneNumber: String) {
+        
+        let appURL = NSURL(string: "https://api.whatsapp.com/send?text=&phone=966\(phoneNumber)")!
+        let webURL = NSURL(string: "https://web.whatsapp.com/send?text=&phone=966\(phoneNumber)")!
+
+        if UIApplication.shared.canOpenURL(appURL as URL) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(appURL as URL, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(appURL as URL)
+            }
+        } else {
+            //redirect to safari because the user doesn't have Instagram
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(webURL as URL, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(webURL as URL)
+            }
+        }
+    }
+    
 }
