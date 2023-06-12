@@ -155,10 +155,10 @@ extension DriverSubProvidersViewController: UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DSubProviderTableViewCell
         cell.setUI(with: filtredProviders[indexPath.row])
         cell.call = {
-            self.makeCall(phoneNumber: self.filtredProviders[indexPath.row]["contact"].stringValue)
+            self.makeCall(phoneNumber: self.filtredProviders[indexPath.row]["phone"].stringValue)
         }
         cell.whatsapp = {
-            self.openWhatsapp(phoneNumber: self.filtredProviders[indexPath.row]["contact"].stringValue)
+            self.openWhatsapp(phoneNumber: self.filtredProviders[indexPath.row]["phone"].stringValue)
         }
         
         return cell

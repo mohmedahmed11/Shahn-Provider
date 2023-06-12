@@ -39,7 +39,7 @@ class DSubProviderTableViewCell: UITableViewCell {
     
     func setUI(with provider: JSON) {
         name.text = provider["name"].string
-        phone.text = provider["contact"].string
+        phone.text = provider["phone"].string
         city.text = provider["city_name"].stringValue+" - "+provider["area"].stringValue
         distance.text = "0.0 KM"
         carType.text = provider["car_type"].string
