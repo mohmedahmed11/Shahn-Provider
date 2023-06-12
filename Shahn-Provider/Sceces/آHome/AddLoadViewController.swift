@@ -7,6 +7,8 @@
 
 import UIKit
 import SwiftyJSON
+import Alamofire
+import ProgressHUD
 
 class AddLoadViewController: UIViewController {
 
@@ -21,6 +23,7 @@ class AddLoadViewController: UIViewController {
     var selectedDriverId: Int = 0
     var pickerView = UIPickerView()
     var currentTextField = UITextField()
+    var code: Int = 0
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -51,7 +54,8 @@ class AddLoadViewController: UIViewController {
     }
 
     func sendData() {
-        presenter?.addLoad(with: ["order_id": order["id"].stringValue, "offer_id": order["offer_id"].stringValue,"driver_id": "\(selectedDriverId)","wight": weight.text!,"number": serialNumber.text!, "action": "create"])
+        self.code = Int.random(in: 1111 ... 9999)
+        presenter?.addLoad(with: ["order_id": order["id"].stringValue, "offer_id": order["offer_id"].stringValue,"driver_id": "\(selectedDriverId)","wight": weight.text!,"number": serialNumber.text!, "code": "\(code)", "action": "create"])
     }
     
     /*
@@ -71,6 +75,8 @@ extension AddLoadViewController: AddLoadDelegate {
         switch result {
         case .success(let data):
             if data["operation"].boolValue == true {
+                var loadId = data["id"].intValue
+                self.sendSMS(id: loadId)
                 self.navigationController?.popViewController(animated: true)
             }else {
                 AlertHelper.showAlert(message: "عفوا حاول مرة أخري")
@@ -92,6 +98,16 @@ extension AddLoadViewController: AddLoadDelegate {
         }
     }
     
+    func sendSMS(id: Int) {
+        let message = "شحنة رقم \(id)# \n الرمز المتسلسل للشحنة \(self.serialNumber.text!) \n رمز الشحنة \(code)"
+        let parameters:Parameters = ["message": message.utf8,"phone": "966\(order["user"]["contact"])"]
+        
+        ProgressHUD.animationType = .circleStrokeSpin
+        ProgressHUD.show()
+        NetworkManager.instance.request(with: "\(Glubal.baseurl.path)\(Glubal.sms.path)", method: .post, parameters: parameters,  decodingType: JSON.self, errorModel: ErrorModel.self) { result in
+            ProgressHUD.dismiss()
+        }
+    }
     
 }
 

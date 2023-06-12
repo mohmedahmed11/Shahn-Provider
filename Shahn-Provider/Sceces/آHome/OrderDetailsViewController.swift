@@ -137,7 +137,28 @@ class OrderDetailsViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func openWhatsapp() {
+        
+        let appURL = NSURL(string: "https://api.whatsapp.com/send?text=&phone=966\(order["receiver_phone"].stringValue)")!
+        let webURL = NSURL(string: "https://web.whatsapp.com/send?text=&phone=966\(order["receiver_phone"].stringValue)")!
 
+        if UIApplication.shared.canOpenURL(appURL as URL) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(appURL as URL, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(appURL as URL)
+            }
+        } else {
+            //redirect to safari because the user doesn't have Instagram
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(webURL as URL, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(webURL as URL)
+            }
+        }
+    }
+    
     @IBAction func showLoads() {
         if order["total_delivery"].intValue > 0 {
             self.performSegue(withIdentifier: "charges", sender: nil)

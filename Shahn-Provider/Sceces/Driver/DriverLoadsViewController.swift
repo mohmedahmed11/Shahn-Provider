@@ -80,7 +80,23 @@ class DriverLoadsViewController: UIViewController {
 
 }
 
-extension DriverLoadsViewController: LoadsDelegate {
+extension DriverLoadsViewController: DriverLoadsDelegate {
+    func didStatusChanged(with result: Result<SwiftyJSON.JSON, Error>) {
+        switch result {
+        case .success(let data):
+            if data["operation"].boolValue == true {
+                self.presenter?.getLoads(driverId: UserDefaults.standard.integer(forKey: "userIsIn"))
+            }else {
+                AlertHelper.showAlert(message: "عفواً لم تتم العملية حاولة مرة أخرى")
+            }
+        case .failure(let error):
+            AlertHelper.showAlert(message: "حدث خطأ اعد المحاولة")
+            print(error)
+        }
+    }
+        
+    
+    
     func didReciveLoads(with result: Result<JSON, Error>) {
         switch result {
         case .success(let data):
@@ -128,7 +144,6 @@ extension DriverLoadsViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ChargesTableViewCell
         cell.setUI(with: filtredCharges[indexPath.row])
-        cell.chargeId.text = "#\(indexPath.row + 1)"
         cell.invoiceDetails = {
             self.openFile(with: self.charges[indexPath.row]["invoice"].stringValue)
         }
@@ -136,7 +151,18 @@ extension DriverLoadsViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if filtredCharges[indexPath.row]["status"].intValue == 0 {
+            AlertHelper.showOkCancel(message: "تسليم الشحنة") {
+                AlertHelper.showAlertTextEntry(message: "ادخل رمز الشحنة المرسل للعميل" , placeholderText: "----", keyboardType: .numberPad) { buttonIndex, textField in
+                    if textField.text! == self.filtredCharges[indexPath.row]["code"].string {
+                        self.presenter?.changeLoadStatus(orderId: self.filtredCharges[indexPath.row]["order_id"].intValue, loadId: self.filtredCharges[indexPath.row]["id"].intValue, OfferId: self.filtredCharges[indexPath.row]["offer_id"].intValue)
+                        return
+                    }else {
+                        AlertHelper.showAlert(message: "عفواً الرمز عير متطابق")
+                    }
+                }
+            }
+        }
     }
     
     func openFile(with url: String) {

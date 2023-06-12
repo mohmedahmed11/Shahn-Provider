@@ -9,39 +9,30 @@ import Foundation
 import SwiftyJSON
 import ProgressHUD
 
+protocol DriverLoadsDelegate {
+    func didReciveLoads(with result: Result<JSON, Error>)
+    func didStatusChanged(with result: Result<JSON, Error>)
+}
+
+protocol SupoortViewDelegate {
+    func didReciveSubProviders(with result: Result<JSON, Error>)
+}
 
 class DriverPresenter {
-    var ordersViewController: OrdersListDelegate?
-    var pricingViewController: PricingOffersStatusDelegate?
-    var addLoadViewController: AddLoadDelegate?
-    var LoadsViewController: LoadsDelegate?
-    var detailsViewController: DetailsDelegate?
+    var driverLoadsViewController: DriverLoadsDelegate?
+    var supportView: SupoortViewDelegate?
     
-    convenience init(_ viewController: OrdersListDelegate) {
+    convenience init(_ viewController: DriverLoadsDelegate) {
         self.init()
-        self.ordersViewController = viewController
+        self.driverLoadsViewController = viewController
+    }
+    
+    convenience init(_ viewController: SupoortViewDelegate) {
+        self.init()
+        self.supportView = viewController
     }
     
     
-    convenience init(_ viewController: PricingOffersStatusDelegate) {
-        self.init()
-        self.pricingViewController = viewController
-    }
-    
-    convenience init(_ viewController: AddLoadDelegate) {
-        self.init()
-        self.addLoadViewController = viewController
-    }
-    
-    convenience init(_ viewController: LoadsDelegate) {
-        self.init()
-        self.LoadsViewController = viewController
-    }
-    
-    convenience init(_ viewController: DetailsDelegate) {
-        self.init()
-        self.detailsViewController = viewController
-    }
     
     func updateLocation(lat: Double, lon: Double) {
         startProgress()
@@ -51,17 +42,17 @@ class DriverPresenter {
         }
     }
     
-    func changeOfferStatus(orderId: Int, providerId: Int, status: Int) {
-        guard let request = Glubal.offersStatus.getRequest(parameters: ["provider_id": "\(providerId)", "order_id": "\(orderId)", "status": "\(status)"]) else {return}
+    func changeLoadStatus(orderId: Int, loadId: Int, OfferId: Int) {
+        guard let request = Glubal.loadStatus(chargeId: loadId, deliverId: OfferId, orderId: orderId).getRequest() else {return}
         startProgress()
         NetworkManager.instance.request(with: request, decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
             guard let self = self else { return }
             self.stopProgress()
             switch result {
             case .success(let data):
-                self.detailsViewController?.didStatusChanged(with: .success(data))
+                self.driverLoadsViewController?.didStatusChanged(with: .success(data))
             case .failure(let error):
-                self.detailsViewController?.didStatusChanged(with: .failure(error))
+                self.driverLoadsViewController?.didStatusChanged(with: .failure(error))
             }
         }
     }
@@ -74,13 +65,27 @@ class DriverPresenter {
             self.stopProgress()
             switch result {
             case .success(let data):
-                self.LoadsViewController?.didReciveLoads(with: .success(data))
+                self.driverLoadsViewController?.didReciveLoads(with: .success(data))
             case .failure(let error):
-                self.LoadsViewController?.didReciveLoads(with: .failure(error))
+                self.driverLoadsViewController?.didReciveLoads(with: .failure(error))
             }
         }
     }
     
+    func loadSubProviders(action: String = "all_drivers") {
+        guard let request = Glubal.getSubProviders(userId: UserDefaults.standard.integer(forKey: "userIsIn"), action: action).getRequest() else {return}
+        startProgress()
+        NetworkManager.instance.request(with: request, decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
+            guard let self = self else { return }
+            self.stopProgress()
+            switch result {
+            case .success(let data):
+                self.supportView?.didReciveSubProviders(with: .success(data))
+            case .failure(let error):
+                self.supportView?.didReciveSubProviders(with: .failure(error))
+            }
+        }
+    }
     
     func getSubProviders() {
         guard let request = Glubal.getSubProviders(userId: UserDefaults.standard.integer(forKey: "userIsIn"), action: "drivers").getRequest() else {return}
@@ -90,9 +95,9 @@ class DriverPresenter {
             self.stopProgress()
             switch result {
             case .success(let data):
-                self.addLoadViewController?.didReciveDrivers(with: .success(data))
+                self.supportView?.didReciveSubProviders(with: .success(data))
             case .failure(let error):
-                self.addLoadViewController?.didReciveDrivers(with: .failure(error))
+                self.supportView?.didReciveSubProviders(with: .failure(error))
             }
         }
     }

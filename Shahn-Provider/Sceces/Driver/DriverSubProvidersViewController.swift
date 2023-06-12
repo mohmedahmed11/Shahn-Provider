@@ -23,14 +23,14 @@ class DriverSubProvidersViewController: UIViewController {
     var filtredProviders = [JSON]()
     var cities: [JSON] = []
     
-    var presenter: SubProvidersPresenter?
+    var presenter: DriverPresenter?
     
     var pickerView = UIPickerView()
     var currentTextField = UITextField()
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        presenter = SubProvidersPresenter(self)
+        presenter = DriverPresenter(self)
     }
 
     override func viewDidLoad() {
@@ -104,7 +104,8 @@ class DriverSubProvidersViewController: UIViewController {
 
 }
 
-extension DriverSubProvidersViewController: SubProvidersViewDelegate {
+extension DriverSubProvidersViewController: SupoortViewDelegate {
+ 
     func didReciveSubProviders(with result: Result<JSON, Error>) {
         switch result {
         case .success(let data):
