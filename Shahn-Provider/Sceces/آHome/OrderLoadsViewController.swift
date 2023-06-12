@@ -64,7 +64,7 @@ extension OrderLoadsViewController: LoadsDelegate {
             if data["operation"].boolValue == true {
                 if !data["data"].arrayValue.isEmpty {
                     self.charges = data["data"].arrayValue
-                    self.tableView.tableFooterView = nil
+                    self.tableView.backgroundView = nil
                 } else {
                     self.addNoData()
                 }
