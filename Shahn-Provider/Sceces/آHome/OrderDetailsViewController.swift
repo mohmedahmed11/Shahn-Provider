@@ -33,6 +33,7 @@ class OrderDetailsViewController: UIViewController {
     @IBOutlet weak var optionsBtsStack: UIStackView!
     
     var presenter: OrdersPresenter?
+    var chargeCount : Int = 0
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -47,7 +48,7 @@ class OrderDetailsViewController: UIViewController {
     
     func setData() {
         type.text = order["type"].string
-        wight.text = !order["wight"].string!.isEmpty ? "الوزن: \(order["wight"].stringValue)" : "الردود: \(order["circles"].stringValue) ردود"
+        wight.text = order["wight"].intValue != 0  ? "الوزن: \(order["wight"].stringValue)" : "الردود: \(order["circles"].stringValue) ردود"
         details.text = order["details"].string
         chargeDate.text = "تاريخ الشحن: \(order["charge_date"].stringValue)"
         picLocation.text = "الشحن: \(order["pickup_lat"].stringValue) : \(order["pickup_lon"].stringValue)"
@@ -164,7 +165,8 @@ class OrderDetailsViewController: UIViewController {
             self.performSegue(withIdentifier: "charges", sender: nil)
         }else {
             AlertHelper.showAlertTextEntry(message: "عدد الشحنات للطلب", placeholderText: "عدد الشحنات", keyboardType: .numberPad) { buttonIndex, textField in
-                self.presenter?.orderLoadsCount(offerId: self.order["offer_id"].intValue, count: Int(textField.text!)!)
+                self.chargeCount = Int(textField.text!)!
+                self.presenter?.orderLoadsCount(offerId: self.order["offer_id"].intValue, count: self.chargeCount)
                 return
             }
         }
@@ -202,6 +204,7 @@ extension OrderDetailsViewController: PricingDelegate, DetailsDelegate {
         case .success(let data):
             print(data)
             if data["operation"].boolValue == true {
+                order["total_delivery"] = JSON(self.chargeCount)
                 self.performSegue(withIdentifier: "charges", sender: nil)
             }else {
                 AlertHelper.showAlert(message: "عفوا أعد المحاولة")
