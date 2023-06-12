@@ -26,8 +26,71 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="d99-Yb-50c">
                                 <rect key="frame" x="8" y="111" width="377" height="733"/>
                                 <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TwP-tZ-wLa">
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="بحث" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A1D-28-y5g">
+                                                <rect key="frame" x="0.0" y="0.0" width="247" height="34"/>
+                                                <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                                <connections>
+                                                    <action selector="valueChanged:" destination="Y6W-OH-hqX" eventType="editingChanged" id="vU3-YM-YWz"/>
+                                                </connections>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Caw-U4-zNN" customClass="DesignableButton" customModule="Shahn_Provider" customModuleProvider="target">
+                                                <rect key="frame" x="257" y="0.0" width="120" height="34"/>
+                                                <subviews>
+                                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3rT-FR-T3h">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="UFB-1x-Snv"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvR-Yc-tPz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120" height="34"/>
+                                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="كل المناطق">
+                                                            <color key="titleColor" name="AccentColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="picCity" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fYI-Tv-C0t"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="wvR-Yc-tPz" secondAttribute="bottom" id="EoD-fb-bOD"/>
+                                                    <constraint firstItem="3rT-FR-T3h" firstAttribute="top" secondItem="Caw-U4-zNN" secondAttribute="top" id="Koa-g5-jrG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3rT-FR-T3h" secondAttribute="trailing" id="Tld-eM-BoE"/>
+                                                    <constraint firstAttribute="width" constant="120" id="Zzb-Tq-rz0"/>
+                                                    <constraint firstItem="wvR-Yc-tPz" firstAttribute="top" secondItem="Caw-U4-zNN" secondAttribute="top" id="bkg-ll-ja3"/>
+                                                    <constraint firstItem="wvR-Yc-tPz" firstAttribute="leading" secondItem="Caw-U4-zNN" secondAttribute="leading" id="d4X-HQ-I1L"/>
+                                                    <constraint firstAttribute="trailing" secondItem="wvR-Yc-tPz" secondAttribute="trailing" id="nHa-AD-nF2"/>
+                                                    <constraint firstItem="3rT-FR-T3h" firstAttribute="leading" secondItem="Caw-U4-zNN" secondAttribute="leading" id="nsU-aK-WnW"/>
+                                                    <constraint firstAttribute="bottom" secondItem="3rT-FR-T3h" secondAttribute="bottom" id="shx-6Y-Ywt"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="6"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" systemColor="systemGray5Color"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="8ep-28-65t"/>
+                                        </constraints>
+                                    </stackView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="J8Y-g9-ebX">
-                                        <rect key="frame" x="0.0" y="0.0" width="377" height="35"/>
+                                        <rect key="frame" x="0.0" y="42" width="377" height="35"/>
                                         <color key="backgroundColor" name="BGColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="bWE-Ba-xdG"/>
@@ -43,7 +106,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="k1I-Fq-vJB">
-                                        <rect key="frame" x="0.0" y="42" width="377" height="691"/>
+                                        <rect key="frame" x="0.0" y="84" width="377" height="649"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="144" id="IxL-Wt-CAG" customClass="DSubProviderTableViewCell" customModule="Shahn_Provider" customModuleProvider="target">
@@ -213,6 +276,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="الخدمات المساندة" id="tz2-EB-kzd"/>
                     <connections>
+                        <outlet property="citiesBtn" destination="wvR-Yc-tPz" id="hhm-SC-FKl"/>
+                        <outlet property="city" destination="3rT-FR-T3h" id="93T-0Q-A1j"/>
                         <outlet property="optionsSegment" destination="J8Y-g9-ebX" id="afd-C0-6PJ"/>
                         <outlet property="tableView" destination="k1I-Fq-vJB" id="Nmf-R6-f0g"/>
                     </connections>
@@ -247,6 +312,9 @@
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="unnamed" width="256" height="256"/>
         <image name="whatsup" width="147" height="143"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BGColor">
             <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -255,6 +323,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

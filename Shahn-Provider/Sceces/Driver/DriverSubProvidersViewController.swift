@@ -14,10 +14,19 @@ class DriverSubProvidersViewController: UIViewController {
     @IBOutlet weak var optionsSegment: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var citiesBtn: UIButton!
+    @IBOutlet weak var city: UITextField!
+    
+    @IBOutlet weak var search: UITextField!
+    
     var providers = [JSON]()
     var filtredProviders = [JSON]()
+    var cities: [JSON] = []
     
     var presenter: SubProvidersPresenter?
+    
+    var pickerView = UIPickerView()
+    var currentTextField = UITextField()
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -26,7 +35,9 @@ class DriverSubProvidersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         self.customNavJannaFont()
+        loadCities()
         setupSegments()
         // Do any additional setup after loading the view.
     }
@@ -34,6 +45,23 @@ class DriverSubProvidersViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.optionsSegment.selectedSegmentIndex = 0
         presenter?.loadSubProviders(action: "support_services")
+    }
+    
+    func loadCities() {
+        guard let request = Glubal.cities.getRequest() else {return}
+        self.presenter?.startProgress()
+        NetworkManager.instance.request(with: request, decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
+            guard let self = self else { return }
+            self.presenter?.stopProgress()
+            switch result {
+            case .success(let data):
+                if data["operation"].boolValue == true {
+                    self.cities = data["data"].arrayValue
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     
     func setupSegments() {
@@ -183,4 +211,68 @@ extension DriverSubProvidersViewController: UITableViewDelegate, UITableViewData
         }
     }
     
+}
+
+
+extension DriverSubProvidersViewController: UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    @IBAction func picCity() {
+        self.city.becomeFirstResponder()
+    }
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        currentTextField = textField
+        if currentTextField == city {
+            city.inputView = pickerView
+        }
+    }
+    
+    @IBAction func valueChanged(_ textField: UITextField) {
+        if textField.text!.count > 2 {
+            filtredProviders = providers.filter({ $0["city_name"].stringValue == textField.text || $0["name"].stringValue == textField.text || $0["area"].stringValue == textField.text || $0["car_ype"].stringValue == textField.text })
+        }else {
+            filtredProviders = providers
+        }
+        tableView.reloadData()
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if currentTextField == city {
+            return self.cities.count + 1
+        }
+        return 0
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if currentTextField == city {
+            if row == 0 {
+                return "كل المناطق"
+            }
+            return self.cities[row - 1]["name"].string
+                
+        }
+        return ""
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if currentTextField == city {
+            if row == 0 {
+                filtredProviders = providers
+                self.citiesBtn.setTitle("كل المناطق", for: .normal)
+            }else {
+                filtredProviders = providers.filter({ $0["city_id"].intValue == self.cities[row - 1]["id"].intValue })
+                self.citiesBtn.setTitle(self.cities[row - 1]["name"].string, for: .normal)
+            }
+            tableView.reloadData()
+        }
+        self.view.endEditing(true)
+    }
 }
