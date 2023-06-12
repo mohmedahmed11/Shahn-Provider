@@ -29,15 +29,21 @@ class OrderTableViewCell: UITableViewCell {
         wight.text = order["wight"].intValue != 0 ? "\(order["wight"].stringValue)" : "\(order["circles"].stringValue) ردود"
         wightLbl.text = order["wight"].intValue != 0 ? "الوزن: " : "الردود:"
         date.text = order["created_at"].string
-        if order["offer_status"].intValue == 0 || order["offer_status"].intValue == 1 {
+        if order["offer_status"].intValue == 0 {
             status.text = "جديد"
             status.textColor = .systemBlue
-        }else  if order["offer_status"].intValue == 2 {
+        }else if order["offer_status"].intValue == 1 {
+            status.text = "تم إسال العرض"
+            status.textColor = .systemOrange
+        } else if order["offer_status"].intValue == 2 {
             status.text = "معتمد"
             status.textColor = .systemOrange
         }else if order["offer_status"].intValue == 3 {
             status.text = "تم النفيذ"
             status.textColor = .systemGreen
+        }else if order["offer_status"].intValue == 4 {
+            status.text = "تم إعتماد مزود آخر"
+            status.textColor = .systemRed
         }else if order["offer_status"].intValue == 5 {
             status.text = "ملغي"
             status.textColor = .systemRed
