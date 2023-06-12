@@ -71,6 +71,7 @@
 		CEAB775A2A36784C00E963BC /* DriverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77592A36784C00E963BC /* DriverPresenter.swift */; };
 		CEAB775C2A367D6B00E963BC /* DriverSubProvidersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB775B2A367D6B00E963BC /* DriverSubProvidersViewController.swift */; };
 		CEAB775E2A367DE400E963BC /* DSubProviderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB775D2A367DE400E963BC /* DSubProviderTableViewCell.swift */; };
+		CEAB77602A36F94C00E963BC /* DriverAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB775F2A36F94C00E963BC /* DriverAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +144,7 @@
 		CEAB77592A36784C00E963BC /* DriverPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverPresenter.swift; sourceTree = "<group>"; };
 		CEAB775B2A367D6B00E963BC /* DriverSubProvidersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverSubProvidersViewController.swift; sourceTree = "<group>"; };
 		CEAB775D2A367DE400E963BC /* DSubProviderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSubProviderTableViewCell.swift; sourceTree = "<group>"; };
+		CEAB775F2A36F94C00E963BC /* DriverAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAccountViewController.swift; sourceTree = "<group>"; };
 		D9779CA92DC9F519B4B84B3C /* Pods-Shahn-Provider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahn-Provider.release.xcconfig"; path = "Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -396,6 +398,7 @@
 				CEAB77572A36780C00E963BC /* DriverLoadsViewController.swift */,
 				CEAB775D2A367DE400E963BC /* DSubProviderTableViewCell.swift */,
 				CEAB775B2A367D6B00E963BC /* DriverSubProvidersViewController.swift */,
+				CEAB775F2A36F94C00E963BC /* DriverAccountViewController.swift */,
 				CEAB77592A36784C00E963BC /* DriverPresenter.swift */,
 			);
 			path = Driver;
@@ -571,6 +574,7 @@
 				CEAB76BA2A076BF000E963BC /* AppDelegate.swift in Sources */,
 				CEAB76EE2A0E68F200E963BC /* CommonFunctions.swift in Sources */,
 				CEAB77232A1350D400E963BC /* OrderDetailsViewController.swift in Sources */,
+				CEAB77602A36F94C00E963BC /* DriverAccountViewController.swift in Sources */,
 				CEAB77462A16965300E963BC /* OrderPricingViewController.swift in Sources */,
 				CEAB76DC2A0E688800E963BC /* RegistrationViewController.swift in Sources */,
 				CEAB76FA2A0E691300E963BC /* CustomMarker.swift in Sources */,
