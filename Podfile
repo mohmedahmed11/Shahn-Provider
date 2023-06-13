@@ -12,7 +12,7 @@ target 'Shahn-Provider' do
   pod 'ProgressHUD'
   pod 'IQKeyboardManagerSwift'
   pod 'NVActivityIndicatorView'
-  pod 'Kingfisher'
+  pod 'Kingfisher', '7.6.2'
   pod 'ImageSlideshow'
   pod "ImageSlideshow/Kingfisher"
   pod 'GoogleMaps'
