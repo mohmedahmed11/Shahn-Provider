@@ -416,7 +416,7 @@
 				CEAB76B32A076BF000E963BC /* Frameworks */,
 				CEAB76B42A076BF000E963BC /* Resources */,
 				4960903439C039DE24849809 /* [CP] Embed Pods Frameworks */,
-				E743CAA710FE4CAAFC66067E /* [CP] Copy Pods Resources */,
+				98118F60A17C282A6FBCEA12 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -508,6 +508,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		98118F60A17C282A6FBCEA12 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A0F692C8E6BD7C19AFED7B85 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -528,23 +545,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E743CAA710FE4CAAFC66067E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
