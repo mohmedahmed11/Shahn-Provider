@@ -27,6 +27,7 @@ class OrderDetailsViewController: UIViewController {
     @IBOutlet weak var providerOfferPrice: UILabel!
     @IBOutlet weak var providerOfferDaies: UILabel!
     @IBOutlet weak var loadsCount: UILabel!
+    @IBOutlet weak var payment: UILabel!
     @IBOutlet weak var chargesBtn: UIView!
     @IBOutlet weak var pricingStack: UIStackView!
     @IBOutlet weak var reciverStack: UIStackView!
@@ -57,6 +58,8 @@ class OrderDetailsViewController: UIViewController {
         reciverPhone.text = order["receiver_phone"].string
         images = order["images"].arrayValue
         imagesCollectionView.reloadData()
+        
+        payment.text = order["payment_type"].intValue == 1 ? "دفع عند الوصول" : "دفع ألكتروني"
         
         if order["total_delivery"].intValue > 0 {
             loadsCount.text = "\(order["total_delivery"].intValue) شحنة"

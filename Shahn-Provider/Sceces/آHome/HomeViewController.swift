@@ -47,7 +47,7 @@ class HomeViewController: UIViewController {
             self.filtredOrders = orders
         }else {
             if sender.selectedSegmentIndex == 4 {
-                self.filtredOrders = orders.filter({ $0["offer_status"].intValue == 5})
+                self.filtredOrders = orders.filter({ $0["offer_status"].intValue == 4 || $0["offer_status"].intValue == 5})
             }else if sender.selectedSegmentIndex == 1 {
                 self.filtredOrders = orders.filter({ $0["offer_status"].intValue == 0 || $0["offer_status"].intValue == 1})
             }else {
