@@ -26,7 +26,7 @@ class OrderTableViewCell: UITableViewCell {
     func setUI(with order: JSON) {
         orderId.text = "#"+order["id"].stringValue
         type.text = order["type"].string
-        wight.text = order["wight"].intValue != 0 ? "\(order["wight"].stringValue)" : "\(order["circles"].stringValue) ردود"
+        wight.text = order["wight"].intValue != 0 ? "\(order["wight"].stringValue) طن" : "\(order["circles"].stringValue) ردود"
         wightLbl.text = order["wight"].intValue != 0 ? "الوزن: " : "الردود:"
         date.text = order["created_at"].string
         if order["offer_status"].intValue == 0 {

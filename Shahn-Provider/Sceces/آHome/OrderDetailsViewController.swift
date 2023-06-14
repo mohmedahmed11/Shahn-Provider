@@ -48,7 +48,7 @@ class OrderDetailsViewController: UIViewController {
     
     func setData() {
         type.text = order["type"].string
-        wight.text = order["wight"].intValue != 0  ? "الوزن: \(order["wight"].stringValue)" : "الردود: \(order["circles"].stringValue) ردود"
+        wight.text = order["wight"].intValue != 0  ? "الوزن: \(order["wight"].stringValue) طن" : "الردود: \(order["circles"].stringValue) ردود"
         details.text = order["details"].string
         chargeDate.text = "تاريخ الشحن: \(order["charge_date"].stringValue)"
         picLocation.text = "الشحن: \(order["pickup_lat"].stringValue) : \(order["pickup_lon"].stringValue)"
