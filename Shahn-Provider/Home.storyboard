@@ -360,7 +360,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dtw-ww-8kz">
-                                        <rect key="frame" x="8" y="8" width="377" height="1336"/>
+                                        <rect key="frame" x="8" y="8" width="377" height="1406"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="معلومات الشحنة" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExF-rW-C55">
                                                 <rect key="frame" x="0.0" y="0.0" width="377" height="34"/>
@@ -1094,6 +1094,36 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxr-hF-b95">
+                                                <rect key="frame" x="0.0" y="1356" width="377" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تقرير الطلب" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIA-XA-3xK">
+                                                        <rect key="frame" x="8" y="8" width="361" height="34"/>
+                                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="18"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sVA-no-RRZ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="377" height="50"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <connections>
+                                                            <action selector="oprnReport" destination="sRB-Ua-goL" eventType="touchUpInside" id="y9p-mq-G1p"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" name="PrimaryColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="sVA-no-RRZ" secondAttribute="trailing" id="5Tj-y9-scQ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xIA-XA-3xK" secondAttribute="trailing" constant="8" id="ErH-MM-8xF"/>
+                                                    <constraint firstAttribute="bottom" secondItem="sVA-no-RRZ" secondAttribute="bottom" id="H2b-tV-1KQ"/>
+                                                    <constraint firstItem="xIA-XA-3xK" firstAttribute="leading" secondItem="cxr-hF-b95" secondAttribute="leading" constant="8" id="HbQ-8T-AvT"/>
+                                                    <constraint firstItem="xIA-XA-3xK" firstAttribute="top" secondItem="cxr-hF-b95" secondAttribute="top" constant="8" id="Q0g-9P-mLp"/>
+                                                    <constraint firstItem="sVA-no-RRZ" firstAttribute="top" secondItem="cxr-hF-b95" secondAttribute="top" id="bGS-uY-YKM"/>
+                                                    <constraint firstItem="sVA-no-RRZ" firstAttribute="leading" secondItem="cxr-hF-b95" secondAttribute="leading" id="gVF-08-vI3"/>
+                                                    <constraint firstAttribute="height" constant="50" id="hAv-Ii-alE"/>
+                                                    <constraint firstAttribute="bottom" secondItem="xIA-XA-3xK" secondAttribute="bottom" constant="8" id="jsZ-TF-QyU"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -1167,6 +1197,7 @@
                         <outlet property="reciverName" destination="ue4-lT-ce1" id="YqU-zE-s5Y"/>
                         <outlet property="reciverPhone" destination="8pw-JY-6SU" id="Usp-yS-16X"/>
                         <outlet property="reciverStack" destination="AEI-Sc-9uN" id="hor-Do-SyI"/>
+                        <outlet property="reportBtn" destination="cxr-hF-b95" id="P36-nE-tVz"/>
                         <outlet property="type" destination="LsN-bE-YAv" id="ZX2-md-P3t"/>
                         <outlet property="wight" destination="VHC-vK-Vks" id="Cme-fW-t1y"/>
                         <segue destination="brL-X2-rSL" kind="presentation" identifier="pricing" modalPresentationStyle="pageSheet" id="agC-n9-g51"/>

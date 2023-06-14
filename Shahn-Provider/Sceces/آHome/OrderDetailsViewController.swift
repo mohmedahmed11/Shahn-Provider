@@ -9,6 +9,7 @@ import UIKit
 import SwiftyJSON
 import ImageSlideshow
 import Kingfisher
+import SafariServices
 
 class OrderDetailsViewController: UIViewController {
     
@@ -32,6 +33,7 @@ class OrderDetailsViewController: UIViewController {
     @IBOutlet weak var pricingStack: UIStackView!
     @IBOutlet weak var reciverStack: UIStackView!
     @IBOutlet weak var optionsBtsStack: UIStackView!
+    @IBOutlet weak var reportBtn: UIView!
     
     var presenter: OrdersPresenter?
     var chargeCount : Int = 0
@@ -59,13 +61,18 @@ class OrderDetailsViewController: UIViewController {
         images = order["images"].arrayValue
         imagesCollectionView.reloadData()
         
-        payment.text = order["payment_type"].intValue == 1 ? "دفع عند الوصول" : "دفع ألكتروني"
-        
         if order["total_delivery"].intValue > 0 {
             loadsCount.text = "\(order["total_delivery"].intValue) شحنة"
         }
         
-        if order["offer_status"].intValue > 0 && order["offer_status"].intValue < 5 {
+        if order["offer_status"].intValue == 2 || order["offer_status"].intValue == 3 {
+            self.reportBtn.isHidden = false
+            payment.text = order["payment_type"].intValue == 1 ? "دفع عند الوصول" : "دفع ألكتروني"
+        }else {
+            self.reportBtn.isHidden = true
+        }
+        
+        if order["offer_status"].intValue > 0 && order["offer_status"].intValue < 4 {
             self.pricingStack.isHidden = false
             self.optionsBtsStack.isHidden = true
             if order["offer_status"].intValue > 1 {
@@ -173,6 +180,15 @@ class OrderDetailsViewController: UIViewController {
                 return
             }
         }
+    }
+    
+    @IBAction func oprnReport() {
+        let url = order["invoice"].stringValue
+        if let url = URL(string: "\(Glubal.filesBaseurl.path)\(url)"){
+            let vc = SFSafariViewController(url: url)
+            present(vc, animated: true)
+        }
+        
     }
     
     // MARK: - Navigation
