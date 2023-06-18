@@ -7,11 +7,13 @@
 
 import UIKit
 import SwiftyJSON
+import ProgressHUD
 
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var optionsSegment: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loginBtn: UIView!
     
     var orders = [JSON]()
     var filtredOrders = [JSON]()
@@ -25,6 +27,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.customNavJannaFont()
+        loginBtn.isHidden = !UserDefaults.standard.bool(forKey: "hasDriver")
         setupSegments()
         // Do any additional setup after loading the view.
     }
@@ -40,6 +43,38 @@ class HomeViewController: UIViewController {
         
         let fontAttributes = [NSAttributedString.Key.font: UIFont(name: "BahijJanna", size: 16) ?? .systemFont(ofSize: 16)]
         optionsSegment.setTitleTextAttributes(fontAttributes, for: .normal)
+    }
+    
+    @IBAction func driverLogin() {
+        ProgressHUD.animationType = .circleStrokeSpin
+        ProgressHUD.show()
+        NetworkManager.instance.request(with: "\(Glubal.baseurl.path)\(Glubal.drivers.path)", method: .post, parameters: [ "phone": UserDefaults.standard.string(forKey: "user_phone")!, "action": "login"],  decodingType: JSON.self, errorModel: ErrorModel.self) { result in
+            ProgressHUD.dismiss()
+            switch result {
+            case .success(let data):
+                if data["operation"].boolValue == true {
+                    AppManager.shared.authUser = User(id: data["user"]["id"].stringValue, name: data["user"]["name"].stringValue, phone: data["user"]["phone"].stringValue, contact: data["user"]["contact"].stringValue, type: "driver", image: data["user"]["image"].stringValue)
+                    AppManager.shared.authUser?.action = "login"
+                    AppManager.shared.authUser?.hasProvider = data["has_provider"].boolValue
+                    self.saveUser()
+                }else {
+                    AlertHelper.showAlert(message:  "عفواً رقم الهاتف غير موجود")
+                }
+                
+            case .failure(let error):
+                AlertHelper.showAlert(message: "عفواً فشل الدخول حاول مرة أخرى")
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func saveUser() {
+        UserDefaults.standard.set(AppManager.shared.authUser!.id, forKey: "userIsIn")
+        UserDefaults.standard.set(AppManager.shared.authUser!.phone, forKey: "user_phone")
+        UserDefaults.standard.set(AppManager.shared.authUser!.type!, forKey: "userType")
+        UserDefaults.standard.set(AppManager.shared.authUser!.hasDriver, forKey: "hasDriver")
+        UserDefaults.standard.set(AppManager.shared.authUser!.hasProvider, forKey: "hasProvider")
+        self.parent?.parent?.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func optionChange(_ sender: UISegmentedControl) {

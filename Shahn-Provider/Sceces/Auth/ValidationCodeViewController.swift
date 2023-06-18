@@ -87,6 +87,8 @@ class ValidationCodeViewController: UIViewController {
         UserDefaults.standard.set(AppManager.shared.authUser!.id, forKey: "userIsIn")
         UserDefaults.standard.set(AppManager.shared.authUser!.phone, forKey: "user_phone")
         UserDefaults.standard.set(AppManager.shared.authUser!.type!, forKey: "userType")
+        UserDefaults.standard.set(AppManager.shared.authUser!.hasDriver, forKey: "hasDriver")
+        UserDefaults.standard.set(AppManager.shared.authUser!.hasProvider, forKey: "hasProvider")
         self.navigationController?.popToRootViewController(animated: true)
     }
     
