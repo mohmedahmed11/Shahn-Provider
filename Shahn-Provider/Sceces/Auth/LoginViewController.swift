@@ -68,6 +68,7 @@ class LoginViewController: UIViewController {
                 if data["operation"].boolValue == true {
                     AppManager.shared.authUser = User(id: data["user"]["id"].stringValue, name: data["user"]["name"].stringValue, phone: data["user"]["phone"].stringValue, contact: data["user"]["contact"].stringValue, type: "provider", image: data["user"]["image"].stringValue)
                     AppManager.shared.authUser?.action = "login"
+                    AppManager.shared.authUser?.hasDriver = data["has_driver"].boolValue
                     self.sendSmsData()
                 }else {
                     AlertHelper.showAlert(message:  "عفواً رقم الهاتف غير موجود")
@@ -91,6 +92,7 @@ class LoginViewController: UIViewController {
                 if data["operation"].boolValue == true {
                     AppManager.shared.authUser = User(id: data["user"]["id"].stringValue, name: data["user"]["name"].stringValue, phone: data["user"]["phone"].stringValue, contact: data["user"]["contact"].stringValue, type: "driver", image: data["user"]["image"].stringValue)
                     AppManager.shared.authUser?.action = "login"
+                    AppManager.shared.authUser?.hasProvider = data["has_provider"].boolValue
                     self.sendSmsData()
                 }else {
                     AlertHelper.showAlert(message:  "عفواً رقم الهاتف غير موجود")

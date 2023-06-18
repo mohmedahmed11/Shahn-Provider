@@ -28,6 +28,8 @@ struct User: Codable {
     var userCode = 0000
     var action: String = "login"
     var userType = 1
+    var hasDriver = false
+    var hasProvider = false
     
 }
 
