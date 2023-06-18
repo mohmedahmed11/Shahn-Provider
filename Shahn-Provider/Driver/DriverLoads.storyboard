@@ -185,7 +185,7 @@
                                 </constraints>
                                 <segments>
                                     <segment title="الكل"/>
-                                    <segment title="جديد"/>
+                                    <segment title="جاري الشحن"/>
                                     <segment title="تم التنفيذ"/>
                                 </segments>
                                 <connections>

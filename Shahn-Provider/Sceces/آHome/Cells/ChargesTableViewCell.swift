@@ -32,7 +32,7 @@ class ChargesTableViewCell: UITableViewCell {
         self.wight.text = charge["wight"].stringValue+" طن"
         
         if charge["status"].intValue == 0 {
-            status.text = "جديد"
+            status.text = "جاري الشحن"
             status.textColor = .systemBlue
         }else if charge["status"].intValue == 1 {
             status.text = "تم التنفيذ"

@@ -145,7 +145,7 @@ extension DriverLoadsViewController: UITableViewDelegate, UITableViewDataSource 
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ChargesTableViewCell
         cell.setUI(with: filtredCharges[indexPath.row])
         cell.invoiceDetails = {
-            self.openFile(with: self.charges[indexPath.row]["invoice"].stringValue)
+            self.openFile(with: self.filtredCharges[indexPath.row]["invoice"].stringValue)
         }
         return cell
     }
@@ -154,7 +154,7 @@ extension DriverLoadsViewController: UITableViewDelegate, UITableViewDataSource 
         if filtredCharges[indexPath.row]["status"].intValue == 0 {
             AlertHelper.showOkCancel(message: "تسليم الشحنة") {
                 AlertHelper.showAlertTextEntry(message: "ادخل رمز الشحنة المرسل للعميل" , placeholderText: "----", keyboardType: .numberPad) { buttonIndex, textField in
-                    if textField.text! == self.filtredCharges[indexPath.row]["code"].string {
+                    if Int(textField.text!) == self.filtredCharges[indexPath.row]["code"].intValue {
                         self.presenter?.changeLoadStatus(orderId: self.filtredCharges[indexPath.row]["order_id"].intValue, loadId: self.filtredCharges[indexPath.row]["id"].intValue, OfferId: self.filtredCharges[indexPath.row]["offer_id"].intValue)
                         return
                     }else {

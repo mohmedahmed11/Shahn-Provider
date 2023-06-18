@@ -27,5 +27,7 @@
 	<string>التطبيق يتطلب الوصول لمعرض الصور لكي تتمكن من اختيار الصور المطلوبة منك</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>التطبيق يتطلب الوصوع للموقع لكي تتمكن من إضافة مواقع الخدمة او عرضها</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>
