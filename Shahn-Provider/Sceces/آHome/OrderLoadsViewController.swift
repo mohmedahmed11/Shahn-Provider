@@ -50,6 +50,10 @@ class OrderLoadsViewController: UIViewController {
         if segue.identifier == "addLoad" {
             let vc = segue.destination as! AddLoadViewController
             vc.order = order
+        }else if segue.identifier == "openLocation" {
+            let vc = segue.destination as! PicAddressViewController
+            vc.locationJSON = sender as? JSON
+            vc.IsForPicing = false
         }
         // Pass the selected object to the new view controller.
     }
@@ -104,9 +108,16 @@ extension OrderLoadsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ChargesTableViewCell
         cell.setUI(with: charges[indexPath.row])
-        cell.chargeId.text = "#\(indexPath.row + 1)"
+        if charges[indexPath.row]["status"].intValue == 0 {
+            cell.driverStack.isHidden = false
+        }else {
+            cell.driverStack.isHidden = true
+        }
         cell.invoiceDetails = {
             self.openFile(with: self.charges[indexPath.row]["invoice"].stringValue)
+        }
+        cell.fallowDriver = {
+            self.performSegue(withIdentifier: "openLocation", sender: JSON(["lat": self.charges[indexPath.row]["lat"].doubleValue ,"lon": self.charges[indexPath.row]["lon"].doubleValue]))
         }
         return cell
     }

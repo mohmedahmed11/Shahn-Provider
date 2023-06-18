@@ -17,8 +17,10 @@ class ChargesTableViewCell: UITableViewCell {
     @IBOutlet weak var wight: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var driverStack: UIStackView!
     
     var invoiceDetails: (() -> Void)?
+    var fallowDriver: (() -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -45,6 +47,10 @@ class ChargesTableViewCell: UITableViewCell {
     
     @IBAction func showInvoide() {
         invoiceDetails?()
+    }
+    
+    @IBAction func showDriverInMap() {
+        fallowDriver?()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
