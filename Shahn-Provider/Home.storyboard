@@ -1346,8 +1346,14 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ed-U1-48b">
                                                             <rect key="frame" x="0.0" y="102" width="361" height="26"/>
                                                             <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تسلسل الشحنة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e65-1t-KMr">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="92" height="26"/>
+                                                                    <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IkR-TN-oB9">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="241" height="26"/>
+                                                                    <rect key="frame" x="92" y="0.0" width="149" height="26"/>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 </view>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWr-bL-9Qn">
@@ -1365,9 +1371,6 @@
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="34" id="3Lt-eK-fts"/>
-                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
@@ -1382,6 +1385,7 @@
                                         <connections>
                                             <outlet property="chargeId" destination="yP7-V1-XXI" id="fyJ-RH-3Le"/>
                                             <outlet property="date" destination="BCb-c9-989" id="nV1-iH-NP9"/>
+                                            <outlet property="driver" destination="e65-1t-KMr" id="IHL-bu-sY2"/>
                                             <outlet property="driverStack" destination="4ed-U1-48b" id="Y2r-K4-10s"/>
                                             <outlet property="serial" destination="vT4-xD-WFi" id="4xU-AF-Ksk"/>
                                             <outlet property="status" destination="pkt-X3-6oG" id="bq7-wj-iIv"/>
@@ -1487,7 +1491,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="الرقم المتسلسل" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wgk-Ed-f4g">
                                                         <rect key="frame" x="14" y="0.0" width="363" height="50"/>
                                                         <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                         <connections>
                                                             <action selector="valueChanged:" destination="pOM-De-IBB" eventType="editingChanged" id="3lq-3N-ft9"/>
                                                         </connections>
@@ -1520,7 +1524,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="وزن الشحن" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Yl-4y-n18">
                                                         <rect key="frame" x="14" y="0.0" width="363" height="50"/>
                                                         <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                         <connections>
                                                             <action selector="valueChanged:" destination="pOM-De-IBB" eventType="editingChanged" id="l80-hf-vbz"/>
                                                         </connections>

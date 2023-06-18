@@ -17,6 +17,7 @@ class ChargesTableViewCell: UITableViewCell {
     @IBOutlet weak var wight: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var driver: UILabel!
     @IBOutlet weak var driverStack: UIStackView!
     
     var invoiceDetails: (() -> Void)?

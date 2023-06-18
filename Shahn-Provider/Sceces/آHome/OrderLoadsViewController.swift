@@ -108,6 +108,7 @@ extension OrderLoadsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ChargesTableViewCell
         cell.setUI(with: charges[indexPath.row])
+        cell.driver.text = charges[indexPath.row]["driver"].string
         if charges[indexPath.row]["status"].intValue == 0 {
             cell.driverStack.isHidden = false
         }else {

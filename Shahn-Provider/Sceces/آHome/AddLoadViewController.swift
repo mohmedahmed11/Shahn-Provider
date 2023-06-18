@@ -75,10 +75,12 @@ extension AddLoadViewController: AddLoadDelegate {
         switch result {
         case .success(let data):
             if data["operation"].boolValue == true {
-                var loadId = data["id"].intValue
+                let loadId = data["id"].intValue
                 self.sendSMS(id: loadId)
                 self.navigationController?.popViewController(animated: true)
-            }else {
+            }else if data["message"].string != nil {
+                AlertHelper.showAlert(message: data["message"].stringValue)
+            } else {
                 AlertHelper.showAlert(message: "عفوا حاول مرة أخري")
             }
         case .failure(let u):
