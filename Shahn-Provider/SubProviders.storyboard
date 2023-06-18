@@ -542,7 +542,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bze-1c-w6S">
                                                                 <rect key="frame" x="8" y="0.0" width="361" height="30"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgS-yO-Wud" customClass="DesignableButton" customModule="Shahn" customModuleProvider="target">
+                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgS-yO-Wud" customClass="DesignableButton" customModule="Shahn_Provider" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="3" width="24" height="24"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
@@ -586,7 +586,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GEJ-OK-fkL">
                                                                 <rect key="frame" x="8" y="0.0" width="361" height="30"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c78-eC-eDN" customClass="DesignableButton" customModule="Shahn" customModuleProvider="target">
+                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c78-eC-eDN" customClass="DesignableButton" customModule="Shahn_Provider" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="3" width="24" height="24"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
@@ -630,7 +630,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YKS-kC-oqq">
                                                                 <rect key="frame" x="8" y="0.0" width="361" height="30"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRW-HE-zvq" customClass="DesignableButton" customModule="Shahn" customModuleProvider="target">
+                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRW-HE-zvq" customClass="DesignableButton" customModule="Shahn_Provider" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="3" width="24" height="24"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
@@ -674,7 +674,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CLc-Ld-Pv3">
                                                                 <rect key="frame" x="8" y="0.0" width="361" height="30"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QU4-dd-rt8" customClass="DesignableButton" customModule="Shahn" customModuleProvider="target">
+                                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QU4-dd-rt8" customClass="DesignableButton" customModule="Shahn_Provider" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="3" width="24" height="24"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
@@ -794,11 +794,11 @@
             </objects>
             <point key="canvasLocation" x="2252.6717557251909" y="-28.169014084507044"/>
         </scene>
-        <!--الفرع-->
+        <!--الفروع-->
         <scene sceneID="FG9-8b-3dg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jSQ-fe-AeU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="الفرع" image="gearshape" catalog="system" selectedImage="gearshape.fill" id="uNq-8j-SkG"/>
+                    <tabBarItem key="tabBarItem" title="الفروع" image="gearshape" catalog="system" selectedImage="gearshape.fill" id="uNq-8j-SkG"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7JJ-ZS-Hco">
