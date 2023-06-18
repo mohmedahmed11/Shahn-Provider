@@ -337,6 +337,39 @@
                     </view>
                     <navigationItem key="navigationItem" title="العروض" id="FsO-JH-xs8">
                         <barButtonItem key="backBarButtonItem" title=" " id="q13-tx-xdQ"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Ais-67-iKJ">
+                            <view key="customView" contentMode="scaleToFill" id="mYj-VQ-ODj">
+                                <rect key="frame" x="16" y="0.0" width="110" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الدخول كسائق" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nr-CZ-SmO">
+                                        <rect key="frame" x="4" y="0.0" width="71.666666666666671" height="44"/>
+                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p2x-Bb-DCQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="44"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="showLoads" destination="sRB-Ua-goL" eventType="touchUpInside" id="gNe-La-Ews"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="PrimaryColor"/>
+                                <constraints>
+                                    <constraint firstItem="2nr-CZ-SmO" firstAttribute="top" secondItem="mYj-VQ-ODj" secondAttribute="top" id="4Tg-F6-kRo"/>
+                                    <constraint firstAttribute="trailing" secondItem="2nr-CZ-SmO" secondAttribute="trailing" constant="4" id="BT5-YQ-23d"/>
+                                    <constraint firstAttribute="bottom" secondItem="p2x-Bb-DCQ" secondAttribute="bottom" id="Gcd-IR-IfM"/>
+                                    <constraint firstAttribute="width" constant="90" id="SdV-fX-JdF"/>
+                                    <constraint firstAttribute="trailing" secondItem="p2x-Bb-DCQ" secondAttribute="trailing" id="VcO-S3-lTH"/>
+                                    <constraint firstItem="p2x-Bb-DCQ" firstAttribute="leading" secondItem="mYj-VQ-ODj" secondAttribute="leading" id="eCX-iq-L0X"/>
+                                    <constraint firstAttribute="bottom" secondItem="2nr-CZ-SmO" secondAttribute="bottom" id="g4e-q7-w6f"/>
+                                    <constraint firstItem="2nr-CZ-SmO" firstAttribute="leading" secondItem="mYj-VQ-ODj" secondAttribute="leading" constant="4" id="i92-TI-iDT"/>
+                                    <constraint firstItem="p2x-Bb-DCQ" firstAttribute="top" secondItem="mYj-VQ-ODj" secondAttribute="top" id="pL9-4s-Gu4"/>
+                                </constraints>
+                            </view>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="optionsSegment" destination="OD0-p2-Dl9" id="Te1-uI-kev"/>

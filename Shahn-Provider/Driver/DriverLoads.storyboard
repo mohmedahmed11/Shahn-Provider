@@ -205,7 +205,38 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2C6-lo-WdM" secondAttribute="trailing" constant="8" id="yqV-4D-TyZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="الشحنات المسندة" id="gNx-ld-e58"/>
+                    <navigationItem key="navigationItem" title="الشحنات المسندة" id="gNx-ld-e58">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ikz-Ec-1tf">
+                            <view key="customView" contentMode="scaleToFill" id="yb6-cC-okM">
+                                <rect key="frame" x="361" y="0.0" width="110" height="37.333333333333329"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الدخول كمزود خدمة" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lea-sX-q49">
+                                        <rect key="frame" x="4" y="0.0" width="102" height="37.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kd-3C-Wcd">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="37.333333333333336"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="PrimaryColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1kd-3C-Wcd" secondAttribute="trailing" id="4OK-uM-2DA"/>
+                                    <constraint firstItem="Lea-sX-q49" firstAttribute="top" secondItem="yb6-cC-okM" secondAttribute="top" id="5Vr-P8-xXW"/>
+                                    <constraint firstAttribute="width" constant="110" id="91s-3G-F9V"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lea-sX-q49" secondAttribute="trailing" constant="4" id="G4e-zv-XeN"/>
+                                    <constraint firstAttribute="bottom" secondItem="1kd-3C-Wcd" secondAttribute="bottom" id="Qn7-aw-iPg"/>
+                                    <constraint firstItem="1kd-3C-Wcd" firstAttribute="leading" secondItem="yb6-cC-okM" secondAttribute="leading" id="Rg2-EA-bjR"/>
+                                    <constraint firstItem="Lea-sX-q49" firstAttribute="leading" secondItem="yb6-cC-okM" secondAttribute="leading" constant="4" id="dPm-Y1-JBU"/>
+                                    <constraint firstItem="1kd-3C-Wcd" firstAttribute="top" secondItem="yb6-cC-okM" secondAttribute="top" id="fyS-e8-amP"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lea-sX-q49" secondAttribute="bottom" id="mzu-82-1qv"/>
+                                </constraints>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="optionsSegment" destination="2C6-lo-WdM" id="6OJ-0p-rIh"/>
                         <outlet property="tableView" destination="WxN-ix-ejn" id="x9p-2X-2GO"/>
