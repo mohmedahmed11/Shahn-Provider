@@ -42,8 +42,8 @@ class DriverPresenter {
         }
     }
     
-    func changeLoadStatus(orderId: Int, loadId: Int, OfferId: Int) {
-        guard let request = Glubal.loadStatus(chargeId: loadId, deliverId: OfferId, orderId: orderId).getRequest() else {return}
+    func changeLoadStatus(orderId: Int, loadId: Int, OfferId: Int, driverId: Int) {
+        guard let request = Glubal.loadStatus(chargeId: loadId, deliverId: OfferId, orderId: orderId, driverId: driverId).getRequest() else {return}
         startProgress()
         NetworkManager.instance.request(with: request, decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
             guard let self = self else { return }

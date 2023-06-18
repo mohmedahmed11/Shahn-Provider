@@ -155,7 +155,8 @@ extension DriverLoadsViewController: UITableViewDelegate, UITableViewDataSource 
             AlertHelper.showOkCancel(message: "تسليم الشحنة") {
                 AlertHelper.showAlertTextEntry(message: "ادخل رمز الشحنة المرسل للعميل" , placeholderText: "----", keyboardType: .numberPad) { buttonIndex, textField in
                     if Int(textField.text!) == self.filtredCharges[indexPath.row]["code"].intValue {
-                        self.presenter?.changeLoadStatus(orderId: self.filtredCharges[indexPath.row]["order_id"].intValue, loadId: self.filtredCharges[indexPath.row]["id"].intValue, OfferId: self.filtredCharges[indexPath.row]["offer_id"].intValue)
+                        self.presenter?.changeLoadStatus(orderId: self.filtredCharges[indexPath.row]["order_id"].intValue, loadId: self.filtredCharges[indexPath.row]["id"].intValue, OfferId: self.filtredCharges[indexPath.row]["offer_id"].intValue,driverId: self.filtredCharges[indexPath.row]["driver_id"].intValue)
+                        
                         return
                     }else {
                         AlertHelper.showAlert(message: "عفواً الرمز عير متطابق")
