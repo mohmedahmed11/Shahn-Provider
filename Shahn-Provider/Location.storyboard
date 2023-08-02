@@ -73,6 +73,37 @@
             </objects>
             <point key="canvasLocation" x="929" y="4"/>
         </scene>
+        <!--العنوان-->
+        <scene sceneID="Wu3-Hr-QC3">
+            <objects>
+                <viewController storyboardIdentifier="ShowAddressViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="t60-Iy-IRy" customClass="ShowAddressViewController" customModule="Shahn_Provider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rRy-AL-Tav">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="die-Kz-XSg">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="psZ-3Y-wZH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="die-Kz-XSg" firstAttribute="top" secondItem="psZ-3Y-wZH" secondAttribute="top" id="1fM-dw-9z6"/>
+                            <constraint firstItem="psZ-3Y-wZH" firstAttribute="trailing" secondItem="die-Kz-XSg" secondAttribute="trailing" id="6tK-6J-wHg"/>
+                            <constraint firstItem="die-Kz-XSg" firstAttribute="leading" secondItem="rRy-AL-Tav" secondAttribute="leading" id="KrV-aR-d3u"/>
+                            <constraint firstAttribute="bottom" secondItem="die-Kz-XSg" secondAttribute="bottom" id="oZx-SP-2mR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="العنوان" id="IGj-e2-MXJ"/>
+                    <connections>
+                        <outlet property="mapPlaceView" destination="die-Kz-XSg" id="Pto-ab-mgP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="at5-cC-DT2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2008" y="4"/>
+        </scene>
     </scenes>
     <resources>
         <image name="custom-pin-red" width="40" height="40"/>

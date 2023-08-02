@@ -20,6 +20,8 @@ class OrderDetailsViewController: UIViewController {
     @IBOutlet weak var wight: UILabel!
     @IBOutlet weak var details: UILabel!
     @IBOutlet weak var imagesCollectionView: UICollectionView!
+    @IBOutlet weak var picLocationAdd: UILabel!
+    @IBOutlet weak var dropLocationAdd: UILabel!
     @IBOutlet weak var picLocation: UILabel!
     @IBOutlet weak var dropLocation: UILabel!
     @IBOutlet weak var chargeDate: UILabel!
@@ -54,8 +56,15 @@ class OrderDetailsViewController: UIViewController {
         wight.text = order["wight"].intValue != 0  ? "الوزن: \(order["wight"].stringValue) طن" : "الردود: \(order["circles"].stringValue) ردود"
         details.text = order["details"].string
         chargeDate.text = "تاريخ الشحن: \(order["charge_date"].stringValue)"
-        picLocation.text = "الشحن: \(order["pickup_lat"].stringValue) : \(order["pickup_lon"].stringValue)"
-        dropLocation.text = "التفريغ: \(order["dropoff_lat"].stringValue) : \(order["dropoff_lon"].stringValue)"
+        picLocation.text = "\(order["pickup_lat"].stringValue) : \(order["pickup_lon"].stringValue)"
+        dropLocation.text = "\(order["dropoff_lat"].stringValue) : \(order["dropoff_lon"].stringValue)"
+        
+        picLocationAdd.text = "الشحن: \(order["pickup_area"].stringValue)"
+        dropLocationAdd.text = "التفريغ: \(order["drop_off_area"].stringValue)"
+        
+        providerOfferPrice.text = "\(order["price"].stringValue) ريال"
+        providerOfferDaies.text = "\(order["duration"].stringValue) يوم"
+        
         reciverName.text = order["receiver_name"].string
         reciverPhone.text = order["receiver_phone"].string
         images = order["images"].arrayValue
@@ -106,10 +115,12 @@ class OrderDetailsViewController: UIViewController {
     }
     
     @IBAction func openPicInMap() {
+//        self.performSegue(withIdentifier: "openLocation", sender: JSON(["lat": order["pickup_lat"].floatValue ,"lon": order["pickup_lon"].floatValue]))
         self.openGoogleMap(latDouble: order["pickup_lat"].floatValue, longDouble: order["pickup_lon"].floatValue)
     }
     
     @IBAction func openDropInMap() {
+//        self.performSegue(withIdentifier: "openLocation", sender: JSON(["lat": order["dropoff_lat"].floatValue ,"lon": order["dropoff_lon"].floatValue]))
         self.openGoogleMap(latDouble: order["dropoff_lat"].floatValue, longDouble: order["dropoff_lon"].floatValue)
     }
     
@@ -203,6 +214,9 @@ class OrderDetailsViewController: UIViewController {
         }else if segue.identifier == "charges" {
             let vc = segue.destination as! OrderLoadsViewController
             vc.order = order
+        }else if segue.identifier == "openLocation" {
+            let vc = segue.destination as! ShowAddressViewController
+            vc.locationJSON = sender as? JSON
         }
         // Pass the selected object to the new view controller.
     }

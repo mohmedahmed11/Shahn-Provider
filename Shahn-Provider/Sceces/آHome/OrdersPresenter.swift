@@ -19,6 +19,8 @@ protocol PricingOffersStatusDelegate {
 
 protocol LoadsDelegate {
     func didReciveLoads(with result: Result<JSON, Error>)
+    func didReciveDrivers(with result: Result<JSON, Error>)
+    func didAddDriverToLoad(with result: Result<JSON, Error>)
 }
 
 protocol AddLoadDelegate {
@@ -123,6 +125,21 @@ class OrdersPresenter {
         }
     }
     
+    func addAddDriverToLoad(with parameters: [String: String]) {
+        startProgress()
+        NetworkManager.instance.request(with: "\(Glubal.baseurl.path)\(Glubal.addLoad.path)", method: .post, parameters: parameters,  decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
+            guard let self = self else { return }
+            self.stopProgress()
+            switch result {
+            case .success(let data):
+                print(data)
+                self.LoadsViewController?.didAddDriverToLoad(with: .success(data))
+            case .failure(let error):
+                self.LoadsViewController?.didAddDriverToLoad(with: .failure(error))
+            }
+        }
+    }
+    
     func addLoad(with parameters: [String: String]) {
         startProgress()
         NetworkManager.instance.request(with: "\(Glubal.baseurl.path)\(Glubal.addLoad.path)", method: .post, parameters: parameters,  decodingType: JSON.self, errorModel: ErrorModel.self) { [weak self] result in
@@ -146,9 +163,9 @@ class OrdersPresenter {
             self.stopProgress()
             switch result {
             case .success(let data):
-                self.addLoadViewController?.didReciveDrivers(with: .success(data))
+                self.LoadsViewController?.didReciveDrivers(with: .success(data))
             case .failure(let error):
-                self.addLoadViewController?.didReciveDrivers(with: .failure(error))
+                self.LoadsViewController?.didReciveDrivers(with: .failure(error))
             }
         }
     }

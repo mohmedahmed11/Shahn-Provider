@@ -18,10 +18,13 @@ class ChargesTableViewCell: UITableViewCell {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var driver: UILabel!
+    @IBOutlet weak var invoiceBtn: UIButton!
     @IBOutlet weak var driverStack: UIStackView!
+    @IBOutlet weak var addDriverStack: UIStackView!
     
     var invoiceDetails: (() -> Void)?
     var fallowDriver: (() -> Void)?
+    var addDriver: (() -> Void)?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,13 +38,13 @@ class ChargesTableViewCell: UITableViewCell {
         self.wight.text = charge["wight"].stringValue+" طن"
         
         if charge["status"].intValue == 0 {
-            status.text = "جاري الشحن"
+            status.text = "جديد"
             status.textColor = .systemBlue
         }else if charge["status"].intValue == 1 {
-            status.text = "تم التنفيذ"
+            status.text = "جاري الشحن"
             status.textColor = .systemGreen
         }else if charge["status"].intValue == 2 {
-            status.text = "ملغي"
+            status.text = "تم التنفيذ"
             status.textColor = .systemRed
         }
     }
@@ -52,6 +55,10 @@ class ChargesTableViewCell: UITableViewCell {
     
     @IBAction func showDriverInMap() {
         fallowDriver?()
+    }
+    
+    @IBAction func addDriverAction() {
+        addDriver?()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

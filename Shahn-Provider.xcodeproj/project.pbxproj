@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A11E8EA9F9FDEFA756C4CE8B /* Pods_Shahn_Provider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086A2B1F5ACF601DD82A4146 /* Pods_Shahn_Provider.framework */; };
+		CE0FAD2D2A7A7E54003E814D /* ShowAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FAD2C2A7A7E54003E814D /* ShowAddressViewController.swift */; };
 		CEAB76BA2A076BF000E963BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76B92A076BF000E963BC /* AppDelegate.swift */; };
 		CEAB76BC2A076BF000E963BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76BB2A076BF000E963BC /* SceneDelegate.swift */; };
 		CEAB76BE2A076BF000E963BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76BD2A076BF000E963BC /* ViewController.swift */; };
@@ -77,6 +78,7 @@
 /* Begin PBXFileReference section */
 		086A2B1F5ACF601DD82A4146 /* Pods_Shahn_Provider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shahn_Provider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B8D006B784584C9ADC0730 /* Pods-Shahn-Provider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahn-Provider.debug.xcconfig"; path = "Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider.debug.xcconfig"; sourceTree = "<group>"; };
+		CE0FAD2C2A7A7E54003E814D /* ShowAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAddressViewController.swift; sourceTree = "<group>"; };
 		CEAB76B62A076BF000E963BC /* Shahn-Provider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shahn-Provider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAB76B92A076BF000E963BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAB76BB2A076BF000E963BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			children = (
 				CEAB76B92A076BF000E963BC /* AppDelegate.swift */,
 				CEAB774B2A3637B500E963BC /* PicAddressViewController.swift */,
+				CE0FAD2C2A7A7E54003E814D /* ShowAddressViewController.swift */,
 				CEAB76BB2A076BF000E963BC /* SceneDelegate.swift */,
 				CEAB76BD2A076BF000E963BC /* ViewController.swift */,
 				CEAB76CF2A0E67EF00E963BC /* Helpers */,
@@ -582,6 +585,7 @@
 				CEAB76EB2A0E68F200E963BC /* AlertHelper.swift in Sources */,
 				CEAB76FB2A0E691300E963BC /* noUserDataNotLoadedNip.swift in Sources */,
 				CEAB775E2A367DE400E963BC /* DSubProviderTableViewCell.swift in Sources */,
+				CE0FAD2D2A7A7E54003E814D /* ShowAddressViewController.swift in Sources */,
 				CEAB76E92A0E68F200E963BC /* AttachmentHandler.swift in Sources */,
 				CEAB775A2A36784C00E963BC /* DriverPresenter.swift in Sources */,
 				CEAB772E2A13521D00E963BC /* OrderTableViewCell.swift in Sources */,
