@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ick-z5-61M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ick-z5-61M">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -29,9 +29,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ubE-ve-076">
-                                <rect key="frame" x="0.0" y="320.66666666666669" width="393" height="200.00000000000006"/>
+                                <rect key="frame" x="0.0" y="220.66666666666663" width="393" height="400"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Dwr-JD-Nau"/>
+                                    <constraint firstAttribute="height" constant="400" id="Dwr-JD-Nau"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="جار التحميل" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZh-KE-tuy">
@@ -60,7 +60,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xDZ-mI-d8q"/>
-                        <color key="backgroundColor" name="BGColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="xDZ-mI-d8q" firstAttribute="bottom" secondItem="DZh-KE-tuy" secondAttribute="bottom" constant="8" id="0iW-jr-nNV"/>
                             <constraint firstItem="apd-mr-vX3" firstAttribute="centerY" secondItem="DZh-KE-tuy" secondAttribute="centerY" id="9U7-lu-6z9"/>
@@ -419,7 +419,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LxN-fl-7WT">
                                                                 <rect key="frame" x="8" y="0.0" width="361" height="50"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHi-x4-Vcr" customClass="DesignableButton" customModule="Shahn" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHi-x4-Vcr" customClass="DesignableButton" customModule="Shahn_Provider" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="13" width="24" height="24"/>
                                                                         <color key="backgroundColor" name="PrimaryColor"/>
                                                                         <constraints>
@@ -469,7 +469,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="rr7-vj-Bii">
                                                                 <rect key="frame" x="8" y="0.0" width="361" height="50"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-M3-HTW" customClass="DesignableButton" customModule="Shahn" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-M3-HTW" customClass="DesignableButton" customModule="Shahn_Provider" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="13" width="24" height="24"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
@@ -519,7 +519,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qjf-zo-yRL">
                                                                 <rect key="frame" x="8" y="0.0" width="361" height="50"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79z-N7-m0h" customClass="DesignableButton" customModule="Shahn" customModuleProvider="target">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79z-N7-m0h" customClass="DesignableButton" customModule="Shahn_Provider" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="13" width="24" height="24"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
@@ -568,7 +568,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zhp-65-hgd">
                                                 <rect key="frame" x="0.0" y="418" width="377" height="24"/>
                                                 <subviews>
-                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2g-J9-CEe" customClass="DesignableButton" customModule="Shahn" customModuleProvider="target">
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2g-J9-CEe" customClass="DesignableButton" customModule="Shahn_Provider" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="24" id="LfX-XQ-ORj"/>
@@ -712,7 +712,7 @@
                                                 <rect key="frame" x="84.666666666666671" y="0.0" width="183.66666666666663" height="24"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="التحقق من رقم الجوال" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVh-dQ-rg0">
-                                                        <rect key="frame" x="20" y="0.0" width="143.66666666666666" height="24"/>
+                                                        <rect key="frame" x="20" y="0.0" width="143.66666666666663" height="24"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="IJ1-zi-EO9"/>
                                                         </constraints>
@@ -1050,7 +1050,7 @@
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="WgT-Hf-e6g" customClass="ImageCollectionViewCell" customModule="Shahn" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="WgT-Hf-e6g" customClass="ImageCollectionViewCell" customModule="Shahn_Provider" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Bfb-5o-XmN">
@@ -1389,7 +1389,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1hu-FD-sq2">
                                                                         <rect key="frame" x="8" y="0.0" width="361" height="30"/>
                                                                         <subviews>
-                                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9T-tc-tIO" customClass="DesignableButton" customModule="Shahn" customModuleProvider="target">
+                                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9T-tc-tIO" customClass="DesignableButton" customModule="Shahn_Provider" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="3" width="24" height="24"/>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
@@ -1434,7 +1434,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="k9m-gf-IOL">
                                                                         <rect key="frame" x="8" y="0.0" width="361" height="30"/>
                                                                         <subviews>
-                                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFy-O3-trq" customClass="DesignableButton" customModule="Shahn" customModuleProvider="target">
+                                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TFy-O3-trq" customClass="DesignableButton" customModule="Shahn_Provider" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="3" width="24" height="24"/>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
@@ -1479,7 +1479,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="GGj-zP-AGN">
                                                                         <rect key="frame" x="8" y="0.0" width="361" height="30"/>
                                                                         <subviews>
-                                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfk-N2-mxh" customClass="DesignableButton" customModule="Shahn" customModuleProvider="target">
+                                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfk-N2-mxh" customClass="DesignableButton" customModule="Shahn_Provider" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="3" width="24" height="24"/>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
@@ -1524,7 +1524,7 @@
                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NL7-UF-swh">
                                                                         <rect key="frame" x="8" y="0.0" width="361" height="30"/>
                                                                         <subviews>
-                                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3y-Lf-Cly" customClass="DesignableButton" customModule="Shahn" customModuleProvider="target">
+                                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3y-Lf-Cly" customClass="DesignableButton" customModule="Shahn_Provider" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="3" width="24" height="24"/>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
@@ -1708,10 +1708,10 @@
         <segue reference="d9j-Q8-Oec"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="logo" width="567" height="423"/>
+        <image name="logo" width="1024" height="1024"/>
         <image name="no-image" width="980" height="980"/>
         <image name="reload" width="33.333332061767578" height="33.333332061767578"/>
-        <image name="shahn-logo" width="380" height="200"/>
+        <image name="shahn-logo" width="1024" height="1024"/>
         <namedColor name="BGColor">
             <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
