@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C6j-FP-Cd7">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Bahij Janna-Bold.ttf">
+            <string>BahijJanna-Bold</string>
+        </array>
+        <array key="Bahij Janna-Regular.ttf">
+            <string>BahijJanna</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--الشحنات المسندة-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="DriverLoadsViewController" customModule="Shahn_Provider" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WxN-ix-ejn">
+                                <rect key="frame" x="8" y="153" width="377" height="657"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="144" id="cXo-Mc-Q2E" customClass="ChargesTableViewCell" customModule="Shahn_Provider" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="377" height="144"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cXo-Mc-Q2E" id="Rdt-SA-RdG">
+                                            <rect key="frame" x="0.0" y="0.0" width="377" height="144"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2wH-4L-xkc">
+                                                    <rect key="frame" x="8" y="8" width="361" height="128"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Cv-Gy-Q33">
+                                                            <rect key="frame" x="0.0" y="0.0" width="361" height="37.333333333333336"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZOo-A2-Tut">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="109.33333333333333" height="37.333333333333336"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الشحنة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW8-04-Dko">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="37.333333333333336"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="24" id="f9t-u8-DhK"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#102" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gB-lm-6VY">
+                                                                            <rect key="frame" x="74.666666666666671" y="0.0" width="34.666666666666671" height="37.333333333333336"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="24" id="eGr-2E-Mcp"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="BahijJanna-Bold" family="Bahij Janna" pointSize="16"/>
+                                                                            <color key="textColor" name="PrimaryColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATm-aA-a9R">
+                                                                    <rect key="frame" x="286" y="0.0" width="75" height="37.333333333333336"/>
+                                                                    <color key="backgroundColor" name="PrimaryColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="75" id="ufM-Ea-6nM"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
+                                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                    <state key="normal" title="الفاتورة">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="showInvoide" destination="cXo-Mc-Q2E" eventType="touchUpInside" id="8Yl-eZ-SXr"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NNP-M5-g6e">
+                                                            <rect key="frame" x="0.0" y="45.333333333333329" width="361" height="37.333333333333329"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6o1-oz-bBk">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="134.66666666666666" height="37.333333333333336"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تسلسل الشحنة" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6c-Z8-Keu">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="92" height="37.333333333333336"/>
+                                                                            <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#102" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNw-y0-ktJ">
+                                                                            <rect key="frame" x="100" y="0.0" width="34.666666666666657" height="37.333333333333336"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="24" id="2hO-td-S8N"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="BahijJanna-Bold" family="Bahij Janna" pointSize="16"/>
+                                                                            <color key="textColor" name="PrimaryColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UVl-BC-pf0">
+                                                                    <rect key="frame" x="253.66666666666671" y="0.0" width="107.33333333333334" height="37.333333333333336"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="وزن الشحنة :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5V-xE-evt">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="37.333333333333336"/>
+                                                                            <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="جديد" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoI-8L-QNe">
+                                                                            <rect key="frame" x="79.666666666666629" y="0.0" width="27.666666666666671" height="37.333333333333336"/>
+                                                                            <fontDescription key="fontDescription" name="BahijJanna-Bold" family="Bahij Janna" pointSize="16"/>
+                                                                            <color key="textColor" name="PrimaryColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Lp-f9-ceQ">
+                                                            <rect key="frame" x="0.0" y="90.666666666666671" width="361" height="37.333333333333329"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2023/04/9 11:32 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V00-kg-tTC">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="133.66666666666666" height="37.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
+                                                                    <color key="textColor" systemColor="systemGray3Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Oyb-Zn-vbI">
+                                                                    <rect key="frame" x="253" y="0.0" width="108" height="37.333333333333336"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="حالة الشحنة :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUv-RO-ShC">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="72.333333333333329" height="37.333333333333336"/>
+                                                                            <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="16"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="جديد" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZpX-Q0-HOC">
+                                                                            <rect key="frame" x="80.333333333333314" y="0.0" width="27.666666666666671" height="37.333333333333336"/>
+                                                                            <fontDescription key="fontDescription" name="BahijJanna-Bold" family="Bahij Janna" pointSize="16"/>
+                                                                            <color key="textColor" name="PrimaryColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2wH-4L-xkc" firstAttribute="leading" secondItem="Rdt-SA-RdG" secondAttribute="leading" constant="8" id="4vU-cn-mcn"/>
+                                                <constraint firstAttribute="trailing" secondItem="2wH-4L-xkc" secondAttribute="trailing" constant="8" id="ITm-d3-h08"/>
+                                                <constraint firstItem="2wH-4L-xkc" firstAttribute="top" secondItem="Rdt-SA-RdG" secondAttribute="top" constant="8" id="bka-sn-EcM"/>
+                                                <constraint firstAttribute="bottom" secondItem="2wH-4L-xkc" secondAttribute="bottom" constant="8" id="uCI-Ir-I4h"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="chargeId" destination="8gB-lm-6VY" id="DeU-Dh-Qu8"/>
+                                            <outlet property="date" destination="V00-kg-tTC" id="EDd-ws-tTP"/>
+                                            <outlet property="serial" destination="qNw-y0-ktJ" id="ivn-Zh-zdM"/>
+                                            <outlet property="status" destination="ZpX-Q0-HOC" id="Gag-i0-fm2"/>
+                                            <outlet property="wight" destination="zoI-8L-QNe" id="EmJ-tP-MB5"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="eXJ-Ts-vaT"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="CSY-20-mQa"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2C6-lo-WdM">
+                                <rect key="frame" x="8" y="111" width="377" height="35"/>
+                                <color key="backgroundColor" name="BGColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="2cQ-8k-0da"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="الكل"/>
+                                    <segment title="جاري الشحن"/>
+                                    <segment title="تم التنفيذ"/>
+                                </segments>
+                                <connections>
+                                    <action selector="optionChange:" destination="Y6W-OH-hqX" eventType="valueChanged" id="7GK-8V-6as"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2C6-lo-WdM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="4bo-5y-Gr5"/>
+                            <constraint firstItem="WxN-ix-ejn" firstAttribute="top" secondItem="2C6-lo-WdM" secondAttribute="bottom" constant="8" id="JOl-Zl-ySP"/>
+                            <constraint firstAttribute="trailing" secondItem="WxN-ix-ejn" secondAttribute="trailing" constant="8" id="PXQ-l3-5PC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WxN-ix-ejn" secondAttribute="bottom" constant="8" id="YpS-EP-rpv"/>
+                            <constraint firstItem="2C6-lo-WdM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="nkC-mM-5eX"/>
+                            <constraint firstItem="WxN-ix-ejn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="x3b-7J-84D"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2C6-lo-WdM" secondAttribute="trailing" constant="8" id="yqV-4D-TyZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="الشحنات المسندة" id="gNx-ld-e58">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ikz-Ec-1tf">
+                            <view key="customView" contentMode="scaleToFill" id="yb6-cC-okM">
+                                <rect key="frame" x="267" y="3.3333333333333321" width="110" height="37.333333333333343"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الدخول كمزود خدمة" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lea-sX-q49">
+                                        <rect key="frame" x="4" y="0.0" width="102" height="37.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="BahijJanna" family="Bahij Janna" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kd-3C-Wcd">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="37.333333333333336"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="providerLogin" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fgX-oO-9Hd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="PrimaryColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1kd-3C-Wcd" secondAttribute="trailing" id="4OK-uM-2DA"/>
+                                    <constraint firstItem="Lea-sX-q49" firstAttribute="top" secondItem="yb6-cC-okM" secondAttribute="top" id="5Vr-P8-xXW"/>
+                                    <constraint firstAttribute="width" constant="110" id="91s-3G-F9V"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lea-sX-q49" secondAttribute="trailing" constant="4" id="G4e-zv-XeN"/>
+                                    <constraint firstAttribute="bottom" secondItem="1kd-3C-Wcd" secondAttribute="bottom" id="Qn7-aw-iPg"/>
+                                    <constraint firstItem="1kd-3C-Wcd" firstAttribute="leading" secondItem="yb6-cC-okM" secondAttribute="leading" id="Rg2-EA-bjR"/>
+                                    <constraint firstItem="Lea-sX-q49" firstAttribute="leading" secondItem="yb6-cC-okM" secondAttribute="leading" constant="4" id="dPm-Y1-JBU"/>
+                                    <constraint firstItem="1kd-3C-Wcd" firstAttribute="top" secondItem="yb6-cC-okM" secondAttribute="top" id="fyS-e8-amP"/>
+                                    <constraint firstAttribute="bottom" secondItem="Lea-sX-q49" secondAttribute="bottom" id="mzu-82-1qv"/>
+                                </constraints>
+                            </view>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="loginBtn" destination="yb6-cC-okM" id="IRC-Hx-G6B"/>
+                        <outlet property="optionsSegment" destination="2C6-lo-WdM" id="6OJ-0p-rIh"/>
+                        <outlet property="tableView" destination="WxN-ix-ejn" id="x9p-2X-2GO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956.48854961832058" y="-28.169014084507044"/>
+        </scene>
+        <!--الشحنات-->
+        <scene sceneID="o5p-1I-0Nw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C6j-FP-Cd7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="الشحنات" image="house" catalog="system" selectedImage="house.fill" id="fDv-VO-KEV"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yQs-sG-Zmr">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="OBI-Ro-gE9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="55b-La-WPy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <namedColor name="BGColor">
+            <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryColor">
+            <color red="0.86699998378753662" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

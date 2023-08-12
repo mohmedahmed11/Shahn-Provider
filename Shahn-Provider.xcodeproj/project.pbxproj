@@ -8,17 +8,77 @@
 
 /* Begin PBXBuildFile section */
 		A11E8EA9F9FDEFA756C4CE8B /* Pods_Shahn_Provider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 086A2B1F5ACF601DD82A4146 /* Pods_Shahn_Provider.framework */; };
+		CE0FAD2D2A7A7E54003E814D /* ShowAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FAD2C2A7A7E54003E814D /* ShowAddressViewController.swift */; };
 		CEAB76BA2A076BF000E963BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76B92A076BF000E963BC /* AppDelegate.swift */; };
 		CEAB76BC2A076BF000E963BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76BB2A076BF000E963BC /* SceneDelegate.swift */; };
 		CEAB76BE2A076BF000E963BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76BD2A076BF000E963BC /* ViewController.swift */; };
 		CEAB76C12A076BF000E963BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76BF2A076BF000E963BC /* Main.storyboard */; };
 		CEAB76C32A076BF100E963BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76C22A076BF100E963BC /* Assets.xcassets */; };
 		CEAB76C62A076BF100E963BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76C42A076BF100E963BC /* LaunchScreen.storyboard */; };
+		CEAB76CE2A0E67D500E963BC /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76CD2A0E67D500E963BC /* Tabbar.storyboard */; };
+		CEAB76DC2A0E688800E963BC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76D92A0E688700E963BC /* RegistrationViewController.swift */; };
+		CEAB76DD2A0E688800E963BC /* ValidationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76DA2A0E688800E963BC /* ValidationCodeViewController.swift */; };
+		CEAB76DE2A0E688800E963BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76DB2A0E688800E963BC /* LoginViewController.swift */; };
+		CEAB76E92A0E68F200E963BC /* AttachmentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E22A0E68F200E963BC /* AttachmentHandler.swift */; };
+		CEAB76EA2A0E68F200E963BC /* StretchyHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E32A0E68F200E963BC /* StretchyHeaderLayout.swift */; };
+		CEAB76EB2A0E68F200E963BC /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E82A0E68F200E963BC /* AlertHelper.swift */; };
+		CEAB76EC2A0E68F200E963BC /* Extestension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E02A0E68F100E963BC /* Extestension.swift */; };
+		CEAB76ED2A0E68F200E963BC /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E12A0E68F100E963BC /* Extensions+UIView.swift */; };
+		CEAB76EE2A0E68F200E963BC /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E42A0E68F200E963BC /* CommonFunctions.swift */; };
+		CEAB76EF2A0E68F200E963BC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E72A0E68F200E963BC /* Utilities.swift */; };
+		CEAB76F02A0E68F200E963BC /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E62A0E68F200E963BC /* HeaderView.swift */; };
+		CEAB76F12A0E68F200E963BC /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76E52A0E68F200E963BC /* API.swift */; };
+		CEAB76FA2A0E691300E963BC /* CustomMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76F42A0E691200E963BC /* CustomMarker.swift */; };
+		CEAB76FB2A0E691300E963BC /* noUserDataNotLoadedNip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76F92A0E691300E963BC /* noUserDataNotLoadedNip.swift */; };
+		CEAB76FC2A0E691300E963BC /* noDataFoundNip.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB76F52A0E691200E963BC /* noDataFoundNip.swift */; };
+		CEAB77032A0E694A00E963BC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77022A0E694A00E963BC /* UserModel.swift */; };
+		CEAB77042A0E694A00E963BC /* AboutModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77002A0E694A00E963BC /* AboutModels.swift */; };
+		CEAB77052A0E694A00E963BC /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77012A0E694A00E963BC /* ErrorModel.swift */; };
+		CEAB77082A0E697400E963BC /* Bahij Janna-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77072A0E697300E963BC /* Bahij Janna-Bold.ttf */; };
+		CEAB77092A0E697900E963BC /* Bahij Janna-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76FE2A0E692800E963BC /* Bahij Janna-Regular.ttf */; };
+		CEAB770D2A10E19E00E963BC /* ProviderInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB770C2A10E19E00E963BC /* ProviderInfoViewController.swift */; };
+		CEAB77102A1116F900E963BC /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB770F2A1116F900E963BC /* ImageCollectionViewCell.swift */; };
+		CEAB77122A134C8700E963BC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77112A134C8700E963BC /* Home.storyboard */; };
+		CEAB77142A134CA200E963BC /* SubProviders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77132A134CA200E963BC /* SubProviders.storyboard */; };
+		CEAB77172A134CEE00E963BC /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77152A134CEE00E963BC /* Setting.storyboard */; };
+		CEAB77182A134CEE00E963BC /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77162A134CEE00E963BC /* Account.storyboard */; };
+		CEAB771A2A134D1900E963BC /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77192A134D1900E963BC /* UserAccountViewController.swift */; };
+		CEAB771E2A134D4000E963BC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB771C2A134D4000E963BC /* AboutViewController.swift */; };
+		CEAB771F2A134D4000E963BC /* AddCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB771D2A134D4000E963BC /* AddCommentViewController.swift */; };
+		CEAB77232A1350D400E963BC /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77212A1350D400E963BC /* OrderDetailsViewController.swift */; };
+		CEAB77242A1350D400E963BC /* OrderLoadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77222A1350D400E963BC /* OrderLoadsViewController.swift */; };
+		CEAB77272A13513B00E963BC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77262A13513B00E963BC /* HomeViewController.swift */; };
+		CEAB77292A1351A100E963BC /* ChargesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77282A1351A100E963BC /* ChargesTableViewCell.swift */; };
+		CEAB772E2A13521D00E963BC /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB772D2A13521D00E963BC /* OrderTableViewCell.swift */; };
+		CEAB77302A135A5600E963BC /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB772F2A135A5600E963BC /* TabbarController.swift */; };
+		CEAB77352A14FC4600E963BC /* AddLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77342A14FC4600E963BC /* AddLoadViewController.swift */; };
+		CEAB773A2A14FDCE00E963BC /* SubProvidersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77392A14FDCE00E963BC /* SubProvidersViewController.swift */; };
+		CEAB773C2A14FE4900E963BC /* ProviderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB773B2A14FE4900E963BC /* ProviderTableViewCell.swift */; };
+		CEAB773E2A15075600E963BC /* AddSubProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB773D2A15075600E963BC /* AddSubProviderViewController.swift */; };
+		CEAB77402A16891300E963BC /* OrdersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB773F2A16891300E963BC /* OrdersPresenter.swift */; };
+		CEAB77412A168DC300E963BC /* customViewsMedia.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76F62A0E691200E963BC /* customViewsMedia.xcassets */; };
+		CEAB77422A168DC300E963BC /* noDataFoundNip.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76F32A0E691200E963BC /* noDataFoundNip.xib */; };
+		CEAB77432A168DC300E963BC /* CustomMarker.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76F82A0E691300E963BC /* CustomMarker.xib */; };
+		CEAB77442A168DC300E963BC /* noUserDataNotLoadedNip.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAB76F72A0E691200E963BC /* noUserDataNotLoadedNip.xib */; };
+		CEAB77462A16965300E963BC /* OrderPricingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77452A16965300E963BC /* OrderPricingViewController.swift */; };
+		CEAB77482A362E8F00E963BC /* SubProvidersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77472A362E8F00E963BC /* SubProvidersPresenter.swift */; };
+		CEAB774A2A36371E00E963BC /* Location.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77492A36371E00E963BC /* Location.storyboard */; };
+		CEAB774C2A3637B500E963BC /* PicAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB774B2A3637B500E963BC /* PicAddressViewController.swift */; };
+		CEAB774E2A36746700E963BC /* DriverTabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB774D2A36746700E963BC /* DriverTabbar.storyboard */; };
+		CEAB77502A36760B00E963BC /* DriverLoads.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB774F2A36760B00E963BC /* DriverLoads.storyboard */; };
+		CEAB77522A36763D00E963BC /* SubProvidersList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77512A36763D00E963BC /* SubProvidersList.storyboard */; };
+		CEAB77542A36765200E963BC /* DriverAccount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAB77532A36765200E963BC /* DriverAccount.storyboard */; };
+		CEAB77582A36780D00E963BC /* DriverLoadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77572A36780C00E963BC /* DriverLoadsViewController.swift */; };
+		CEAB775A2A36784C00E963BC /* DriverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB77592A36784C00E963BC /* DriverPresenter.swift */; };
+		CEAB775C2A367D6B00E963BC /* DriverSubProvidersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB775B2A367D6B00E963BC /* DriverSubProvidersViewController.swift */; };
+		CEAB775E2A367DE400E963BC /* DSubProviderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB775D2A367DE400E963BC /* DSubProviderTableViewCell.swift */; };
+		CEAB77602A36F94C00E963BC /* DriverAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAB775F2A36F94C00E963BC /* DriverAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		086A2B1F5ACF601DD82A4146 /* Pods_Shahn_Provider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shahn_Provider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B8D006B784584C9ADC0730 /* Pods-Shahn-Provider.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahn-Provider.debug.xcconfig"; path = "Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider.debug.xcconfig"; sourceTree = "<group>"; };
+		CE0FAD2C2A7A7E54003E814D /* ShowAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAddressViewController.swift; sourceTree = "<group>"; };
 		CEAB76B62A076BF000E963BC /* Shahn-Provider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shahn-Provider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAB76B92A076BF000E963BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAB76BB2A076BF000E963BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +87,66 @@
 		CEAB76C22A076BF100E963BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAB76C52A076BF100E963BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEAB76C72A076BF100E963BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEAB76CD2A0E67D500E963BC /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		CEAB76D92A0E688700E963BC /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		CEAB76DA2A0E688800E963BC /* ValidationCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationCodeViewController.swift; sourceTree = "<group>"; };
+		CEAB76DB2A0E688800E963BC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CEAB76E02A0E68F100E963BC /* Extestension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extestension.swift; sourceTree = "<group>"; };
+		CEAB76E12A0E68F100E963BC /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
+		CEAB76E22A0E68F200E963BC /* AttachmentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentHandler.swift; sourceTree = "<group>"; };
+		CEAB76E32A0E68F200E963BC /* StretchyHeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyHeaderLayout.swift; sourceTree = "<group>"; };
+		CEAB76E42A0E68F200E963BC /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		CEAB76E52A0E68F200E963BC /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		CEAB76E62A0E68F200E963BC /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		CEAB76E72A0E68F200E963BC /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		CEAB76E82A0E68F200E963BC /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		CEAB76F32A0E691200E963BC /* noDataFoundNip.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = noDataFoundNip.xib; sourceTree = "<group>"; };
+		CEAB76F42A0E691200E963BC /* CustomMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMarker.swift; sourceTree = "<group>"; };
+		CEAB76F52A0E691200E963BC /* noDataFoundNip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noDataFoundNip.swift; sourceTree = "<group>"; };
+		CEAB76F62A0E691200E963BC /* customViewsMedia.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = customViewsMedia.xcassets; sourceTree = "<group>"; };
+		CEAB76F72A0E691200E963BC /* noUserDataNotLoadedNip.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = noUserDataNotLoadedNip.xib; sourceTree = "<group>"; };
+		CEAB76F82A0E691300E963BC /* CustomMarker.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomMarker.xib; sourceTree = "<group>"; };
+		CEAB76F92A0E691300E963BC /* noUserDataNotLoadedNip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = noUserDataNotLoadedNip.swift; sourceTree = "<group>"; };
+		CEAB76FE2A0E692800E963BC /* Bahij Janna-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij Janna-Regular.ttf"; sourceTree = "<group>"; };
+		CEAB77002A0E694A00E963BC /* AboutModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutModels.swift; sourceTree = "<group>"; };
+		CEAB77012A0E694A00E963BC /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
+		CEAB77022A0E694A00E963BC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		CEAB77072A0E697300E963BC /* Bahij Janna-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bahij Janna-Bold.ttf"; sourceTree = "<group>"; };
+		CEAB770A2A10D17F00E963BC /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
+		CEAB770B2A10D18000E963BC /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CEAB770C2A10E19E00E963BC /* ProviderInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderInfoViewController.swift; sourceTree = "<group>"; };
+		CEAB770F2A1116F900E963BC /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		CEAB77112A134C8700E963BC /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		CEAB77132A134CA200E963BC /* SubProviders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SubProviders.storyboard; sourceTree = "<group>"; };
+		CEAB77152A134CEE00E963BC /* Setting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
+		CEAB77162A134CEE00E963BC /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		CEAB77192A134D1900E963BC /* UserAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountViewController.swift; sourceTree = "<group>"; };
+		CEAB771C2A134D4000E963BC /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		CEAB771D2A134D4000E963BC /* AddCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCommentViewController.swift; sourceTree = "<group>"; };
+		CEAB77212A1350D400E963BC /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
+		CEAB77222A1350D400E963BC /* OrderLoadsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderLoadsViewController.swift; sourceTree = "<group>"; };
+		CEAB77262A13513B00E963BC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CEAB77282A1351A100E963BC /* ChargesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargesTableViewCell.swift; sourceTree = "<group>"; };
+		CEAB772D2A13521D00E963BC /* OrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		CEAB772F2A135A5600E963BC /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		CEAB77342A14FC4600E963BC /* AddLoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoadViewController.swift; sourceTree = "<group>"; };
+		CEAB77392A14FDCE00E963BC /* SubProvidersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubProvidersViewController.swift; sourceTree = "<group>"; };
+		CEAB773B2A14FE4900E963BC /* ProviderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderTableViewCell.swift; sourceTree = "<group>"; };
+		CEAB773D2A15075600E963BC /* AddSubProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSubProviderViewController.swift; sourceTree = "<group>"; };
+		CEAB773F2A16891300E963BC /* OrdersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersPresenter.swift; sourceTree = "<group>"; };
+		CEAB77452A16965300E963BC /* OrderPricingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPricingViewController.swift; sourceTree = "<group>"; };
+		CEAB77472A362E8F00E963BC /* SubProvidersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubProvidersPresenter.swift; sourceTree = "<group>"; };
+		CEAB77492A36371E00E963BC /* Location.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Location.storyboard; sourceTree = "<group>"; };
+		CEAB774B2A3637B500E963BC /* PicAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicAddressViewController.swift; sourceTree = "<group>"; };
+		CEAB774D2A36746700E963BC /* DriverTabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DriverTabbar.storyboard; sourceTree = "<group>"; };
+		CEAB774F2A36760B00E963BC /* DriverLoads.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DriverLoads.storyboard; sourceTree = "<group>"; };
+		CEAB77512A36763D00E963BC /* SubProvidersList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SubProvidersList.storyboard; sourceTree = "<group>"; };
+		CEAB77532A36765200E963BC /* DriverAccount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DriverAccount.storyboard; sourceTree = "<group>"; };
+		CEAB77572A36780C00E963BC /* DriverLoadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverLoadsViewController.swift; sourceTree = "<group>"; };
+		CEAB77592A36784C00E963BC /* DriverPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverPresenter.swift; sourceTree = "<group>"; };
+		CEAB775B2A367D6B00E963BC /* DriverSubProvidersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverSubProvidersViewController.swift; sourceTree = "<group>"; };
+		CEAB775D2A367DE400E963BC /* DSubProviderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSubProviderTableViewCell.swift; sourceTree = "<group>"; };
+		CEAB775F2A36F94C00E963BC /* DriverAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverAccountViewController.swift; sourceTree = "<group>"; };
 		D9779CA92DC9F519B4B84B3C /* Pods-Shahn-Provider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shahn-Provider.release.xcconfig"; path = "Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,7 +168,6 @@
 				13B8D006B784584C9ADC0730 /* Pods-Shahn-Provider.debug.xcconfig */,
 				D9779CA92DC9F519B4B84B3C /* Pods-Shahn-Provider.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -82,14 +201,210 @@
 			isa = PBXGroup;
 			children = (
 				CEAB76B92A076BF000E963BC /* AppDelegate.swift */,
+				CEAB774B2A3637B500E963BC /* PicAddressViewController.swift */,
+				CE0FAD2C2A7A7E54003E814D /* ShowAddressViewController.swift */,
 				CEAB76BB2A076BF000E963BC /* SceneDelegate.swift */,
 				CEAB76BD2A076BF000E963BC /* ViewController.swift */,
+				CEAB76CF2A0E67EF00E963BC /* Helpers */,
+				CEAB76D82A0E686B00E963BC /* Sceces */,
 				CEAB76BF2A076BF000E963BC /* Main.storyboard */,
 				CEAB76C22A076BF100E963BC /* Assets.xcassets */,
+				CEAB76CD2A0E67D500E963BC /* Tabbar.storyboard */,
+				CEAB77552A36765A00E963BC /* Driver */,
+				CEAB77112A134C8700E963BC /* Home.storyboard */,
+				CEAB77132A134CA200E963BC /* SubProviders.storyboard */,
+				CEAB77492A36371E00E963BC /* Location.storyboard */,
+				CEAB77162A134CEE00E963BC /* Account.storyboard */,
+				CEAB77152A134CEE00E963BC /* Setting.storyboard */,
 				CEAB76C42A076BF100E963BC /* LaunchScreen.storyboard */,
 				CEAB76C72A076BF100E963BC /* Info.plist */,
 			);
 			path = "Shahn-Provider";
+			sourceTree = "<group>";
+		};
+		CEAB76CF2A0E67EF00E963BC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB77062A0E695700E963BC /* Models */,
+				CEAB76FF2A0E694200E963BC /* Fonts */,
+				CEAB76FD2A0E691C00E963BC /* CustomViews */,
+				CEAB76F22A0E690100E963BC /* Utilities */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CEAB76D82A0E686B00E963BC /* Sceces */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB770E2A1116DD00E963BC /* Cells */,
+				CEAB77312A135A5900E963BC /* Tabbar */,
+				CEAB76DF2A0E689000E963BC /* Auth */,
+				CEAB77252A1350DA00E963BC /* Home */,
+				CEAB77562A3677D100E963BC /* Driver */,
+				CEAB77362A14FD9800E963BC /* SubProvider */,
+				CEAB771B2A134D1E00E963BC /* Account */,
+				CEAB77202A134D4700E963BC /* Setting */,
+			);
+			path = Sceces;
+			sourceTree = "<group>";
+		};
+		CEAB76DF2A0E689000E963BC /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB76DB2A0E688800E963BC /* LoginViewController.swift */,
+				CEAB76D92A0E688700E963BC /* RegistrationViewController.swift */,
+				CEAB770C2A10E19E00E963BC /* ProviderInfoViewController.swift */,
+				CEAB76DA2A0E688800E963BC /* ValidationCodeViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		CEAB76F22A0E690100E963BC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB76E82A0E68F200E963BC /* AlertHelper.swift */,
+				CEAB76E52A0E68F200E963BC /* API.swift */,
+				CEAB76E22A0E68F200E963BC /* AttachmentHandler.swift */,
+				CEAB76E42A0E68F200E963BC /* CommonFunctions.swift */,
+				CEAB76E12A0E68F100E963BC /* Extensions+UIView.swift */,
+				CEAB76E02A0E68F100E963BC /* Extestension.swift */,
+				CEAB76E62A0E68F200E963BC /* HeaderView.swift */,
+				CEAB76E32A0E68F200E963BC /* StretchyHeaderLayout.swift */,
+				CEAB76E72A0E68F200E963BC /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CEAB76FD2A0E691C00E963BC /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB76F42A0E691200E963BC /* CustomMarker.swift */,
+				CEAB76F82A0E691300E963BC /* CustomMarker.xib */,
+				CEAB76F62A0E691200E963BC /* customViewsMedia.xcassets */,
+				CEAB76F52A0E691200E963BC /* noDataFoundNip.swift */,
+				CEAB76F32A0E691200E963BC /* noDataFoundNip.xib */,
+				CEAB76F92A0E691300E963BC /* noUserDataNotLoadedNip.swift */,
+				CEAB76F72A0E691200E963BC /* noUserDataNotLoadedNip.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		CEAB76FF2A0E694200E963BC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB77072A0E697300E963BC /* Bahij Janna-Bold.ttf */,
+				CEAB76FE2A0E692800E963BC /* Bahij Janna-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CEAB77062A0E695700E963BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB77002A0E694A00E963BC /* AboutModels.swift */,
+				CEAB77012A0E694A00E963BC /* ErrorModel.swift */,
+				CEAB77022A0E694A00E963BC /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEAB770E2A1116DD00E963BC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB770F2A1116F900E963BC /* ImageCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CEAB771B2A134D1E00E963BC /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB77192A134D1900E963BC /* UserAccountViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		CEAB77202A134D4700E963BC /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB771C2A134D4000E963BC /* AboutViewController.swift */,
+				CEAB771D2A134D4000E963BC /* AddCommentViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		CEAB77252A1350DA00E963BC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB772A2A1351A400E963BC /* Cells */,
+				CEAB77262A13513B00E963BC /* HomeViewController.swift */,
+				CEAB773F2A16891300E963BC /* OrdersPresenter.swift */,
+				CEAB77212A1350D400E963BC /* OrderDetailsViewController.swift */,
+				CEAB77452A16965300E963BC /* OrderPricingViewController.swift */,
+				CEAB77342A14FC4600E963BC /* AddLoadViewController.swift */,
+				CEAB77222A1350D400E963BC /* OrderLoadsViewController.swift */,
+			);
+			name = Home;
+			path = "آHome";
+			sourceTree = "<group>";
+		};
+		CEAB772A2A1351A400E963BC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB772D2A13521D00E963BC /* OrderTableViewCell.swift */,
+				CEAB77282A1351A100E963BC /* ChargesTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CEAB77312A135A5900E963BC /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB772F2A135A5600E963BC /* TabbarController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		CEAB77362A14FD9800E963BC /* SubProvider */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB77372A14FDB300E963BC /* Cell */,
+				CEAB77392A14FDCE00E963BC /* SubProvidersViewController.swift */,
+				CEAB77472A362E8F00E963BC /* SubProvidersPresenter.swift */,
+				CEAB773D2A15075600E963BC /* AddSubProviderViewController.swift */,
+			);
+			path = SubProvider;
+			sourceTree = "<group>";
+		};
+		CEAB77372A14FDB300E963BC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB773B2A14FE4900E963BC /* ProviderTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CEAB77552A36765A00E963BC /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB774D2A36746700E963BC /* DriverTabbar.storyboard */,
+				CEAB774F2A36760B00E963BC /* DriverLoads.storyboard */,
+				CEAB77512A36763D00E963BC /* SubProvidersList.storyboard */,
+				CEAB77532A36765200E963BC /* DriverAccount.storyboard */,
+			);
+			path = Driver;
+			sourceTree = "<group>";
+		};
+		CEAB77562A3677D100E963BC /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				CEAB77572A36780C00E963BC /* DriverLoadsViewController.swift */,
+				CEAB775D2A367DE400E963BC /* DSubProviderTableViewCell.swift */,
+				CEAB775B2A367D6B00E963BC /* DriverSubProvidersViewController.swift */,
+				CEAB775F2A36F94C00E963BC /* DriverAccountViewController.swift */,
+				CEAB77592A36784C00E963BC /* DriverPresenter.swift */,
+			);
+			path = Driver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,7 +419,7 @@
 				CEAB76B32A076BF000E963BC /* Frameworks */,
 				CEAB76B42A076BF000E963BC /* Resources */,
 				4960903439C039DE24849809 /* [CP] Embed Pods Frameworks */,
-				E743CAA710FE4CAAFC66067E /* [CP] Copy Pods Resources */,
+				98118F60A17C282A6FBCEA12 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -137,6 +452,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
 			);
 			mainGroup = CEAB76AD2A076BF000E963BC;
 			productRefGroup = CEAB76B72A076BF000E963BC /* Products */;
@@ -153,8 +469,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAB774A2A36371E00E963BC /* Location.storyboard in Resources */,
+				CEAB77412A168DC300E963BC /* customViewsMedia.xcassets in Resources */,
+				CEAB77122A134C8700E963BC /* Home.storyboard in Resources */,
+				CEAB77442A168DC300E963BC /* noUserDataNotLoadedNip.xib in Resources */,
+				CEAB77082A0E697400E963BC /* Bahij Janna-Bold.ttf in Resources */,
+				CEAB77182A134CEE00E963BC /* Account.storyboard in Resources */,
+				CEAB774E2A36746700E963BC /* DriverTabbar.storyboard in Resources */,
+				CEAB76CE2A0E67D500E963BC /* Tabbar.storyboard in Resources */,
+				CEAB77432A168DC300E963BC /* CustomMarker.xib in Resources */,
 				CEAB76C62A076BF100E963BC /* LaunchScreen.storyboard in Resources */,
+				CEAB77542A36765200E963BC /* DriverAccount.storyboard in Resources */,
+				CEAB77522A36763D00E963BC /* SubProvidersList.storyboard in Resources */,
 				CEAB76C32A076BF100E963BC /* Assets.xcassets in Resources */,
+				CEAB77502A36760B00E963BC /* DriverLoads.storyboard in Resources */,
+				CEAB77172A134CEE00E963BC /* Setting.storyboard in Resources */,
+				CEAB77092A0E697900E963BC /* Bahij Janna-Regular.ttf in Resources */,
+				CEAB77422A168DC300E963BC /* noDataFoundNip.xib in Resources */,
+				CEAB77142A134CA200E963BC /* SubProviders.storyboard in Resources */,
 				CEAB76C12A076BF000E963BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +511,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		98118F60A17C282A6FBCEA12 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A0F692C8E6BD7C19AFED7B85 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,23 +550,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E743CAA710FE4CAAFC66067E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shahn-Provider/Pods-Shahn-Provider-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -225,9 +557,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAB77052A0E694A00E963BC /* ErrorModel.swift in Sources */,
+				CEAB77302A135A5600E963BC /* TabbarController.swift in Sources */,
+				CEAB77402A16891300E963BC /* OrdersPresenter.swift in Sources */,
+				CEAB76ED2A0E68F200E963BC /* Extensions+UIView.swift in Sources */,
+				CEAB76DE2A0E688800E963BC /* LoginViewController.swift in Sources */,
+				CEAB77582A36780D00E963BC /* DriverLoadsViewController.swift in Sources */,
+				CEAB77352A14FC4600E963BC /* AddLoadViewController.swift in Sources */,
 				CEAB76BE2A076BF000E963BC /* ViewController.swift in Sources */,
+				CEAB775C2A367D6B00E963BC /* DriverSubProvidersViewController.swift in Sources */,
+				CEAB76EC2A0E68F200E963BC /* Extestension.swift in Sources */,
+				CEAB77482A362E8F00E963BC /* SubProvidersPresenter.swift in Sources */,
+				CEAB771A2A134D1900E963BC /* UserAccountViewController.swift in Sources */,
+				CEAB774C2A3637B500E963BC /* PicAddressViewController.swift in Sources */,
+				CEAB76F12A0E68F200E963BC /* API.swift in Sources */,
+				CEAB76EF2A0E68F200E963BC /* Utilities.swift in Sources */,
+				CEAB773A2A14FDCE00E963BC /* SubProvidersViewController.swift in Sources */,
+				CEAB76EA2A0E68F200E963BC /* StretchyHeaderLayout.swift in Sources */,
 				CEAB76BA2A076BF000E963BC /* AppDelegate.swift in Sources */,
+				CEAB76EE2A0E68F200E963BC /* CommonFunctions.swift in Sources */,
+				CEAB77232A1350D400E963BC /* OrderDetailsViewController.swift in Sources */,
+				CEAB77602A36F94C00E963BC /* DriverAccountViewController.swift in Sources */,
+				CEAB77462A16965300E963BC /* OrderPricingViewController.swift in Sources */,
+				CEAB76DC2A0E688800E963BC /* RegistrationViewController.swift in Sources */,
+				CEAB76FA2A0E691300E963BC /* CustomMarker.swift in Sources */,
 				CEAB76BC2A076BF000E963BC /* SceneDelegate.swift in Sources */,
+				CEAB76EB2A0E68F200E963BC /* AlertHelper.swift in Sources */,
+				CEAB76FB2A0E691300E963BC /* noUserDataNotLoadedNip.swift in Sources */,
+				CEAB775E2A367DE400E963BC /* DSubProviderTableViewCell.swift in Sources */,
+				CE0FAD2D2A7A7E54003E814D /* ShowAddressViewController.swift in Sources */,
+				CEAB76E92A0E68F200E963BC /* AttachmentHandler.swift in Sources */,
+				CEAB775A2A36784C00E963BC /* DriverPresenter.swift in Sources */,
+				CEAB772E2A13521D00E963BC /* OrderTableViewCell.swift in Sources */,
+				CEAB773E2A15075600E963BC /* AddSubProviderViewController.swift in Sources */,
+				CEAB77102A1116F900E963BC /* ImageCollectionViewCell.swift in Sources */,
+				CEAB77272A13513B00E963BC /* HomeViewController.swift in Sources */,
+				CEAB77242A1350D400E963BC /* OrderLoadsViewController.swift in Sources */,
+				CEAB773C2A14FE4900E963BC /* ProviderTableViewCell.swift in Sources */,
+				CEAB771E2A134D4000E963BC /* AboutViewController.swift in Sources */,
+				CEAB770D2A10E19E00E963BC /* ProviderInfoViewController.swift in Sources */,
+				CEAB77042A0E694A00E963BC /* AboutModels.swift in Sources */,
+				CEAB77032A0E694A00E963BC /* UserModel.swift in Sources */,
+				CEAB77292A1351A100E963BC /* ChargesTableViewCell.swift in Sources */,
+				CEAB771F2A134D4000E963BC /* AddCommentViewController.swift in Sources */,
+				CEAB76FC2A0E691300E963BC /* noDataFoundNip.swift in Sources */,
+				CEAB76DD2A0E688800E963BC /* ValidationCodeViewController.swift in Sources */,
+				CEAB76F02A0E68F200E963BC /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +613,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEAB76C02A076BF000E963BC /* Base */,
+				CEAB770A2A10D17F00E963BC /* ar */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -246,6 +622,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEAB76C52A076BF100E963BC /* Base */,
+				CEAB770B2A10D18000E963BC /* ar */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -257,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -303,7 +681,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -317,6 +695,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -357,7 +736,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -375,21 +754,26 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PP486X33A2;
+				DEVELOPMENT_TEAM = J8XP2443NZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Shahn-Provider/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "شاحن-مزود خدمة";
+				INFOPLIST_KEY_NSCameraUsageDescription = "التطبيق يتطلب الوصول للكاميرا لكي تتمكن من اخد الصور المطلوبة منك";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "التطبيق يتطلب الوصوع للموقع لكي تتمكن من إضافة مواقع الخدمة او عرضها";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "التطبيق يتطلب الوصول لمعرض الصور لكي تتمكن من اختيار الصور المطلوبة منك";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "PitaStudio.Shahn-Provider";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shahenprovider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -408,21 +792,26 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PP486X33A2;
+				DEVELOPMENT_TEAM = J8XP2443NZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Shahn-Provider/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "شاحن-مزود خدمة";
+				INFOPLIST_KEY_NSCameraUsageDescription = "التطبيق يتطلب الوصول للكاميرا لكي تتمكن من اخد الصور المطلوبة منك";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "التطبيق يتطلب الوصوع للموقع لكي تتمكن من إضافة مواقع الخدمة او عرضها";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "التطبيق يتطلب الوصول لمعرض الصور لكي تتمكن من اختيار الصور المطلوبة منك";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "PitaStudio.Shahn-Provider";
+				PRODUCT_BUNDLE_IDENTIFIER = com.shahenprovider;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
