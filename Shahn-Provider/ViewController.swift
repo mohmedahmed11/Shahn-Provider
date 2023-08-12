@@ -71,6 +71,7 @@ class ViewController: UIViewController {
     
     func segue() {
         if UserDefaults.standard.value(forKey: "userIsIn") != nil {
+            loadUserInfo()
             if UserDefaults.standard.string(forKey: "userType") == "driver" {
                 self.performSegue(withIdentifier: "toDriverHome", sender: nil)
             }else {
@@ -78,6 +79,23 @@ class ViewController: UIViewController {
             }
         }else {
             self.performSegue(withIdentifier: "doSign", sender: nil)
+        }
+    }
+    
+    func loadUserInfo() {
+        ProgressHUD.animationType = .circleStrokeSpin
+        ProgressHUD.show()
+        NetworkManager.instance.request(with: "\(Glubal.baseurl.path)\(Glubal.getUser.path)", parameters: ["id": UserDefaults.standard.value(forKey: "userIsIn") ?? "-1"], decodingType: JSON.self, errorModel: ErrorModel.self) { result in
+            ProgressHUD.dismiss()
+            switch result {
+            case .success(let data):
+                if data["operation"].boolValue == true {
+                    AppManager.shared.authUser = User(id: data["user"]["id"].stringValue, name: data["user"]["name"].stringValue, phone: data["user"]["phone"].stringValue, contact: data["user"]["contact"].stringValue)
+                }
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
     }
     

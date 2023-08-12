@@ -10,6 +10,8 @@ import SwiftyJSON
 import ImageSlideshow
 import Kingfisher
 import SafariServices
+import Alamofire
+import ProgressHUD
 
 class OrderDetailsViewController: UIViewController {
     
@@ -39,6 +41,7 @@ class OrderDetailsViewController: UIViewController {
     
     var presenter: OrdersPresenter?
     var chargeCount : Int = 0
+    var userContact: String = ""
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -229,7 +232,20 @@ extension OrderDetailsViewController: PricingDelegate, DetailsDelegate {
     }
     
     func didPriceOffer() {
-        self.navigationController?.popToRootViewController(animated: true)
+        self.sendSMS()
+    }
+    
+    func sendSMS() {
+        let message = "تطبيق شاحن \n تم إرسال عرض تسعير للطلب #\(order["id"].stringValue) - \(order["type"].stringValue) \n من \(AppManager.shared.authUser.name ?? "provider")"
+        let parameters:Parameters = ["message": message.utf8,"phone": "966\(order["user"]["contact"].stringValue)"]
+        print(parameters)
+        
+        ProgressHUD.animationType = .circleStrokeSpin
+        ProgressHUD.show()
+        NetworkManager.instance.request(with: "\(Glubal.baseurl.path)\(Glubal.sms.path)", method: .post, parameters: parameters,  decodingType: JSON.self, errorModel: ErrorModel.self) { result in
+            ProgressHUD.dismiss()
+            self.navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     func didAddLoadsCount(with result: Result<JSON, Error>) {
